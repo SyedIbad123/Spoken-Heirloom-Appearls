@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { images, navLinks } from "@/utils/constant";
 import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -15,15 +17,20 @@ export default function Navbar() {
           <div className="flex items-center h-16 md:h-20 relative">
             {/* All nav links - left side */}
             <div className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-primary-foreground/80 hover:text-accent-light text-body-sm font-medium transition-colors duration-200"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`text-primary-foreground/90 text-body-sm transition-colors duration-200 ${
+                      isActive ? "font-extrabold" : "font-medium"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Logo - center */}
@@ -117,16 +124,21 @@ export default function Navbar() {
           {isMenuOpen && (
             <div className="lg:hidden py-4 border-t border-primary/20">
               <div className="flex flex-col gap-2">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-primary-foreground/80 hover:text-accent-light py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`text-primary-foreground/80 hover:text-accent-light py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors duration-200 ${
+                        isActive ? "font-bold" : "font-medium"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
                 <Link
                   href="#"
                   className="mt-4 mx-4 inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-body-sm font-medium rounded-full hover:bg-accent-light transition-colors duration-200"

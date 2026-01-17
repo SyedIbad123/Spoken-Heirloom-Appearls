@@ -113,6 +113,7 @@ const config: Config = {
         "slide-up": "slideUp 0.6s ease-out",
         "scale-in": "scaleIn 0.4s ease-out",
         marquee: "marquee 30s linear infinite",
+        "spin-slow": "spin 20s linear infinite",
       },
       keyframes: {
         fadeIn: {
