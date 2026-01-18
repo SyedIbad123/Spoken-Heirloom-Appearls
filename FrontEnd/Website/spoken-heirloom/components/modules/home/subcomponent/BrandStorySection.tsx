@@ -16,8 +16,8 @@ export default function BrandStorySection() {
             smallHeading="About Us"
             bigHeading="THE SPOKEN HEIRLOOM"
             showWhirl={true}
-            smallHeadingColor="text-olive"
-            bigHeadingColor="text-olive"
+            smallHeadingColor="text-primary-foreground"
+            bigHeadingColor="text-primary-foreground"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center mt-12">
@@ -91,7 +91,7 @@ export default function BrandStorySection() {
                 <div className="mt-10">
                   <Button
                     text="Learn More"
-                    textColor="text-olive"
+                    textColor="text-primary-foreground"
                     borderColor="border-olive"
                     hoverBgColor="hover:bg-olive"
                     hoverTextColor="hover:text-white"

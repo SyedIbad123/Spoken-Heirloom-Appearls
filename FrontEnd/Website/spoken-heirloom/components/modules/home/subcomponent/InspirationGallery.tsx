@@ -64,7 +64,7 @@ export default function InspirationGallery() {
         <div className="text-center mt-12">
           <Button
             text="View All Inspo"
-            textColor="text-olive"
+            textColor="text-primary-foreground"
             borderColor="border-primary-foreground/35 border-2"
             hoverBgColor="hover:bg-primary-foreground"
             hoverTextColor="hover:text-white"

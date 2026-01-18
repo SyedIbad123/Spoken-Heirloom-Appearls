@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { images } from "@/utils/constant";
 import Button from "@/components/shared/Button";
+import CarouselNavigation from "@/components/shared/CarouselNavigation";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,27 +83,13 @@ export default function HeroSection() {
           <div className="relative w-full">
             <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-4 py-28">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div>
-                    <Image
-                      src={images.LeftArrow}
-                      alt="Previous slide"
-                      className="object-cover w-28 h-full"
-                      onClick={handlePrevSlide}
-                    />
-                  </div>
-                  <div className="text-white text-md md:text-base font-light tracking-widest">
-                    {String(currentSlide + 1)}/{String(carouselImages.length)}
-                  </div>
-                  <div>
-                    <Image
-                      src={images.RightArrow}
-                      alt="Next slide"
-                      className="object-cover w-28 lg:w-28 xl:w-28  h-full"
-                      onClick={handleNextSlide}
-                    />
-                  </div>
-                </div>
+                <CarouselNavigation
+                  currentIndex={currentSlide}
+                  totalItems={carouselImages.length}
+                  onPrev={handlePrevSlide}
+                  onNext={handleNextSlide}
+                  variant="light"
+                />
               </div>
             </div>
           </div>

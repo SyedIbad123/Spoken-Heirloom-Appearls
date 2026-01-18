@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import SectionHeader from "@/components/shared/SectionHeader";
-import Button from "@/components/shared/Button";
 import PricingCard from "@/components/shared/PricingCard";
 import PricingToggle from "@/components/shared/PricingToggle";
 import SubscriptionView from "@/components/shared/SubscriptionView";
+import Stats from "@/components/shared/Stats";
 import { images } from "@/utils/constant";
+import MemoryVoiceBanner from "@/components/shared/MemoryVoiceBanner";
 
 const packages = [
   {
@@ -117,36 +118,45 @@ export default function PackagesSection() {
   };
 
   return (
-    <section className="py-section-md md:py-section-lg bg-primary">
-      <div className="section-container">
-        <SectionHeader
-          smallHeading="Our Pricing"
-          bigHeading="PACKAGES & SUBSCRIPTIONS PRICES"
-          smallHeadingColor="text-olive"
-          bigHeadingColor="text-olive"
+    <>
+      <section className="flex flex-col gap-28 py-section-md md:py-section-md bg-primary">
+        <div className="section-container">
+          <SectionHeader
+            smallHeading="Our Pricing"
+            bigHeading="PACKAGES & SUBSCRIPTIONS PRICES"
+            smallHeadingColor="text-primary-foreground"
+            bigHeadingColor="text-primary-foreground"
+          />
+
+          <PricingToggle activeTab={activeTab} onTabChange={setActiveTab} />
+
+          {activeTab === "packages" ? (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto mt-16">
+              {currentPricing.map((plan, index) => (
+                <PricingCard
+                  key={plan.name}
+                  name={plan.name}
+                  price={plan.price}
+                  period={(plan as any).period}
+                  features={plan.features}
+                  highlighted={plan.highlighted}
+                  cta={plan.cta}
+                  backgroundImage={getBackgroundImage(index)}
+                />
+              ))}
+            </div>
+          ) : (
+            <SubscriptionView />
+          )}
+        </div>
+        <Stats />
+        <MemoryVoiceBanner
+          leftImage={images.MemoryLeftImage}
+          rightImage={images.MemoryRightImage}
         />
+      </section>
 
-        <PricingToggle activeTab={activeTab} onTabChange={setActiveTab} />
-
-        {activeTab === "packages" ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto mt-16">
-            {currentPricing.map((plan, index) => (
-              <PricingCard
-                key={plan.name}
-                name={plan.name}
-                price={plan.price}
-                period={(plan as any).period}
-                features={plan.features}
-                highlighted={plan.highlighted}
-                cta={plan.cta}
-                backgroundImage={getBackgroundImage(index)}
-              />
-            ))}
-          </div>
-        ) : (
-          <SubscriptionView />
-        )}
-      </div>
-    </section>
+      {/* Stats Section */}
+    </>
   );
 }

@@ -3,8 +3,10 @@ import USLogo from "@/assets/US_flag.png";
 import HeroSectionImage01 from "@/assets/Hero_Section_Image_01.png";
 import HeroSectionImage02 from "@/assets/Hero_Section_Image_02.png";
 import HeroSectionImage03 from "@/assets/Hero_Section_Image_03.png";
-import RightArrow from "@/assets/right_arrow.png";
-import LeftArrow from "@/assets/left_arrow.png";
+import RightArrowWhite from "@/assets/Arrow_Right_White.svg";
+import LeftArrowWhite from "@/assets/Arrow_Left_White.svg";
+import RightArrowOlive from "@/assets/Right_Arrow_Olive.svg";
+import LeftArrowOlive from "@/assets/Left_Arrow_Olive.svg";
 import ProcessSectionImage from "@/assets/Process_Section_Image.png";
 import ProcessFlowImage from "@/assets/Process_Flow_Image.png";
 import ProcessFlowSvg from "@/assets/Process_Flow_SVG.svg";
@@ -28,9 +30,14 @@ import QRSubscriptionImage from "@/assets/QR_Subscription.svg";
 import WeddingSubscriptionImage from "@/assets/Wedding_Subscription.svg";
 import TravelSubscriptionImage from "@/assets/Travel_Subscription.svg";
 import ChildhoodSubscriptionImage from "@/assets/Childhood_Subscription.svg";
+import MemoryLeftImage from "@/assets/Memory_Left_Image.svg";
+import MemoryRightImage from "@/assets/Memory_Right_Image.svg";
+import TestimonialMainImage from "@/assets/Testimonial_Main_Image.svg";
 
 import CommonWhirl from "@/assets/Common_Whirl.svg";
-import CommonLeaf from "@/assets/Common_Leaf.png";
+import CommonLeaf from "@/assets/Common_Leaf.svg";
+import CommonFlower from "@/assets/Common_Flower.svg";
+import CommonQuote from "@/assets/Common_Quote.svg";
 
 export const navLinks = [
   { label: "Home", href: "/" },
@@ -48,8 +55,10 @@ export const images = {
   HeroSectionImage01,
   HeroSectionImage02,
   HeroSectionImage03,
-  RightArrow,
-  LeftArrow,
+  RightArrowWhite,
+  LeftArrowWhite,
+  RightArrowOlive,
+  LeftArrowOlive,
   ProcessSectionImage,
   ProcessFlowImage,
   ProcessRightImage,
@@ -73,9 +82,14 @@ export const images = {
   WeddingSubscriptionImage,
   TravelSubscriptionImage,
   ChildhoodSubscriptionImage,
+  MemoryLeftImage,
+  MemoryRightImage,
+  TestimonialMainImage,
 
   CommonWhirl,
   CommonLeaf,
+  CommonFlower,
+  CommonQuote,
 };
 
 export const processSteps = [

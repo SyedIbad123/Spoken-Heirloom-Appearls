@@ -19,8 +19,8 @@ export default function SectionHeader({
   description,
   showWhirl = false,
   alignment = "center",
-  smallHeadingColor = "text-olive",
-  bigHeadingColor = "text-olive",
+  smallHeadingColor = "text-primary-foreground",
+  bigHeadingColor = "text-primary-foreground",
   descriptionColor = "text-foreground-muted",
   className = "",
 }: SectionHeaderProps) {
