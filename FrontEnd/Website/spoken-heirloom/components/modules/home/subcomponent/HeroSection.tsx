@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { images } from "@/utils/constant";
+import Button from "@/components/shared/Button";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,9 +11,9 @@ export default function HeroSection() {
 
   // Sample carousel images - replace with actual images if available
   const carouselImages = [
-    images.HeroSectionImage,
-    images.HeroSectionImage,
-    images.HeroSectionImage,
+    images.HeroSectionImage01,
+    images.HeroSectionImage02,
+    images.HeroSectionImage03,
   ];
 
   useEffect(() => {
@@ -40,14 +41,19 @@ export default function HeroSection() {
       <section className="mx-auto relative h-screen md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0">
-          <Image
-            src={images.HeroSectionImage}
-            alt="Hero Background"
-            fill
-            priority
-            className="object-cover w-full h-full"
-            quality={100}
-          />
+          {carouselImages.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              alt={`Hero Background ${index + 1}`}
+              fill
+              priority={index === 0}
+              className={`object-cover w-full h-full transition-opacity duration-700 ${
+                currentSlide === index ? "opacity-100" : "opacity-0"
+              }`}
+              quality={100}
+            />
+          ))}
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -67,9 +73,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Button */}
-          <button className="px-8 md:px-10 py-3 md:py-4 bg-transparent border border-white text-white font-semibold text-base md:text-lg hover:bg-white hover:text-black transition-all duration-300 mb-12 md:mb-16">
-            Build My Heirloom Today
-          </button>
+          <Button text="Build My Heirloom Today" className="mb-12 md:mb-16" />
         </div>
 
         {/* Carousel Section at Bottom */}
@@ -84,6 +88,7 @@ export default function HeroSection() {
                       src={images.LeftArrow}
                       alt="Previous slide"
                       className="object-cover w-28 h-full"
+                      onClick={handlePrevSlide}
                     />
                   </div>
                   <div className="text-white text-md md:text-base font-light tracking-widest">
@@ -94,6 +99,7 @@ export default function HeroSection() {
                       src={images.RightArrow}
                       alt="Next slide"
                       className="object-cover w-28 lg:w-28 xl:w-28  h-full"
+                      onClick={handleNextSlide}
                     />
                   </div>
                 </div>

@@ -1,13 +1,24 @@
 import NavbarLogo from "@/assets/logo_navbar.png";
 import USLogo from "@/assets/US_flag.png";
-import HeroSectionImage from "@/assets/Hero_Section_Image.png";
+import HeroSectionImage01 from "@/assets/Hero_Section_Image_01.png";
+import HeroSectionImage02 from "@/assets/Hero_Section_Image_02.png";
+import HeroSectionImage03 from "@/assets/Hero_Section_Image_03.png";
 import RightArrow from "@/assets/right_arrow.png";
 import LeftArrow from "@/assets/left_arrow.png";
 import ProcessSectionImage from "@/assets/Process_Section_Image.png";
 import ProcessFlowImage from "@/assets/Process_Flow_Image.png";
 import ProcessFlowSvg from "@/assets/Process_Flow_SVG.svg";
 import ProcessRightImage from "@/assets/Process_Right_Side.png";
-import ProcessLeftImage from "@/assets/Process_Left_Side.png";
+import InspirationImage from "@/assets/Inspiration_Image.png";
+import InspirationBookSVG from "@/assets/Inspiration_Book_Svg.svg";
+import BrandStoryLeftImage from "@/assets/Brand_Story_Left.svg";
+import BrandStoryRightImage from "@/assets/Brand_Story_Right.png";
+import BrandStoryRoseImage from "@/assets/Brand_Story_Rose_Image.png";
+import BrandStoryMainImage from "@/assets/Brand_Story_Main_Image.svg";
+import LogoBrand from "@/assets/Logo_Brand.svg";
+
+import CommonWhirl from "@/assets/Common_Whirl.svg";
+import CommonLeaf from "@/assets/Common_Leaf.png";
 
 export const navLinks = [
   { label: "Home", href: "/" },
@@ -22,14 +33,25 @@ export const navLinks = [
 export const images = {
   NavbarLogo,
   USLogo,
-  HeroSectionImage,
+  HeroSectionImage01,
+  HeroSectionImage02,
+  HeroSectionImage03,
   RightArrow,
   LeftArrow,
   ProcessSectionImage,
   ProcessFlowImage,
   ProcessRightImage,
-  ProcessLeftImage,
   ProcessFlowSvg,
+  InspirationImage,
+  InspirationBookSVG,
+  BrandStoryLeftImage,
+  BrandStoryRightImage,
+  BrandStoryRoseImage,
+  BrandStoryMainImage,
+  LogoBrand,
+
+  CommonWhirl,
+  CommonLeaf,
 };
 
 export const processSteps = [
@@ -51,4 +73,48 @@ export const processSteps = [
     description:
       "Order your professionally bound heirloom book and keep it for generations. A digital version is always included.",
   },
+];
+
+export const galleryCategories = [
+  "All Inspiration",
+  "Journey & Adventures",
+  "Love Stories",
+  "Childhood Treasures",
+  "Family Legacy Books",
+];
+
+export const galleryItems = [
+  {
+    id: 1,
+    title: "DAVID & ROSE",
+    label: "LOVE STORIES",
+    date: "25.12.2025",
+    category: "Love Stories",
+  },
+  {
+    id: 2,
+    title: "DAVID & ROSE",
+    label: "LOVE STORIES",
+    date: "25.12.2025",
+    category: "Love Stories",
+  },
+  {
+    id: 3,
+    title: "DAVID & ROSE",
+    label: "LOVE STORIES",
+    date: "25.12.2025",
+    category: "Love Stories",
+  },
+  {
+    id: 4,
+    title: "DAVID & ROSE",
+    label: "LOVE STORIES",
+    date: "25.12.2025",
+    category: "Love Stories",
+  },
+];
+
+export const marqueeItems = [
+  "Every Family Has a Story Worth Hearing",
+  "Preserve Voices, Cherish Moments, Create Heirlooms",
 ];

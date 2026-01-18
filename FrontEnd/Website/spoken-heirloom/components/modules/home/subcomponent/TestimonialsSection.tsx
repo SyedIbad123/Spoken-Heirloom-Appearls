@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import SectionHeader from "@/components/shared/SectionHeader";
 
 const testimonials = [
   {
@@ -38,7 +39,7 @@ export default function TestimonialsSection() {
 
   const prevTestimonial = () => {
     setActiveIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -46,14 +47,12 @@ export default function TestimonialsSection() {
     <section className="py-section-md md:py-section-lg bg-secondary-light">
       <div className="section-container">
         {/* Section header */}
-        <div className="text-center mb-12 md:mb-16">
-          <p className="text-accent font-medium text-body-sm uppercase tracking-wider mb-3">
-            Testimonials
-          </p>
-          <h2 className="font-serif text-display-sm md:text-display-md text-foreground">
-            What Our Customers Say About Us
-          </h2>
-        </div>
+        <SectionHeader
+          smallHeading="Testimonials"
+          bigHeading="What Our Customers Say About Us"
+          smallHeadingColor="text-accent"
+          bigHeadingColor="text-foreground"
+        />
 
         {/* Testimonial card */}
         <div className="max-w-4xl mx-auto">

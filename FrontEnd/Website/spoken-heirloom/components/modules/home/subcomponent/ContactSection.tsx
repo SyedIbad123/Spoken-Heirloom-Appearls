@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Button from "@/components/shared/Button";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ export default function ContactSection() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -137,9 +138,16 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              <button type="submit" className="w-full sm:w-auto btn-primary">
-                Send Message
-              </button>
+              <Button
+                type="submit"
+                text="Send Message"
+                backgroundColor="bg-primary"
+                textColor="text-primary-foreground"
+                borderColor="border-primary"
+                hoverBgColor="hover:bg-primary/90"
+                hoverTextColor="hover:text-primary-foreground"
+                className="w-full sm:w-auto"
+              />
             </form>
           </div>
 

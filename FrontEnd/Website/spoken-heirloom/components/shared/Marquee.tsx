@@ -1,0 +1,55 @@
+import Image from "next/image";
+import { images } from "@/utils/constant";
+
+interface MarqueeProps {
+  items: string[];
+  backgroundColor?: string;
+  textColor?: string;
+  showLeaf?: boolean;
+  leafPosition?: "left" | "right";
+}
+
+export default function Marquee({
+  items,
+  backgroundColor = "bg-primary-border/30",
+  textColor = "text-primary-foreground",
+  showLeaf = false,
+  leafPosition = "right",
+}: MarqueeProps) {
+  return (
+    <div className={`relative ${backgroundColor} py-10 overflow-hidden`}>
+      <div className="flex animate-marquee whitespace-nowrap">
+        {[...Array(6)].map((_, i) => (
+          <div key={i} className={`flex ${textColor} items-center`}>
+            {items.map((item, index) => (
+              <span key={index}>
+                <span className="text-lg md:text-xl font-serif italic mx-4">
+                  {item}
+                </span>
+                {index < items.length - 1 && <span className="mx-4">—</span>}
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Leaf decoration */}
+      {showLeaf && (
+        <div
+          className={`absolute ${
+            leafPosition === "right" ? "right-0" : "left-0"
+          } top-15 -translate-y-1/2 z-10 pointer-events-none ${
+            leafPosition === "right" ? "rotate-180" : ""
+          } mix-blend-multiply`}
+        >
+          <Image
+            src={images.CommonLeaf}
+            alt="Leaf decoration"
+            width={200}
+            height={200}
+          />
+        </div>
+      )}
+    </div>
+  );
+}

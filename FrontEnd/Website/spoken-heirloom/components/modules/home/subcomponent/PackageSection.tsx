@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import SectionHeader from "@/components/shared/SectionHeader";
+import Button from "@/components/shared/Button";
 
 const packages = [
   {
@@ -103,7 +105,7 @@ const subscriptions = [
 
 export default function PackagesSection() {
   const [activeTab, setActiveTab] = useState<"packages" | "subscriptions">(
-    "packages"
+    "packages",
   );
 
   const currentPricing = activeTab === "packages" ? packages : subscriptions;
@@ -112,14 +114,14 @@ export default function PackagesSection() {
     <section className="py-section-md md:py-section-lg bg-background-warm">
       <div className="section-container">
         {/* Section header */}
+        <SectionHeader
+          smallHeading="Our Pricing"
+          bigHeading="Packages & Subscription Prices"
+          smallHeadingColor="text-accent"
+          bigHeadingColor="text-foreground"
+          className="mb-12 md:mb-16"
+        />
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-accent font-medium text-body-sm uppercase tracking-wider mb-3">
-            Our Pricing
-          </p>
-          <h2 className="font-serif text-display-sm md:text-display-md text-foreground mb-8">
-            Packages & Subscription Prices
-          </h2>
-
           {/* Toggle tabs */}
           <div className="inline-flex items-center bg-secondary rounded-full p-1.5 shadow-soft">
             <button
@@ -245,15 +247,29 @@ export default function PackagesSection() {
               </ul>
 
               {/* CTA button */}
-              <button
-                className={`w-full py-3.5 rounded-full font-medium transition-all duration-300 ${
+              <Button
+                text={plan.cta}
+                backgroundColor={plan.highlighted ? "bg-accent" : "bg-primary"}
+                textColor={
                   plan.highlighted
-                    ? "bg-accent hover:bg-accent-light text-accent-foreground shadow-soft"
-                    : "bg-primary hover:bg-primary-dark text-primary-foreground"
-                }`}
-              >
-                {plan.cta}
-              </button>
+                    ? "text-accent-foreground"
+                    : "text-primary-foreground"
+                }
+                borderColor={
+                  plan.highlighted ? "border-accent" : "border-primary"
+                }
+                hoverBgColor={
+                  plan.highlighted
+                    ? "hover:bg-accent-light"
+                    : "hover:bg-primary-dark"
+                }
+                hoverTextColor={
+                  plan.highlighted
+                    ? "hover:text-accent-foreground"
+                    : "hover:text-primary-foreground"
+                }
+                className="w-full py-3.5 rounded-full"
+              />
             </div>
           ))}
         </div>
@@ -303,10 +319,18 @@ export default function PackagesSection() {
               <br />
               Deserves a Voice
             </h2>
-            <button className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary font-medium rounded-full hover:bg-secondary transition-all duration-300 shadow-elevated">
-              <span>Create Your Book</span>
+            <div className="inline-flex items-center gap-3">
+              <Button
+                text="Create Your Book"
+                backgroundColor="bg-white"
+                textColor="text-primary"
+                borderColor="border-white"
+                hoverBgColor="hover:bg-secondary"
+                hoverTextColor="hover:text-primary"
+                className="rounded-full shadow-elevated"
+              />
               <svg
-                className="w-5 h-5"
+                className="w-5 h-5 text-white"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -318,7 +342,7 @@ export default function PackagesSection() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </button>
+            </div>
           </div>
         </div>
       </div>

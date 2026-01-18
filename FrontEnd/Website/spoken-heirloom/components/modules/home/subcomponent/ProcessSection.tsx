@@ -2,15 +2,16 @@
 
 import Image from "next/image";
 import { images, processSteps } from "@/utils/constant";
+import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function ProcessSection() {
   return (
-    <section className="py-section-md md:py-section-lg relative overflow-hidden mt-10">
-      <div className="section-container bg-white p-20 relative">
+    <section className="py-section-md md:py-section-lg relative overflow-hidden mt-10 ">
+      <div className="section-container bg-white p-20 relative border-b-5 border-primary-border">
         <div className="text-center mb-16 md:mb-20 relative">
-          <div className="absolute w-52 h-52 -left-20 -top-20 pointer-events-none ">
+          <div className="absolute w-52 h-52 -left-20 -top-20 pointer-events-none mix-blend-multiply">
             <Image
-              src={images.ProcessLeftImage}
+              src={images.CommonLeaf}
               className=""
               alt="Process Left Image"
             />
@@ -27,16 +28,13 @@ export default function ProcessSection() {
             </div>
           </div>
 
-          <h2 className="font-serif font-semibold text-display-sm md:text-display-md text-primary-foreground mb-4 tracking-wide uppercase">
-            From Voice to Heirloom in
-            <br />
-            Three Simple Steps
-          </h2>
-
-          <p className="text-primary-foreground/90 text-body-md max-w-5xl mx-auto">
-            Our patent-pending QR technology allows future generations to scan
-            and relive voices, stories, and moments instantly.
-          </p>
+          <SectionHeader
+            bigHeading={"From Voice to Heirloom in\nThree Simple Steps"}
+            description="Our patent-pending QR technology allows future generations to scan and relive voices, stories, and moments instantly."
+            bigHeadingColor="text-primary-foreground"
+            descriptionColor="text-primary-foreground/90"
+            className="max-w-5xl mx-auto"
+          />
         </div>
 
         {/* Process Flow Image */}
