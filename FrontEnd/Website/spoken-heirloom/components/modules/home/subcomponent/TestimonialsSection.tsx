@@ -84,7 +84,7 @@ export default function TestimonialsSection() {
               {/* Author info */}
               <div className="flex flex-col items-center">
                 {/* Avatar placeholder */}
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-secondary to-secondary-dark mb-4 flex items-center justify-center overflow-hidden">
+                <div className="w-16 h-16 rounded-full bg-linear-to-br from-secondary to-secondary-dark mb-4 flex items-center justify-center overflow-hidden">
                   <span className="text-2xl font-serif text-primary/50">
                     {testimonials[activeIndex].author.charAt(0)}
                   </span>

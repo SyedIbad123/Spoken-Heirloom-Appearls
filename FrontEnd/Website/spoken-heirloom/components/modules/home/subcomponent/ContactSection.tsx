@@ -155,8 +155,8 @@ export default function ContactSection() {
           <div className="order-1 lg:order-2">
             <div className="relative">
               {/* Main image placeholder */}
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated">
-                <div className="absolute inset-0 bg-gradient-to-br from-sage via-sage-light to-secondary">
+              <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-elevated">
+                <div className="absolute inset-0 bg-linear-to-br from-sage via-sage-light to-secondary">
                   {/* Overlay texture */}
                   <div className="absolute inset-0 bg-texture opacity-30" />
                 </div>

@@ -16,6 +16,18 @@ import BrandStoryRightImage from "@/assets/Brand_Story_Right.png";
 import BrandStoryRoseImage from "@/assets/Brand_Story_Rose_Image.png";
 import BrandStoryMainImage from "@/assets/Brand_Story_Main_Image.svg";
 import LogoBrand from "@/assets/Logo_Brand.svg";
+import ProPlanImage from "@/assets/Prop_Plan_Image.svg";
+import BasicPlanImage from "@/assets/Basic_And_Premium_Plan_Image.svg";
+import PremiumPlanImage from "@/assets/Basic_And_Premium_Plan_Image.svg";
+import Subscription_Plan_Image from "@/assets/Subscription_Plan_Image.svg";
+import FamilyCareSubscriptionImage from "@/assets/Family_Care_Subscription.svg";
+import FamilyHouseSubscriptionImage from "@/assets/Family_House_Subscription.svg";
+import PhotoGallerySubscriptionImage from "@/assets/Photo_Gallery_Subscription.svg";
+import MessageSubscriptionImage from "@/assets/Message_Subscription.svg";
+import QRSubscriptionImage from "@/assets/QR_Subscription.svg";
+import WeddingSubscriptionImage from "@/assets/Wedding_Subscription.svg";
+import TravelSubscriptionImage from "@/assets/Travel_Subscription.svg";
+import ChildhoodSubscriptionImage from "@/assets/Childhood_Subscription.svg";
 
 import CommonWhirl from "@/assets/Common_Whirl.svg";
 import CommonLeaf from "@/assets/Common_Leaf.png";
@@ -49,6 +61,18 @@ export const images = {
   BrandStoryRoseImage,
   BrandStoryMainImage,
   LogoBrand,
+  ProPlanImage,
+  BasicPlanImage,
+  PremiumPlanImage,
+  Subscription_Plan_Image,
+  FamilyCareSubscriptionImage,
+  FamilyHouseSubscriptionImage,
+  PhotoGallerySubscriptionImage,
+  MessageSubscriptionImage,
+  QRSubscriptionImage,
+  WeddingSubscriptionImage,
+  TravelSubscriptionImage,
+  ChildhoodSubscriptionImage,
 
   CommonWhirl,
   CommonLeaf,

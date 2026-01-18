@@ -51,7 +51,7 @@ export default function SectionHeader({
 
       {/* Big heading */}
       <h2
-        className={`font-serif text-display-sm md:text-display-md ${bigHeadingColor} tracking-[0.2em] uppercase mb-4 whitespace-pre-line`}
+        className={`font-serif text-display-sm md:text-display-md ${bigHeadingColor} uppercase mb-4 whitespace-pre-line`}
       >
         {bigHeading}
       </h2>
