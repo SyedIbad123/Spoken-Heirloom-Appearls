@@ -5,8 +5,9 @@ import {
   BrandStorySection,
   PackagesSection,
   TestimonialsSection,
-  ContactSection,
 } from "./subcomponent";
+
+import { ContactSection } from "@/components/shared/ContactSection";
 
 export default function HomePage() {
   return (

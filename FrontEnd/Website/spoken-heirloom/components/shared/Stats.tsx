@@ -25,7 +25,7 @@ export default function Stats({
   textColor = "text-primary-foreground",
 }: StatsProps) {
   return (
-    <section className={`py-16 md:py-8 ${backgroundColor}`}>
+    <section className={`py-16 mb-14 md:py-8 ${backgroundColor}`}>
       <div className="section-container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (

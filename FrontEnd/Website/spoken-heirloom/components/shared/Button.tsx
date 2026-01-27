@@ -30,7 +30,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`cursor-pointer inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-4 ${backgroundColor} ${textColor} ${borderColor} ${hoverBgColor} ${hoverTextColor} font-semibold text-base transition-all duration-300 border ${
+      className={`cursor-pointer inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3 ${backgroundColor} ${textColor} ${borderColor} ${hoverBgColor} ${hoverTextColor} font-semibold text-base transition-all duration-300 border ${
         fullWidth ? "w-full" : ""
       } ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}
     >

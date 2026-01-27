@@ -1,75 +1,59 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { images, galleryCategories, galleryItems } from "@/utils/constant";
+import { images, inspirationGalleryCards } from "@/utils/constant";
 import SectionHeader from "@/components/shared/SectionHeader";
 import Button from "@/components/shared/Button";
+import { CircleAlert } from "lucide-react";
 
 export default function InspirationGallery() {
-  const [activeCategory, setActiveCategory] = useState("All Inspiration");
-
-  const filteredItems =
-    activeCategory === "All Inspiration"
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === activeCategory);
-
   return (
     <section className="py-section-md md:py-section-sm bg-primary">
       <div className="section-container">
         {/* Section header */}
         <SectionHeader
           smallHeading="Books"
-          bigHeading="HEIRLOOM INSPIRATION"
-          description="Explore beautifully crafted examples of memory books you can create."
-          showWhirl={true}
+          bigHeading={`CHOOSE THE TYPE OF THE BOOK YOU\nWANT TO CREATE`}
+          description="Select a book type, then choose whether to build now or be guided by prompts as life unfolds."
+          showWhirl={false}
+          descriptionColor="text-primary-foreground"
+          descriptionStyle="bold"
         />
 
-        {/* Category filters */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
-          {galleryCategories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`text-body-sm  transition-all duration-300 pb-2 relative ${
-                activeCategory === category
-                  ? "font-bold text-primary-foreground"
-                  : "font-medium text-primary-foreground"
-              }`}
-            >
-              {category}
-              {activeCategory === category && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-0.75 bg-primary-foreground"></span>
-              )}
-            </button>
-          ))}
-        </div>
-
-        {/* Gallery grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
-          {filteredItems.map((item) => (
-            <div key={item.id} className="group cursor-pointer">
-              <div className="flex-1 relative mx-3 mb-3">
+          {inspirationGalleryCards.map((card, idx) => (
+            <div
+              key={card.title}
+              className="group cursor-pointer bg-white flex flex-col h-full transition-transform hover:-translate-y-1"
+            >
+              <div className="relative mb-2 aspect-3/4 h-44 overflow-hidden">
                 <Image
-                  src={images.InspirationBookSVG}
-                  alt={item.title}
-                  className="object-cover h-120 w-full drop-shadow-lg drop-shadow-black/15"
+                  src={card.image}
+                  alt={card.alt}
+                  fill
+                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
+              </div>
+              <div className="p-5 pb-8">
+                <h3 className="text-xl md:text-xl font-serif font-semibold text-primary-foreground mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-sm text-primary-foreground pr-10">
+                  {card.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
         {/* View all button */}
-        <div className="text-center mt-12">
-          <Button
-            text="View All Inspo"
-            textColor="text-primary-foreground"
-            borderColor="border-primary-foreground/35 border-2"
-            hoverBgColor="hover:bg-primary-foreground"
-            hoverTextColor="hover:text-white"
-            className="py-3.5"
-          />
+        <div className="flex flex-row justify-center items-center text-center mt-6 gap-2 ">
+          <CircleAlert className="h-4 w-4 text-primary-foreground" />
+          <p className="text-sm text-primary-foreground">
+            Each book type includes a flexible template designed to help you get
+            started.{" "}
+          </p>
         </div>
       </div>
     </section>

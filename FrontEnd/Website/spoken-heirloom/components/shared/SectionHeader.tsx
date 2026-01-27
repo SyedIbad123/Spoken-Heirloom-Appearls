@@ -10,7 +10,9 @@ interface SectionHeaderProps {
   smallHeadingColor?: string;
   bigHeadingColor?: string;
   descriptionColor?: string;
+  descriptionStyle?: string;
   className?: string;
+  headingTransformation?: string;
 }
 
 export default function SectionHeader({
@@ -23,6 +25,8 @@ export default function SectionHeader({
   bigHeadingColor = "text-primary-foreground",
   descriptionColor = "text-foreground-muted",
   className = "",
+  descriptionStyle = "italic",
+  headingTransformation = "uppercase",
 }: SectionHeaderProps) {
   const alignmentClass =
     alignment === "left"
@@ -51,7 +55,7 @@ export default function SectionHeader({
 
       {/* Big heading */}
       <h2
-        className={`font-serif text-display-sm md:text-display-md ${bigHeadingColor} uppercase mb-4 whitespace-pre-line`}
+        className={`font-serif text-display-sm md:text-display-md ${bigHeadingColor} ${headingTransformation == "uppercase" ? "uppercase" : ""} mb-4 whitespace-pre-line`}
       >
         {bigHeading}
       </h2>
@@ -59,9 +63,13 @@ export default function SectionHeader({
       {/* Description (optional) */}
       {description && (
         <p
-          className={`${descriptionColor} text-body-md font-serif italic max-w-xl ${
-            alignment === "center" ? "mx-auto" : ""
-          } mb-6`}
+          className={`${descriptionColor} text-body-md font-serif ${
+            descriptionStyle === "bold"
+              ? "font-bold"
+              : descriptionStyle === "normal"
+                ? "font-normal"
+                : "italic"
+          } max-w-4xl ${alignment === "center" ? "mx-auto" : ""} mb-6`}
         >
           {description}
         </p>
