@@ -4,31 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CarouselNavigation from "@/components/shared/CarouselNavigation";
-import { images } from "@/utils/constant";
-
-const testimonials = [
-  {
-    id: 1,
-    quote:
-      "The Spoken Heirloom turned our memories into something tangible and timeless. It feels like holding our family's history in our hands — and hearing it come alive.",
-    author: "JOHN DOE",
-    role: "Client",
-  },
-  {
-    id: 2,
-    quote:
-      "I created a book for my grandmother's 90th birthday with recordings of all her favorite stories. The tears of joy when she scanned the QR codes and heard our voices will stay with me forever.",
-    author: "SARAH MITCHELL",
-    role: "Client",
-  },
-  {
-    id: 3,
-    quote:
-      "As someone who lost my father last year, having his voice preserved in our family book has been the most precious gift. This is more than a book—it's a bridge to those we love.",
-    author: "MICHAEL CHEN",
-    role: "Client",
-  },
-];
+import { images, testimonials } from "@/utils/constant";
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);

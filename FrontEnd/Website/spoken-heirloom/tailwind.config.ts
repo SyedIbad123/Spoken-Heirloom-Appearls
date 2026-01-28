@@ -16,6 +16,7 @@ const config: Config = {
           dark: "#3D2B22",
           light: "#FAF6F3",
           border: "#E8D9C8",
+          grayText: "#999999",
         },
         secondary: {
           DEFAULT: "#E8E0D5",

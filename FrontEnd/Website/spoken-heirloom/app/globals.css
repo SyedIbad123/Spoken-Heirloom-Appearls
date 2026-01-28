@@ -7,6 +7,7 @@
   --color-primary-dark: #3d2b22;
   --color-primary-light: #faf6f3;
   --color-primary-border: #e8d9c8;
+  --color-primary-grayText: #999999;
 
   --color-secondary: #e8e0d5;
   --color-secondary-foreground: #5c4033;
@@ -80,6 +81,9 @@
 
   --text-body-sm: 0.875rem;
   --text-body-sm--line-height: 1.65;
+
+  --text-body-xs: 0.65rem;
+  --text-body-xs--line-height: 1.5;
 
   /* Spacing */
   --spacing-section-sm: 4rem;

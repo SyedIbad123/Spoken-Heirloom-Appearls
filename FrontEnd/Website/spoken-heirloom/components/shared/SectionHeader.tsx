@@ -68,8 +68,10 @@ export default function SectionHeader({
               ? "font-bold"
               : descriptionStyle === "normal"
                 ? "font-normal"
-                : "italic"
-          } max-w-4xl ${alignment === "center" ? "mx-auto" : ""} mb-6`}
+                : descriptionStyle === "light"
+                  ? "font-light"
+                  : "italic"
+          } max-w-4xl ${alignment === "center" ? "mx-auto" : ""} mb-6 whitespace-pre-line`}
         >
           {description}
         </p>

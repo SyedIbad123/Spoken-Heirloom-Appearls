@@ -1,16 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { images, inspirationGalleryCards } from "@/utils/constant";
+import { inspirationGalleryCards } from "@/utils/constant";
 import SectionHeader from "@/components/shared/SectionHeader";
-import Button from "@/components/shared/Button";
 import { CircleAlert } from "lucide-react";
 
 export default function InspirationGallery() {
   return (
     <section className="py-section-md md:py-section-sm bg-primary">
       <div className="section-container">
-        {/* Section header */}
         <SectionHeader
           smallHeading="Books"
           bigHeading={`CHOOSE THE TYPE OF THE BOOK YOU\nWANT TO CREATE`}

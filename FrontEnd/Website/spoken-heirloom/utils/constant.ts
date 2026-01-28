@@ -46,21 +46,40 @@ import FooterImage03 from "@/assets/Footer_Image_03.svg";
 import FooterImage04 from "@/assets/Footer_Image_04.svg";
 import FooterImage05 from "@/assets/Footer_Image_05.svg";
 import FooterImage06 from "@/assets/Footer_Image_06.svg";
+import BookPageImage01 from "@/assets/Books_Page_Image_01.svg";
+import BookPageImage02 from "@/assets/Books_Page_Image_02.jpg";
+import BookPageImage03 from "@/assets/Books_Page_Image_03.svg";
+import BookPageImage04 from "@/assets/Books_Page_Image_04.svg";
+import BookPageImage05 from "@/assets/Books_Page_Image_05.jpg";
+import BookPageImage06 from "@/assets/Books_Page_Image_06.svg";
+import BookPageImage07 from "@/assets/Books_Page_Image_07.svg";
+import BookPageImage08 from "@/assets/Books_Page_Image_08.svg";
+import BookPageImage09 from "@/assets/Books_Page_Image_09.svg";
+import BookPageImage10 from "@/assets/Books_Page_Image_10.svg";
+import BookPageImage11 from "@/assets/Books_Page_Image_11.svg";
+import BookPageImage12 from "@/assets/Books_Page_Image_12.svg";
+import HowItWorksMainImage from "@/assets/HowItWorks_Main_Image.svg";
+
+import ContactPageHero from "@/assets/Contact_Page_Hero.svg";
+import PricingPageHero from "@/assets/Pricing_Page_Hero.svg";
+import FAQPageHero from "@/assets/FAQ_Page_Hero.svg";
+import BookPageHero from "@/assets/Book_Page_Hero.svg";
+import HowItWorksPageHero from "@/assets/HowItWorks_Page_Hero.svg";
+
 import CommonWhirl from "@/assets/Common_Whirl.svg";
 import CommonLeaf from "@/assets/Common_Leaf.svg";
 import CommonFlower from "@/assets/Common_Flower.svg";
 import CommonQuote from "@/assets/Common_Quote.svg";
-
-import ContactPageHero from "@/assets/Contact_Page_Hero.svg";
-import PricingPageHero from "@/assets/Pricing_Page_Hero.svg";
+import CommonArrowdown from "@/assets/Arrow_down.svg";
 
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "How It Works", href: "#" },
+  { label: "Books", href: "/books" },
+  { label: "How It Works", href: "/HowItWorks" },
   { label: "Create Your Book", href: "#" },
   { label: "Pricing", href: "/pricing" },
-  { label: "FAQ/Support", href: "#" },
+  { label: "FAQ/Support", href: "/FAQ" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -113,14 +132,31 @@ export const images = {
   FooterImage04,
   FooterImage05,
   FooterImage06,
+  BookPageImage01,
+  BookPageImage02,
+  BookPageImage03,
+  BookPageImage04,
+  BookPageImage05,
+  BookPageImage06,
+  BookPageImage07,
+  BookPageImage08,
+  BookPageImage09,
+  BookPageImage10,
+  BookPageImage11,
+  BookPageImage12,
+  HowItWorksMainImage,
 
   ContactPageHero,
   PricingPageHero,
+  FAQPageHero,
+  BookPageHero,
+  HowItWorksPageHero,
 
   CommonWhirl,
   CommonLeaf,
   CommonFlower,
   CommonQuote,
+  CommonArrowdown,
 };
 
 export const processSteps = [
@@ -213,6 +249,30 @@ export const inspirationGalleryCards = [
     alt: "Journeys & Adventures",
     title: "Journeys & Adventures",
     description: "Trips, Moves, and Life's Unforgettable Destinations",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    quote:
+      "The Spoken Heirloom turned our memories into something tangible and timeless. It feels like holding our family's history in our hands — and hearing it come alive.",
+    author: "JOHN DOE",
+    role: "Client",
+  },
+  {
+    id: 2,
+    quote:
+      "I created a book for my grandmother's 90th birthday with recordings of all her favorite stories. The tears of joy when she scanned the QR codes and heard our voices will stay with me forever.",
+    author: "SARAH MITCHELL",
+    role: "Client",
+  },
+  {
+    id: 3,
+    quote:
+      "As someone who lost my father last year, having his voice preserved in our family book has been the most precious gift. This is more than a book—it's a bridge to those we love.",
+    author: "MICHAEL CHEN",
+    role: "Client",
   },
 ];
 
@@ -325,3 +385,137 @@ export const subscriptions = [
     backgroundImage: images.PremiumPlanImage,
   },
 ];
+
+export const faqData = [
+  {
+    question: "What is The Spoken Heirloom?",
+    answer:
+      "The Spoken Heirloom is a digital storytelling platform that helps you create beautifully designed memory books, combining photos, written stories, and recorded voices or videos. Each book becomes a living keepsake you can read, see, and hear for generations to come.",
+  },
+  {
+    question: "How does it work?",
+    answer: "...",
+  },
+  {
+    question:
+      "What’s the difference between a one-time book and a subscription?",
+    answer: "...",
+  },
+  {
+    question: "How does the monthly subscription work?",
+    answer: "...",
+  },
+  {
+    question: "Can I choose how often I receive prompts?",
+    answer: "...",
+  },
+  {
+    question: "What kind of prompts will I receive?",
+    answer: "...",
+  },
+  {
+    question: "Can I skip prompts or add my own?",
+    answer: "...",
+  },
+  {
+    question: "Can family members participate in my subscription?",
+    answer: "...",
+  },
+  {
+    question: "What happens if I cancel my subscription?",
+    answer: "...",
+  },
+  {
+    question: "Will my QR codes or digital memories ever expire?",
+    answer: "...",
+  },
+  {
+    question: "Can I upgrade from a one-time book to a subscription later?",
+    answer: "...",
+  },
+  {
+    question: "Is my content safe and private?",
+    answer: "...",
+  },
+  {
+    question: "Can I order printed copies of my book?",
+    answer: "...",
+  },
+  {
+    question: "What is your return or refund policy?",
+    answer: "...",
+  },
+  {
+    question: "How do I contact support?",
+    answer: "...",
+  },
+];
+
+export const bookImages = [
+  {
+    main: images.BookPageImage01,
+    text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
+  },
+  {
+    main: images.BookPageImage02,
+    text: "Capture your family's adventures and journeys in timeless pages.",
+  },
+  {
+    main: images.BookPageImage03,
+    text: "Preserve love stories and cherished moments forever.",
+  },
+  {
+    main: images.BookPageImage04,
+    text: "Treasured childhood memories, beautifully bound.",
+  },
+  {
+    main: images.BookPageImage05,
+    text: "Family legacy books for generations to come.",
+  },
+  {
+    main: images.BookPageImage06,
+    text: "A collection of stories, laughter, and love.",
+  },
+  // Repeat to make 12 if needed, or use unique images/texts as available
+  {
+    main: images.BookPageImage07,
+    text: "Inspire new traditions with every page.",
+  },
+  {
+    main: images.BookPageImage08,
+    text: "Every photo tells a story worth sharing.",
+  },
+  {
+    main: images.BookPageImage09,
+    text: "Relive the magic of family milestones.",
+  },
+  {
+    main: images.BookPageImage10,
+    text: "A gallery of memories, crafted with care.",
+  },
+  {
+    main: images.BookPageImage11,
+    text: "Legacy in every line and photograph.",
+  },
+  {
+    main: images.BookPageImage12,
+    text: "Stories that connect generations together.",
+  },
+];
+
+export const howItWorksStep1 = {
+  image: images.HowItWorksMainImage, // Replace with the correct image for step 1
+  imageAlt: "Hand holding old family photo",
+  bigHeading: "WE WILL GUIDE YOU EVERY STEP OF THE PROCESS",
+  description:
+    "We'll guide you through every step of the process, making it easy to understand exactly how it all works —\nfrom your first story upload to holding your finished heirloom in your hands.",
+  stepHeading:
+    "1. Add your favorite photos, stories, and short voice or video recordings",
+  stepDescription:
+    "Start by gathering the moments you want to preserve: candid snapshots, formal portraits, handwritten notes, short voice clips, and short videos. On our platform you can upload directly from your phone, tablet, or computer — or import from cloud services.",
+  whatToInclude: [
+    "Photos: both color and black-and-white work beautifully. Aim for high-resolution files (JPEG, PNG) when possible.",
+    "Stories: type them in, copy-paste from old letters, or upload scanned documents (PDF or DOCX). Short captions and dates add useful context.",
+    "Audio & Video: record a grandparent telling a favorite memory, or upload short clips of celebrations. We accept common formats like MP3, WAV, MP4, and MOV. Keep individual recordings to a few minutes for best playback and scanning experience.",
+  ],
+};

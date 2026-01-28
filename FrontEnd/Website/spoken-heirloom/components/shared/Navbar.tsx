@@ -16,14 +16,14 @@ export default function Navbar() {
         <div className=" px-8 mx-2">
           <div className="flex items-center h-16 md:h-20 relative">
             {/* All nav links - left side */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-8 md:gap-4">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`text-primary-foreground/90 text-body-sm transition-colors duration-200 ${
+                    className={`text-primary-foreground/90 text-body-xs transition-colors duration-200 ${
                       isActive ? "font-extrabold" : "font-medium"
                     }`}
                   >

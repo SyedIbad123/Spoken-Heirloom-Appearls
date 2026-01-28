@@ -5,7 +5,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function Footer() {
   return (
-    <footer className="text-primary-foreground pt-0  ">
+    <footer className="text-primary-foreground pt-0">
       {/* Instagram CTA Section */}
       <div className=" pt-8 pb-18">
         <div className="section-container text-center">

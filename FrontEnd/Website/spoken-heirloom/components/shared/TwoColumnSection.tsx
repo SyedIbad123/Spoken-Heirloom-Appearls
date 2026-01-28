@@ -41,7 +41,7 @@ export default function TwoColumnSection({
   descriptionStyle,
   headerAlign = "left",
   children,
-  backgroundColor = "bg-background",
+  backgroundColor = "bg-primary",
   containerClassName = "",
   contentClassName = "",
   gap = "gap-12 lg:gap-16",
@@ -49,7 +49,7 @@ export default function TwoColumnSection({
   const imageSection = (
     <div className={`order-1 lg:order-${imagePosition === "left" ? "1" : "2"}`}>
       <div
-        className={`relative ${imageClassName || "aspect-4/5 rounded-3xl overflow-hidden"}`}
+        className={`relative ${imageClassName || "aspect-4/5 overflow-hidden"}`}
       >
         {image && typeof image === "string" ? (
           <Image
@@ -96,7 +96,7 @@ export default function TwoColumnSection({
   );
 
   return (
-    <section className={`py-section-md md:py-section-lg ${backgroundColor}`}>
+    <section className={`py-section-md md:py-section-sm ${backgroundColor}`}>
       <div className={`section-container ${containerClassName}`}>
         <div
           className={`grid grid-cols-1 lg:grid-cols-2 ${gap} items-center max-w-6xl mx-auto`}

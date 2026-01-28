@@ -10,6 +10,8 @@ import { images, packages, subscriptions } from "@/utils/constant";
 import MemoryVoiceBanner from "@/components/shared/MemoryVoiceBanner";
 
 import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import Button from "./Button";
 
 interface PackagesSectionProps {
   showStats?: boolean;
@@ -21,6 +23,10 @@ interface PackagesSectionProps {
   rightImage?: StaticImageData | null;
   heading?: string;
   sizeOfHeading?: string;
+  description?: string;
+  descriptionColor?: string;
+  descriptionStyle?: string;
+  showMemoryVoiceBanner?: boolean;
 }
 
 export default function PackagesSection({
@@ -29,6 +35,10 @@ export default function PackagesSection({
   bigHeading = "PACKAGES & SUBSCRIPTIONS PRICES",
   smallHeadingColor = "text-primary-foreground",
   bigHeadingColor = "text-primary-foreground",
+  description,
+  descriptionColor,
+  descriptionStyle,
+  showMemoryVoiceBanner = true,
   leftImage,
   rightImage,
   heading,
@@ -56,6 +66,9 @@ export default function PackagesSection({
             bigHeading={bigHeading}
             smallHeadingColor={smallHeadingColor}
             bigHeadingColor={bigHeadingColor}
+            description={description}
+            descriptionColor={descriptionColor}
+            descriptionStyle={descriptionStyle}
           />
 
           <PricingToggle activeTab={activeTab} onTabChange={setActiveTab} />
@@ -80,7 +93,54 @@ export default function PackagesSection({
           )}
         </div>
         {showStats && <Stats />}
-        <MemoryVoiceBanner
+
+        {showMemoryVoiceBanner && (
+          <div className="relative bg-primary-border/30 px-8 md:px-12 mt-8 h-100">
+            {/* CommonLeaf - Top Left */}
+            <div className="absolute -top-13.5 left-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none mix-blend-multiply">
+              <Image
+                src={images.CommonLeaf}
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* CommonLeaf - Bottom Right */}
+            <div className="absolute -bottom-13.5 right-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none mix-blend-multiply rotate-180">
+              <Image
+                src={images.CommonLeaf}
+                alt=""
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            {/* Content with Animation */}
+            <div className="flex flex-col justify-center items-center h-full animate-fade-in">
+              {/* CommonQuote Icon */}
+              <div className="mb-6 flex justify-center"></div>
+
+              {/* Author Info */}
+              <div className="text-center">
+                <p className="font-serif text-lg md:text-xl lg:text-4xl text-primary-foreground font-normal uppercase mb-1 tracking-wide whitespace-pre-line">
+                  {`Because some storiews deserve \n to be heard - Not just \n remembered`}
+                </p>
+                <div className="mt-8">
+                  <Button
+                    text={"Create Your Book"}
+                    textColor="text-olive"
+                    borderColor="border-olive"
+                    hoverBgColor="hover:bg-olive"
+                    hoverTextColor="hover:text-white"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* <MemoryVoiceBanner
           heading={heading}
           leftImage={
             typeof leftImage === "undefined"
@@ -93,7 +153,7 @@ export default function PackagesSection({
               : rightImage
           }
           sizeOfHeading={sizeOfHeading}
-        />
+        /> */}
       </section>
     </>
   );

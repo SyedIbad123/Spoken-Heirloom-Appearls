@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { images, processSteps } from "@/utils/constant";
+import { images } from "@/utils/constant";
+import ProcessStepsGrid from "@/components/shared/ProcessStepsGrid";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 export default function ProcessSection() {
@@ -37,36 +38,7 @@ export default function ProcessSection() {
           />
         </div>
 
-        {/* Process Flow Image */}
-        <div className="flex justify-center mb-16">
-          <Image
-            src={images.ProcessFlowSvg}
-            alt="Process Flow"
-            className="max-w-full h-auto"
-          />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-start">
-          {processSteps.map((step, index) => (
-            <div
-              key={step.step}
-              className="group relative flex flex-col items-center"
-            >
-              {index < processSteps.length - 1 && (
-                <div className="hidden md:block absolute top-0 -right-6 lg:-right-8 h-40 w-px bg-primary-foreground/30" />
-              )}
-
-              <div className="text-center max-w-xs">
-                <h3 className="font-serif text-heading-lg text-foreground mb-3 italic">
-                  {step.step} {step.title}
-                </h3>
-                <p className="text-foreground-muted text-body-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ProcessStepsGrid />
       </div>
     </section>
   );
