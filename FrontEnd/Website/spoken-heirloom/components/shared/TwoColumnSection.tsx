@@ -81,7 +81,7 @@ export default function TwoColumnSection({
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
-            key={image?.src || "img"}
+            key={typeof image !== "string" && image?.src ? image.src : "img"}
           />
         ) : null}
         {imageContent}
