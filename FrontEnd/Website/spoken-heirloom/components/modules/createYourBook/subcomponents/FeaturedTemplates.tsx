@@ -43,7 +43,6 @@ export default function FeaturedtemplateItems() {
               key={t.id}
               images={t.images}
               title={t.title}
-              description={t.description}
               price={t.price}
             />
           ))}
