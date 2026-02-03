@@ -61,26 +61,33 @@ export default function HeroSection() {
         {/* Main Content Container */}
         <div className="font-cormorant relative z-10 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-8 leading-tight max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-2 leading-tight max-w-5xl mx-auto">
             THE EVOLUTION OF THE
             <br />
             PHOTO ALBUM
           </h1>
 
           {/* Subheading */}
-          <p className="text-white text-base md:text-lg lg:text-xl text-center mb-10 md:mb-12 font-light tracking-wide max-w-2xl mx-auto">
+          <p className="text-white font-semibold text-base md:text-lg lg:text-xl text-center mb-10 md:mb-5 tracking-wide max-w-2xl mx-auto">
             Stories you can hear. Memories you can hold.
           </p>
 
           {/* CTA Button */}
-          <Button text="Build My Heirloom Today" className="mb-12 md:mb-16" />
+          <Button
+            text="Build My Heirloom Today"
+            className="mb-12 md:mb-16"
+            backgroundColor="bg-transparent"
+            textColor="text-primary"
+            hoverBgColor="hover:bg-primary"
+            hoverTextColor="hover:text-primary-foreground"
+          />
         </div>
 
         {/* Carousel Section at Bottom */}
         <div className="absolute bottom-0 left-0 right-0 z-20">
           {/* Carousel Container */}
           <div className="relative w-full">
-            <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-28">
+            <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-18">
               <div className="flex items-center justify-between">
                 <CarouselNavigation
                   currentIndex={currentSlide}
@@ -96,7 +103,7 @@ export default function HeroSection() {
       </section>
 
       <div
-        className="relative mb-72 -mt-40 h-0 after:content-[''] after:block after:mx-auto after:w-64 after:h-80 md:after:w-96 md:after:h-120 after:bg-no-repeat after:bg-center after:bg-cover after:border-10 after:border-white after:shadow-lg after:z-20 after:relative"
+        className="relative mb-72 -mt-26 h-0 after:content-[''] after:block after:mx-auto after:w-64 after:h-80 md:after:w-96 md:after:h-120 after:bg-no-repeat after:bg-center after:bg-cover after:border-10 after:border-white after:shadow-lg after:z-20 after:relative"
         style={
           {
             "--bg-image": `url(${images.ProcessSectionImage.src})`,

@@ -8,13 +8,13 @@ export default function AboutTheFounder() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Left Column - Text Content */}
           <div className="flex flex-col">
-            <h2 className=" font-cormorant  text-3xl md:text-4xl lg:text-5xl text-primary-foreground mb-8">
+            <h2 className=" font-cormorant text-3xl md:text-4xl lg:text-4xl font-semibold text-primary-foreground mb-8">
               {aboutFounderContent.heading}
             </h2>
 
-            <div className="font-sans hspace-y-6 text-primary-foreground">
+            <div className="font-sans space-y-6 text-primary-foreground">
               {aboutFounderContent.paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-body-sm leading-relaxed">
+                <p key={index} className="text-body-xs leading-relaxed">
                   {paragraph}
                 </p>
               ))}

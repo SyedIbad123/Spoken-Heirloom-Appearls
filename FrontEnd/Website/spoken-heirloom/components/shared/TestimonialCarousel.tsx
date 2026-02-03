@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import CarouselNavigation from "@/components/shared/CarouselNavigation";
 import { images as defaultImages, testimonials } from "@/utils/constant";
@@ -24,6 +24,15 @@ export default function TestimonialCarousel() {
     setActiveIndex(
       (prev) => (prev - 1 + testimonialList.length) % testimonialList.length,
     );
+
+  // Auto-play testimonials every 2.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   if (!testimonialList || testimonialList.length === 0) return null;
 

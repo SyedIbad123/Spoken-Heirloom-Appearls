@@ -85,24 +85,40 @@ export default function PackagesSection({
             className="font-sans"
           />
 
-          {activeTab === "packages" ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
-              {currentPricing.map((plan, index) => (
-                <PricingCard
-                  key={plan.name}
-                  name={plan.name}
-                  price={plan.price}
-                  period={(plan as any).period}
-                  features={plan.features}
-                  highlighted={plan.highlighted}
-                  cta={plan.cta}
-                  backgroundImage={getBackgroundImage(index)}
-                />
-              ))}
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{
+                transform:
+                  activeTab === "packages"
+                    ? "translateX(0%)"
+                    : "translateX(-100%)",
+              }}
+            >
+              {/* Packages View */}
+              <div className="w-full shrink-0" style={{ minWidth: "100%" }}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+                  {packages.map((plan, index) => (
+                    <PricingCard
+                      key={plan.name}
+                      name={plan.name}
+                      price={plan.price}
+                      period={(plan as any).period}
+                      features={plan.features}
+                      highlighted={plan.highlighted}
+                      cta={plan.cta}
+                      backgroundImage={packages[index].backgroundImage}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Subscription View */}
+              <div className="w-full shrink-0" style={{ minWidth: "100%" }}>
+                <SubscriptionView />
+              </div>
             </div>
-          ) : (
-            <SubscriptionView />
-          )}
+          </div>
         </div>
 
         {showStats && <Stats />}

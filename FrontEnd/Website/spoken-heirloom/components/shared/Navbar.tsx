@@ -37,7 +37,7 @@ export default function Navbar() {
             {/* Logo - center */}
             <Link
               href="/"
-              className="absolute left-1/2 -translate-x-1/2 translate-y-1/6 flex flex-col items-center bg-primary-light py-4 px-8 rounded-2xl shadow-sm "
+              className="absolute left-1/2 -translate-x-1/2 translate-y-1/6 flex flex-col items-center bg-primary-light py-4 px-8 rounded-2xl"
             >
               <div className="relative w-36 h-36 md:w-32 md:h-32 -my-4">
                 <Image
