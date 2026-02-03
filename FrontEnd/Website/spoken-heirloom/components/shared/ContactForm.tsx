@@ -53,10 +53,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
           descriptionColor={descriptionColor}
           description={description}
           descriptionStyle={descriptionStyle}
+          fontStyleSmallHeading="font-cormorant"
+          fontStyleBigHeading="font-cormorant"
         />
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-8">
+      <form onSubmit={handleSubmit} className="font-sans space-y-8">
         {/* Name field */}
         <div>
           <label

@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { images } from "@/utils/constant";
-import SectionHeader from "@/components/shared/SectionHeader";
-import Button from "@/components/shared/Button";
 import ContactForm from "./ContactForm";
 
 interface ContactSectionProps {
@@ -46,7 +44,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section className="py-section-md md:py-section-lg">
+    <section className="mt-20 ">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
           {/* Contact form */}

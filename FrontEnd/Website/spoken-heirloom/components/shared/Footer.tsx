@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="text-primary-foreground pt-0">
       {/* Instagram CTA Section */}
-      <div className=" pt-8 pb-18">
+      <div className="pt-0 pb-18">
         <div className="section-container text-center">
           <SectionHeader
             smallHeading="Instagram"
@@ -16,6 +16,8 @@ export default function Footer() {
             descriptionColor="text-primary-foreground"
             descriptionStyle="bold"
             headingTransformation="normal"
+            fontStyleSmallHeading="font-cormorant"
+            fontStyleBigHeading="font-cormorant"
           />
         </div>
       </div>
@@ -35,13 +37,33 @@ export default function Footer() {
               images.FooterImage05,
               images.FooterImage06,
             ].map((img, idx) => (
-              <div key={idx} className="aspect-4/4 w-full h-full relative">
+              <div
+                key={idx}
+                className="aspect-4/4 w-full h-full relative group overflow-hidden cursor-pointer"
+              >
                 <Image
                   src={img}
                   alt="Instagram"
                   fill
                   className="object-cover"
                 />
+
+                {/* Black overlay - fades in on hover */}
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out z-10"></div>
+
+                {/* Instagram logo - hidden below, slides up on hover */}
+                <div className="absolute inset-0 overflow-hidden z-20">
+                  <div className="absolute inset-0 flex items-center justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                    <div className="w-7 h-7 relative">
+                      <Image
+                        src={images.InstaLogo}
+                        alt="Instagram"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -59,13 +81,13 @@ export default function Footer() {
                   height={120}
                   className="mb-4"
                 />
-                <p className="text-primary font-serif text-xl font-semibold mb-2">
+                <p className="text-primary font-cormorant text-xl font-semibold mb-2">
                   Your Legacy, Told in Words, Images, and Sound.
                 </p>
               </div>
 
               <div className="flex flex-row items-center justify-center gap-3 mb-6">
-                <p className="text-primary font-serif text-xl font-semibold mb-4">
+                <p className="text-primary font-cormorant text-xl font-semibold mb-4">
                   Follow Us
                 </p>
                 <div className="flex flex-row gap-2">
@@ -112,7 +134,7 @@ export default function Footer() {
             {/* Quick Links */}
             <div className="relative pl-10">
               <span className="absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
-              <h4 className="text-primary font-serif text-2xl mb-4 ">
+              <h4 className="text-primary font-cormorant text-2xl mb-4 ">
                 Quick Links
               </h4>
               <ul className="space-y-1">
@@ -120,7 +142,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-primary text-sm transition-colors duration-200"
+                      className="font-sans text-primary text-sm transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -132,7 +154,7 @@ export default function Footer() {
             {/* Useful Links */}
             <div className="relative pl-10">
               <span className="absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
-              <h4 className="text-primary text-2xl font-serif mb-4">
+              <h4 className="text-primary text-2xl font-cormorant mb-4">
                 Useful Links
               </h4>
               <ul className="space-y-1">
@@ -140,7 +162,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-primary text-sm transition-colors duration-200"
+                      className="font-sans text-primary text-sm transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -153,11 +175,11 @@ export default function Footer() {
             <div className="relative pl-10">
               <span className="absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
 
-              <h4 className="text-primary text-md font-serif text-2xl mb-4">
+              <h4 className="text-primary text-md font-cormorant text-2xl mb-4">
                 Contact Info
               </h4>
               <ul className="text-primary text-sm space-y-3">
-                <li className="flex items-center gap-3">
+                <li className="font-sans flex items-center gap-3">
                   <svg
                     className="w-6 h-6 text-primary"
                     fill="none"
@@ -173,7 +195,7 @@ export default function Footer() {
                   </svg>
                   <span>support@thespokenheirloom.com</span>
                 </li>
-                <li className="flex items-center gap-3 text-md">
+                <li className="font-sans flex items-center gap-3 text-md">
                   <svg
                     className="w-6 h-6 text-primary"
                     fill="none"
@@ -210,7 +232,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="relative py-2 bg-primary-foreground">
         <span className="block absolute inset-x-2 top-0 h-px bg-primary/30"></span>
-        <div className="section-container flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary">
+        <div className="font-sans section-container flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary">
           <p>
             © 2026 The Spoken Heirloom LLC. Patent Pending.
             <br />

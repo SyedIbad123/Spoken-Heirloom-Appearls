@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import SectionHeader from "./SectionHeader";
+import CarouselNavigation from "./CarouselNavigation";
 
 interface TwoColumnSectionProps {
   // Image props
@@ -25,6 +26,16 @@ interface TwoColumnSectionProps {
   gap?: string;
 
   children?: React.ReactNode;
+
+  // Carousel navigation props
+  showNavigation?: boolean;
+  navigationProps?: {
+    currentIndex: number;
+    totalItems: number;
+    onPrev: () => void;
+    onNext: () => void;
+    variant?: "light" | "dark";
+  };
 }
 
 export default function TwoColumnSection({
@@ -45,11 +56,14 @@ export default function TwoColumnSection({
   containerClassName = "",
   contentClassName = "",
   gap = "gap-12 lg:gap-16",
+  showNavigation = false,
+  navigationProps,
 }: TwoColumnSectionProps) {
   const imageSection = (
     <div className={`order-1 lg:order-${imagePosition === "left" ? "1" : "2"}`}>
       <div
         className={`relative ${imageClassName || "aspect-4/5 overflow-hidden"}`}
+        key={typeof image === "string" ? image : undefined}
       >
         {image && typeof image === "string" ? (
           <Image
@@ -58,6 +72,7 @@ export default function TwoColumnSection({
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
+            key={image}
           />
         ) : image ? (
           <Image
@@ -66,10 +81,16 @@ export default function TwoColumnSection({
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
+            key={image?.src || "img"}
           />
         ) : null}
         {imageContent}
       </div>
+      {showNavigation && navigationProps && (
+        <div className="mt-10 text-center flex justify-center">
+          <CarouselNavigation {...navigationProps} />
+        </div>
+      )}
     </div>
   );
 
@@ -88,6 +109,9 @@ export default function TwoColumnSection({
             showWhirl={showWhirl}
             descriptionColor={descriptionColor}
             descriptionStyle={descriptionStyle}
+            alignment={`${headerAlign === "center" ? "center" : headerAlign === "right" ? "right" : "left"}`}
+            fontStyleBigHeading="font-cormorant"
+            fontStyleDescription="font-sansh"
           />
         </div>
       )}

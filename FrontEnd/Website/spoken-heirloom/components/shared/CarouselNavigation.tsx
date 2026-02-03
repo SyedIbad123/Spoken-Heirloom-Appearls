@@ -7,6 +7,8 @@ interface CarouselNavigationProps {
   onPrev: () => void;
   onNext: () => void;
   variant?: "light" | "dark";
+  widthOfArrow?: string;
+  sizeOfNumber?: string;
 }
 
 export default function CarouselNavigation({
@@ -15,6 +17,8 @@ export default function CarouselNavigation({
   onPrev,
   onNext,
   variant = "light",
+  widthOfArrow,
+  sizeOfNumber = "text-base",
 }: CarouselNavigationProps) {
   const textColor =
     variant === "light" ? "text-white" : "text-primary-foreground";
@@ -24,16 +28,16 @@ export default function CarouselNavigation({
     variant === "light" ? images.RightArrowWhite : images.RightArrowOlive;
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-2">
       <button onClick={onPrev} className="cursor-pointer">
         <Image
           src={leftArrow}
           alt="Previous"
-          className="object-cover w-20 md:w-28 h-full"
+          className={`object-cover ${widthOfArrow} h-full`}
         />
       </button>
       <div
-        className={`${textColor} text-sm md:text-base font-light tracking-widest`}
+        className={`${textColor} ${sizeOfNumber} font-semibold font-serif tracking-widest`}
       >
         {String(currentIndex + 1)}/{String(totalItems)}
       </div>
@@ -41,7 +45,7 @@ export default function CarouselNavigation({
         <Image
           src={rightArrow}
           alt="Next"
-          className="object-cover w-20 md:w-28 h-full"
+          className={`object-cover ${widthOfArrow} h-full`}
         />
       </button>
     </div>

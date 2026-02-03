@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { images } from "@/utils/constant";
 
 interface SectionHeaderProps {
@@ -6,13 +6,22 @@ interface SectionHeaderProps {
   bigHeading: string;
   description?: string;
   showWhirl?: boolean;
-  alignment?: "left" | "center" | "right";
+  alignment?:
+    | "left"
+    | "center"
+    | "right"
+    | "text-right"
+    | "text-left"
+    | "text-center";
   smallHeadingColor?: string;
   bigHeadingColor?: string;
   descriptionColor?: string;
   descriptionStyle?: string;
   className?: string;
   headingTransformation?: string;
+  fontStyleBigHeading?: string;
+  fontStyleDescription?: string;
+  fontStyleSmallHeading?: string;
 }
 
 export default function SectionHeader({
@@ -27,6 +36,9 @@ export default function SectionHeader({
   className = "",
   descriptionStyle = "italic",
   headingTransformation = "uppercase",
+  fontStyleBigHeading,
+  fontStyleDescription,
+  fontStyleSmallHeading,
 }: SectionHeaderProps) {
   const alignmentClass =
     alignment === "left"
@@ -47,7 +59,7 @@ export default function SectionHeader({
       {/* Small heading (optional) */}
       {smallHeading && (
         <p
-          className={`${smallHeadingColor} font-medium text-body-sm tracking-wider mb-3`}
+          className={`${smallHeadingColor} ${fontStyleSmallHeading} font-bold text-body-sm tracking-wider mb-3`}
         >
           {smallHeading}
         </p>
@@ -55,7 +67,7 @@ export default function SectionHeader({
 
       {/* Big heading */}
       <h2
-        className={`font-serif text-display-sm md:text-display-md ${bigHeadingColor} ${headingTransformation == "uppercase" ? "uppercase" : ""} mb-4 whitespace-pre-line`}
+        className={`${fontStyleBigHeading} font-semibold text-display-sm md:text-display-sm ${bigHeadingColor} ${headingTransformation == "uppercase" ? "uppercase" : ""} mb-4 whitespace-pre-line`}
       >
         {bigHeading}
       </h2>
@@ -63,14 +75,16 @@ export default function SectionHeader({
       {/* Description (optional) */}
       {description && (
         <p
-          className={`${descriptionColor} text-body-md font-serif ${
+          className={`${descriptionColor} ${fontStyleDescription} text-body-md ${
             descriptionStyle === "bold"
               ? "font-bold"
-              : descriptionStyle === "normal"
-                ? "font-normal"
-                : descriptionStyle === "light"
-                  ? "font-light"
-                  : "italic"
+              : descriptionStyle === "medium"
+                ? "font-medium"
+                : descriptionStyle === "normal"
+                  ? "font-normal"
+                  : descriptionStyle === "light"
+                    ? "font-light"
+                    : "italic"
           } max-w-4xl ${alignment === "center" ? "mx-auto" : ""} mb-6 whitespace-pre-line`}
         >
           {description}

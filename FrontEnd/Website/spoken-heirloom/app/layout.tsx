@@ -1,9 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
+import { Seaweed_Script } from "next/font/google";
 import Navbar from "@/components/shared/Navbar";
-import Footer from "@/components/shared/Footer";
+import ConditionalFooter from "@/components/shared/ConditionalFooter";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const seaweed = Seaweed_Script({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-seaweed",
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,11 +51,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased bg-primary`}
+        className={`${cormorant.variable} ${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${seaweed.variable}  antialiased bg-primary overflow-x-hidden`}
       >
         <Navbar />
         <main>{children}</main>
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );

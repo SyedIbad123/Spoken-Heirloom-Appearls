@@ -4,10 +4,17 @@ import Image from "next/image";
 import { inspirationGalleryCards } from "@/utils/constant";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { CircleAlert } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function InspirationGallery() {
+  const router = useRouter();
+
+  const navigate = () => {
+    router.push("/books");
+  };
+
   return (
-    <section className="py-section-md md:py-section-sm bg-primary">
+    <section className="bg-primary -mt-14">
       <div className="section-container">
         <SectionHeader
           smallHeading="Books"
@@ -16,6 +23,9 @@ export default function InspirationGallery() {
           showWhirl={false}
           descriptionColor="text-primary-foreground"
           descriptionStyle="bold"
+          fontStyleSmallHeading="font-cormorant"
+          fontStyleBigHeading="font-cormorant"
+          fontStyleDescription="font-cormorant"
         />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
@@ -23,6 +33,7 @@ export default function InspirationGallery() {
             <div
               key={card.title}
               className="group cursor-pointer bg-white flex flex-col h-full transition-transform hover:-translate-y-1"
+              onClick={navigate}
             >
               <div className="relative mb-2 aspect-3/4 h-44 overflow-hidden">
                 <Image
@@ -34,10 +45,10 @@ export default function InspirationGallery() {
                 />
               </div>
               <div className="p-5 pb-8">
-                <h3 className="text-xl md:text-xl font-serif font-semibold text-primary-foreground mb-2">
+                <h3 className="text-xl md:text-xl font-cormorant font-extrabold text-primary-foreground mb-2">
                   {card.title}
                 </h3>
-                <p className="text-sm text-primary-foreground pr-10">
+                <p className="text-sm font-light font-sans text-primary-foreground pr-10">
                   {card.description}
                 </p>
               </div>

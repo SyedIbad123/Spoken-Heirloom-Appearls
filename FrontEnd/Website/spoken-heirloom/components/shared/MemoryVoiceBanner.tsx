@@ -22,8 +22,8 @@ export default function MemoryVoiceBanner({
   const hasImages = leftImage && rightImage;
 
   return (
-    <section className="relative py-20 md:py-12 overflow-visible bg-primary-border/30">
-      <div className="relative">
+    <section className="relative py-20 md:py-12 mt-20 overflow-visible bg-primary-border/30">
+      <div className="font-cormorant relative">
         {hasImages && (
           <div className="absolute -top-29.5 left-10 sm:-top-29.5 sm:left-20 md:-top-29.5 md:left-40 lg:-top-24.5 lg:left-65 xl:-top-31.5 xl:left-80 2xl:-top-35 2xl:left-96 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-52 lg:h-52 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply">
             <Image
@@ -74,20 +74,22 @@ export default function MemoryVoiceBanner({
               borderColor="border-olive"
               hoverBgColor="hover:bg-olive"
               hoverTextColor="hover:text-white"
+              className="font-semibold! text-xl"
+              navigateTo="/create-your-book"
             />
           </div>
 
           {/* Right Image */}
           {hasImages ? (
-            <div className="flex justify-center lg:justify-start relative">
-              <div className="relative w-full max-w-lg">
+            <div className="relative flex justify-center lg:justify-start">
+              <div className=" w-full max-w-lg">
                 <Image
                   src={rightImage}
                   alt=""
                   className="w-full h-auto object-contain z-10 relative"
                 />
                 {/* CommonLeaf on right image - left bottom corner */}
-                <div className="absolute -bottom-20 -left-20 sm:-bottom-24 sm:-left-28 md:-bottom-32 md:-left-36 lg:-bottom-32 lg:-left-44 xl:-bottom-29.5 xl:-left-48 2xl:-bottom-35.5 2xl:-left-56 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply rotate-180 z-0">
+                <div className="absolute -bottom-20 -left-20 sm:-bottom-24 sm:-left-28 md:-bottom-32 md:-left-36 lg:-bottom-29.5 lg:-left-44 xl:-bottom-31.5 xl:-left-48 2xl:-bottom-35.5 2xl:-left-56 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply rotate-180 z-0">
                   <Image
                     src={images.CommonLeaf}
                     alt=""

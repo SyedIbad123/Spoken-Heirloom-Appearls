@@ -3,7 +3,7 @@ import { images } from "@/utils/constant";
 
 export default function MemoryVoiceSection() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-primary">
+    <section className="relative py-16 md:py-20 overflow-hidden bg-primary">
       <div className="section-container relative">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
           {/* Left Image */}
@@ -19,7 +19,7 @@ export default function MemoryVoiceSection() {
 
           {/* Center Text */}
           <div className="flex items-center justify-center">
-            <h2 className="font-serif font-semibold text-3xl md:text-4xl lg:text-4xl text-primary-foreground text-center leading-tight uppercase">
+            <h2 className="font-cormorant font-semibold text-3xl md:text-4xl lg:text-4xl text-primary-foreground text-center leading-tight uppercase">
               BECAUSE EVERY
               <br />
               MEMORY DESERVES

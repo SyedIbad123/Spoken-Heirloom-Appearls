@@ -23,7 +23,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ faqs }) => {
       {faqs.map((faq, idx) => (
         <div key={idx} className="border-b border-primary-foreground">
           <button
-            className="w-full text-left py-5 px-2 font-serif text-lg md:text-base text-primary-foreground flex justify-between items-center focus:outline-none"
+            className="w-full text-left py-5 px-2 font-cormorant font-bold text-lg md:text-base text-primary-foreground flex justify-between items-center focus:outline-none"
             onClick={() => handleToggle(idx)}
             aria-expanded={openIndex === idx}
           >
@@ -45,7 +45,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ faqs }) => {
             </span>
           </button>
           {openIndex === idx && (
-            <div className="px-2 pb-6 text-xs text-primary-foreground/80 animate-fade-in">
+            <div className="font-sans px-2 pb-6 text-xs text-primary-foreground/80 animate-fade-in">
               {faq.answer}
             </div>
           )}

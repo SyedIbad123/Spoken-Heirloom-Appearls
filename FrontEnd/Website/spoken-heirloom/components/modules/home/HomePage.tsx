@@ -1,13 +1,14 @@
+import TestimonialsSection from "@/components/shared/TestimonialsSection";
 import {
   HeroSection,
   ProcessSection,
   InspirationGallery,
   BrandStorySection,
   PackagesSection,
-  TestimonialsSection,
 } from "./subcomponent";
 
 import { ContactSection } from "@/components/shared/ContactSection";
+import { images } from "@/utils/constant";
 
 export default function HomePage() {
   return (
@@ -16,7 +17,10 @@ export default function HomePage() {
       <ProcessSection />
       <InspirationGallery />
       <BrandStorySection />
-      <PackagesSection />
+      <PackagesSection
+        leftImage={images.MemoryLeftImage}
+        rightImage={images.MemoryRightImage}
+      />
       <TestimonialsSection />
       <ContactSection />
     </>

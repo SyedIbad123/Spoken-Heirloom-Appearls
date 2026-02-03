@@ -59,9 +59,11 @@ const config: Config = {
         ring: "#B8860B",
       },
       fontFamily: {
+        cormorant: ["Cormorant Garamond", "Georgia", "serif"],
         serif: ["Playfair Display", "Georgia", "Cambria", "serif"],
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-geist-mono)", "monospace"],
+        seaweed: ["var(--font-seaweed)", "cursive"],
       },
       fontSize: {
         "display-xl": [

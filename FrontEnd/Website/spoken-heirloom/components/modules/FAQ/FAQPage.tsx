@@ -3,7 +3,7 @@
 import { ContactSection } from "@/components/shared/ContactSection";
 import { images } from "@/utils/constant";
 import CommonHeroSection from "@/components/shared/CommonHeroSection";
-import { FAQDetails } from "./subcomponent";
+import { FAQDetails } from "./subcomponents";
 
 export default function FAQPage() {
   return (

@@ -26,12 +26,10 @@ export default function PricingCard({
   onCtaClick,
 }: PricingCardProps) {
   return (
-    <div className="relative">
-      {/* CommonLeaf decoration at top left */}
-
+    <div className="relative group">
       {/* Card container */}
-      <div className="relative overflow-hidden">
-        <div className="absolute top-0 -left-4 w-72 h-72 z-20 pointer-events-none mix-blend-multiply">
+      <div className="font-cormorant relative overflow-hidden transition-transform duration-900 ease-in-out group-hover:translate-y-6">
+        <div className="absolute top-0 -left-4 w-72 h-72 z-20 pointer-events-none mix-blend-multiply! transition-all duration-900 ease-in-out group-hover:w-60 hover:mix-blend-multiply!">
           <Image src={images.CommonLeaf} alt="" className="object-contain" />
         </div>
         {/* Background image */}
@@ -42,7 +40,7 @@ export default function PricingCard({
         {/* Content */}
         <div className="relative z-10 px-8 py-12 md:px-10 md:py-24 flex flex-col items-center text-center min-h-170">
           {/* Plan name */}
-          <h3 className="font-serif text-xl md:text-xl text-primary-foreground mb-6 uppercase tracking-wider">
+          <h3 className=" text-xl md:text-xl text-primary-foreground mb-6 uppercase tracking-wider">
             {name}
           </h3>
 
@@ -72,7 +70,7 @@ export default function PricingCard({
             {features.map((feature, index) => (
               <li
                 key={index}
-                className="flex gap-2 text-primary-foreground text-body-sm"
+                className="flex gap-2 text-primary-foreground font-semibold text-body-md"
               >
                 <span className="flex-1"> • {feature}</span>
               </li>
@@ -80,17 +78,24 @@ export default function PricingCard({
           </ul>
 
           {/* CTA button */}
-          <Button
-            text={cta}
-            onClick={onCtaClick}
-            backgroundColor={
-              highlighted ? "bg-primary-foreground" : "bg-transparent"
-            }
-            textColor={highlighted ? "text-white" : "text-primary-foreground"}
-            borderColor="border-primary-foreground"
-            hoverBgColor="hover:bg-primary-foreground"
-            hoverTextColor="hover:text-white"
-          />
+          <div
+            className={`transition-all duration-900 ease-in-out ${
+              highlighted
+                ? "group-hover:[&>button]:bg-white group-hover:[&>button]:text-primary-foreground"
+                : "group-hover:[&>button]:bg-primary-foreground group-hover:[&>button]:text-white"
+            }`}
+          >
+            <Button
+              text={cta}
+              onClick={onCtaClick}
+              backgroundColor={
+                highlighted ? "bg-primary-foreground" : "bg-transparent"
+              }
+              textColor={highlighted ? "text-white" : "text-primary-foreground"}
+              borderColor="border-primary-foreground"
+              className="transition-all duration-900 ease-in-out"
+            />
+          </div>
         </div>
       </div>
     </div>

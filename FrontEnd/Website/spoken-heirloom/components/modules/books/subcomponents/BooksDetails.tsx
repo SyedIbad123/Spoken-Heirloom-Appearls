@@ -5,28 +5,35 @@ import Image from "next/image";
 import { galleryCategories, bookImages } from "@/utils/constant";
 import Button from "@/components/shared/Button";
 import SectionHeader from "@/components/shared/SectionHeader";
+import { useRouter } from "next/navigation";
 
 const BooksDetails: React.FC = () => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState(galleryCategories[0]);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   const displayedImages = bookImages;
+
+  const navigate = () => {
+    router.push("/InnerBook");
+  };
 
   return (
     <div className="py-10 px-2 md:px-0">
       <SectionHeader
         bigHeading="EXPLORE HEIRLOOM INSPIRATION"
         className="text-center text-3xl md:text-4xl font-serif mb-2 text-primary-foreground tracking-wide"
+        fontStyleBigHeading="font-cormorant"
       />
-      <div className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
+      <div className="font-cormorant  flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
         {galleryCategories.map((category) => (
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`text-body-sm  transition-all duration-300 pb-2 relative ${
+            className={`text-body-sm transition-all duration-300 pb-2 relative ${
               activeCategory === category
                 ? "font-bold text-primary-foreground"
-                : "font-medium text-primary-foreground"
+                : "font-normal text-primary-foreground"
             }`}
           >
             {category}
@@ -41,29 +48,32 @@ const BooksDetails: React.FC = () => {
         {displayedImages.map((img, idx) => (
           <div
             key={idx}
-            className="relative group overflow-hidden bg-white"
+            className="relative group overflow-hidden bg-white cursor-pointer"
             onMouseEnter={() => setHoveredIdx(idx)}
             onMouseLeave={() => setHoveredIdx(null)}
+            onClick={navigate}
           >
             <Image
               src={img.main}
               alt={`Book inspiration ${idx + 1}`}
-              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-full object-cover"
               width={400}
               height={400}
               priority={idx < 3}
             />
             {/* Hover pop-up */}
             <div
-              className={`absolute bottom-4 right-4 z-10 bg-[#eae5dd] text-primary-foreground text-lg font-serif rounded-md shadow-lg transition-all duration-300
+              className={`text-center absolute bottom-0 right-0 z-10 bg-primary-border text-primary-foreground text-xs font-cormorant font-bold transition-all duration-400 ease-in-out opacity-100
                 ${
                   hoveredIdx === idx
-                    ? "opacity-100 scale-105 pt-8 pl-8 pb-4 pr-4 translate-x-0 translate-y-0"
-                    : "opacity-0 scale-90 pt-2 pl-2 pb-2 pr-4 pointer-events-none translate-x-8 translate-y-8"
+                    ? "pt-12 pl-12 pb-12 pr-8 translate-x-0"
+                    : "pt-2 pl-2 pb-2 pr-4 pointer-events-none translate-x-full"
                 }`}
-              style={{ minWidth: 220, maxWidth: 320 }}
+              style={{ minWidth: 100, maxWidth: 260 }}
             >
-              <div className="transition-all duration-300">{img.text}</div>
+              <div className="text-xs transition-all duration-300">
+                {img.text}
+              </div>
             </div>
           </div>
         ))}
@@ -71,11 +81,12 @@ const BooksDetails: React.FC = () => {
       <div className="flex justify-center mt-12">
         <Button
           text="Load More"
-          className="mb-10 md:mb-4"
+          className="mb-10 md:mb-4 font-cormorant! font-bold!"
           textColor="text-olive"
           borderColor="border-olive"
           hoverBgColor="hover:bg-olive"
           hoverTextColor="hover:text-white"
+          navigateTo="/create-your-book"
         />
       </div>
     </div>

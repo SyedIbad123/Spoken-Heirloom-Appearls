@@ -9,7 +9,7 @@ export default function BrandStorySection() {
   return (
     <>
       {/* Brand Story Section */}
-      <section className="py-section-md md:py-section-lg bg-primary">
+      <section className="mt-20 mb-18 bg-primary">
         <div className="section-container">
           {/* Section Header */}
           <SectionHeader
@@ -18,6 +18,8 @@ export default function BrandStorySection() {
             showWhirl={true}
             smallHeadingColor="text-primary-foreground"
             bigHeadingColor="text-primary-foreground"
+            fontStyleSmallHeading="font-cormorant"
+            fontStyleBigHeading="font-cormorant"
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center mt-12">
@@ -61,7 +63,7 @@ export default function BrandStorySection() {
 
               {/* Content */}
               <div className="relative z-10 text-center">
-                <h3 className="font-serif text-center font-semibold text-2xl md:text-3xl lg:text-4xl text-primary-foreground mb-12 leading-tight uppercase">
+                <h3 className="font-cormorant text-center font-semibold text-2xl md:text-3xl lg:text-4xl text-primary-foreground mb-12 leading-tight uppercase">
                   PRESERVING THE STORIES,
                   <br />
                   AND VOICES THAT DESERVE
@@ -69,7 +71,7 @@ export default function BrandStorySection() {
                   TO LAST FOREVER
                 </h3>
 
-                <div className="space-y-5  text-primary-foreground/80 text-body-md md:text-body-sm leading-normal tracking-tight max-w-lg mx-auto">
+                <div className="space-y-5 font-sans text-primary-foreground/80 text-body-md md:text-body-sm leading-normal tracking-tight max-w-lg mx-auto">
                   <p>
                     At The Spoken Heirloom, we believe every family has a
                     treasure chest of stories moments passed around the dinner
@@ -95,6 +97,8 @@ export default function BrandStorySection() {
                     borderColor="border-olive"
                     hoverBgColor="hover:bg-olive"
                     hoverTextColor="hover:text-white"
+                    className="font-cormorant text-xl!"
+                    navigateTo="/about"
                   />
                 </div>
               </div>

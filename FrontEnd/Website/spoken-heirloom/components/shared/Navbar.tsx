@@ -5,18 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { images, navLinks } from "@/utils/constant";
 import Image from "next/image";
+import Button from "./Button";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full">
+    <header className="sticky top-0 z-50 w-full shadow-md">
       <nav className="bg-primary-light backdrop-blur-sm border-b border-primary/20">
         <div className=" px-8 mx-2">
           <div className="flex items-center h-16 md:h-20 relative">
             {/* All nav links - left side */}
-            <div className="hidden lg:flex items-center gap-8 md:gap-4">
+            <div className="hidden lg:flex items-center gap-8 md:gap-4 font-sans font-extralight">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -24,7 +25,7 @@ export default function Navbar() {
                     key={link.label}
                     href={link.href}
                     className={`text-primary-foreground/90 text-body-xs transition-colors duration-200 ${
-                      isActive ? "font-extrabold" : "font-medium"
+                      isActive ? "font-bold" : "font-medium"
                     }`}
                   >
                     {link.label}
@@ -36,7 +37,7 @@ export default function Navbar() {
             {/* Logo - center */}
             <Link
               href="/"
-              className="absolute left-1/2 -translate-x-1/2 translate-y-1/6 flex flex-col items-center z-10 bg-primary-light py-4 px-8 rounded-2xl"
+              className="absolute left-1/2 -translate-x-1/2 translate-y-1/6 flex flex-col items-center bg-primary-light py-4 px-8 rounded-2xl shadow-sm "
             >
               <div className="relative w-36 h-36 md:w-32 md:h-32 -my-4">
                 <Image
@@ -51,20 +52,12 @@ export default function Navbar() {
 
             {/* Right actions */}
             <div className="flex items-center gap-4 ml-auto">
-              <button className="hidden md:flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
+              <button className="hidden md:flex items-center gap-2">
+                <Image
+                  src={images.NavbarCartLogo}
+                  alt="Book Preview 1"
+                  className="w-5 h-5 object-contain"
+                />
               </button>
               <div className="hidden md:flex items-center gap-2">
                 <span className="text-primary-foreground/80 text-body-sm font-medium">
@@ -82,12 +75,15 @@ export default function Navbar() {
                   </span>
                 </div>
               </div>
-              <Link
-                href="#"
-                className="hidden md:inline-flex items-center gap-2 px-5 py-2  text-foreground/50 border-foreground/50 border-2 text-body-sm font-medium"
-              >
-                Login Now
-              </Link>
+
+              <Button
+                text="Login Now"
+                textColor="text-primary-foreground"
+                borderColor="border-olive"
+                hoverBgColor="hover:bg-olive"
+                hoverTextColor="hover:text-white"
+                className="hidden md:inline-flex items-center gap-2 md:px-5! md:py-2! font-medium font-cormorant"
+              />
 
               {/* Mobile menu button */}
               <button

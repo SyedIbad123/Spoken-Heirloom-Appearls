@@ -1,5 +1,7 @@
 import NavbarLogo from "@/assets/logo_navbar.png";
-import USLogo from "@/assets/US_flag.png";
+import NavbarCartLogo from "@/assets/Navbar_Cart_Logo.svg";
+import USLogo from "@/assets/US_flag.svg";
+import InstaLogo from "@/assets/Insta_Logo.svg";
 import HeroSectionImage01 from "@/assets/Hero_Section_Image_01.png";
 import HeroSectionImage02 from "@/assets/Hero_Section_Image_02.png";
 import HeroSectionImage03 from "@/assets/Hero_Section_Image_03.png";
@@ -59,12 +61,46 @@ import BookPageImage10 from "@/assets/Books_Page_Image_10.svg";
 import BookPageImage11 from "@/assets/Books_Page_Image_11.svg";
 import BookPageImage12 from "@/assets/Books_Page_Image_12.svg";
 import HowItWorksMainImage from "@/assets/HowItWorks_Main_Image.svg";
+import HowItWorksMainImage02 from "@/assets/HowItWorks_Main_Image02.svg";
+import HowItWorksMainImage03 from "@/assets/HowItWorks_Main_Image03.svg";
+import InnerBookMainImage01 from "@/assets/InnerBook_Main_Image01.svg";
+import InnerBookMainImage02 from "@/assets/InnerBook_Main_Image02.svg";
+import InnerBookMainImage03 from "@/assets/InnerBook_Main_Image03.svg";
+import InnerBookMainImage04 from "@/assets/InnerBook_Main_Image04.svg";
+import InnerBookGridImage01 from "@/assets/InnerBook_Grid_Image01.svg";
+import InnerBookGridImage02 from "@/assets/InnerBook_Grid_Image02.svg";
+import InnerBookGridImage03 from "@/assets/InnerBook_Grid_Image03.svg";
+import InnerBookGridImage04 from "@/assets/InnerBook_Grid_Image04.svg";
+import InnerBookGridImage05 from "@/assets/InnerBook_Grid_Image05.svg";
+import InnerBookGridImage06 from "@/assets/InnerBook_Grid_Image06.svg";
+import FeaturedTemplateImage01 from "@/assets/Featured_Template_Image01.svg";
+import FeaturedTemplateImage02 from "@/assets/Featured_Template_Image02.jpg";
+import FeaturedTemplateImage03 from "@/assets/Featured_Template_Image03.svg";
+import FeaturedTemplateImage04 from "@/assets/Featured_Template_Image04.svg";
+import CreateYouBookReadyToBeginImage from "@/assets/CreateYourBook_ReadyToBegin_Image.png";
+import CreateYourBookJourneyImage from "@/assets/CreateYourBook_Journey_Image.svg";
+import CreateYourBookMemoriesCloudLogo from "@/assets/CreateYourBook_Cloud_Logo.svg";
+import CreateYourBookEncryptionLogo from "@/assets/CreateYourBook_encryption_logo.svg";
+import CreateYourBookMemoriesLogo from "@/assets/CreateYourBook_Memories_Logo.svg";
+import CreateYourBookMemoriesMainImage from "@/assets/CreateYourBook_Memories_Main_Image.svg";
+import CreateYourBookMemoriesBackgroundImage from "@/assets/CreateYourBook_Memories_Background_Image.svg";
+import CreateYourBookStepThreeFirstImage from "@/assets/CreateYourBook_Step_Three_First_Image.svg";
+import CreateYourBookStepThreeSecondImage from "@/assets/CreateYourBook_Step_Three_Second_Image.svg";
+import CreateYourBookStepThreeThirdImage from "@/assets/CreateYourBook_Step_Three_Third_Image.svg";
+import AboutFounderImage from "@/assets/About_Founder_Image.svg";
+import AboutOurMissionImage from "@/assets/About_Our_Mission_Image.svg";
+import AboutOurVisionImage from "@/assets/About_Our_Vision_Image.svg";
+import AboutWhatWeDoImage from "@/assets/About_What_We_Do_Image.svg";
 
 import ContactPageHero from "@/assets/Contact_Page_Hero.svg";
 import PricingPageHero from "@/assets/Pricing_Page_Hero.svg";
 import FAQPageHero from "@/assets/FAQ_Page_Hero.svg";
 import BookPageHero from "@/assets/Book_Page_Hero.svg";
 import HowItWorksPageHero from "@/assets/HowItWorks_Page_Hero.svg";
+import InnerBookPageHero from "@/assets/InnerBook_Page_Hero.svg";
+import CreateYourBookPageHero from "@/assets/CreateYourBook_Hero_Image.jpg";
+import AboutHeroImage from "@/assets/About_Hero_Image.svg";
+import CreateYourBookStepFourDefaultTemplateImage from "@/assets/CreateYourBook_Step_Four_Template_Default_Image.svg";
 
 import CommonWhirl from "@/assets/Common_Whirl.svg";
 import CommonLeaf from "@/assets/Common_Leaf.svg";
@@ -75,9 +111,8 @@ import CommonArrowdown from "@/assets/Arrow_down.svg";
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Books", href: "/books" },
   { label: "How It Works", href: "/HowItWorks" },
-  { label: "Create Your Book", href: "#" },
+  { label: "Create Your Book", href: "create-your-book" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ/Support", href: "/FAQ" },
   { label: "Contact", href: "/contact" },
@@ -85,7 +120,9 @@ export const navLinks = [
 
 export const images = {
   NavbarLogo,
+  NavbarCartLogo,
   USLogo,
+  InstaLogo,
   HeroSectionImage01,
   HeroSectionImage02,
   HeroSectionImage03,
@@ -145,12 +182,46 @@ export const images = {
   BookPageImage11,
   BookPageImage12,
   HowItWorksMainImage,
+  HowItWorksMainImage02,
+  HowItWorksMainImage03,
+  InnerBookMainImage01,
+  InnerBookMainImage02,
+  InnerBookMainImage03,
+  InnerBookMainImage04,
+  InnerBookGridImage01,
+  InnerBookGridImage02,
+  InnerBookGridImage03,
+  InnerBookGridImage04,
+  InnerBookGridImage05,
+  InnerBookGridImage06,
+  FeaturedTemplateImage01,
+  FeaturedTemplateImage02,
+  FeaturedTemplateImage03,
+  FeaturedTemplateImage04,
+  CreateYouBookReadyToBeginImage,
+  CreateYourBookJourneyImage,
+  CreateYourBookMemoriesCloudLogo,
+  CreateYourBookEncryptionLogo,
+  CreateYourBookMemoriesLogo,
+  CreateYourBookMemoriesMainImage,
+  CreateYourBookMemoriesBackgroundImage,
+  CreateYourBookStepThreeFirstImage,
+  CreateYourBookStepThreeSecondImage,
+  CreateYourBookStepThreeThirdImage,
+  AboutFounderImage,
+  AboutOurMissionImage,
+  AboutOurVisionImage,
+  AboutWhatWeDoImage,
+  CreateYourBookStepFourDefaultTemplateImage,
 
   ContactPageHero,
   PricingPageHero,
   FAQPageHero,
   BookPageHero,
   HowItWorksPageHero,
+  InnerBookPageHero,
+  CreateYourBookPageHero,
+  AboutHeroImage,
 
   CommonWhirl,
   CommonLeaf,
@@ -173,7 +244,7 @@ export const processSteps = [
       "Use our pre-made layouts to drag and drop your memories. QR codes are automatically generated to bring each page to life when scanned.",
   },
   {
-    step: "03.",
+    step: "3.",
     title: "Print & Cherish",
     description:
       "Order your professionally bound heirloom book and keep it for generations. A digital version is always included.",
@@ -222,6 +293,9 @@ export const galleryItems = [
 export const marqueeItems = [
   "Every Family Has a Story Worth Hearing",
   "Preserve Voices, Cherish Moments, Create Heirlooms",
+  "Let Memories Speak for Generations",
+  "More than Because one day. Hearing their voice will mean everything",
+  "So your children's children will know the sound of love.",
 ];
 
 // Inspiration Gallery Card Data (must be after images export)
@@ -394,128 +468,450 @@ export const faqData = [
   },
   {
     question: "How does it work?",
-    answer: "...",
+    answer:
+      "You simply upload your photos, stories, and recordings to our platform, choose your design, and we turn them into a beautiful, interactive memory book.",
   },
   {
     question:
       "What’s the difference between a one-time book and a subscription?",
-    answer: "...",
+    answer:
+      "A one-time book is a single project, while a subscription allows you to add memories over time and receive regular prompts to keep your story growing.",
   },
   {
     question: "How does the monthly subscription work?",
-    answer: "...",
+    answer:
+      "With a monthly subscription, you receive prompts and can add new memories each month, which are automatically included in your ongoing book.",
   },
   {
     question: "Can I choose how often I receive prompts?",
-    answer: "...",
+    answer:
+      "Yes, you can select daily, weekly, or monthly prompts based on your preference.",
   },
   {
     question: "What kind of prompts will I receive?",
-    answer: "...",
+    answer:
+      "Prompts include questions about your life, family, and special moments to help you capture meaningful stories.",
   },
   {
     question: "Can I skip prompts or add my own?",
-    answer: "...",
+    answer:
+      "Absolutely! You can skip any prompt or add your own custom stories and memories whenever you like.",
   },
   {
     question: "Can family members participate in my subscription?",
-    answer: "...",
+    answer:
+      "Yes, you can invite family members to contribute their own stories, photos, and recordings to your book.",
   },
   {
     question: "What happens if I cancel my subscription?",
-    answer: "...",
+    answer:
+      "If you cancel, you keep all the memories you've added so far and can order a printed book at any time.",
   },
   {
     question: "Will my QR codes or digital memories ever expire?",
-    answer: "...",
+    answer:
+      "No, your QR codes and digital memories remain accessible as long as you have an account with us.",
   },
   {
     question: "Can I upgrade from a one-time book to a subscription later?",
-    answer: "...",
+    answer:
+      "Yes, you can upgrade at any time and continue building on your existing book.",
   },
   {
     question: "Is my content safe and private?",
-    answer: "...",
+    answer:
+      "We use secure cloud storage and encryption to keep your memories safe and private.",
   },
   {
     question: "Can I order printed copies of my book?",
-    answer: "...",
+    answer:
+      "Yes, you can order as many printed copies as you like for family and friends.",
   },
   {
     question: "What is your return or refund policy?",
-    answer: "...",
+    answer:
+      "If you're not satisfied with your book, please contact us and we'll do our best to resolve any issues.",
   },
   {
     question: "How do I contact support?",
-    answer: "...",
+    answer:
+      "You can reach our support team via email or through the contact form on our website.",
   },
 ];
 
 export const bookImages = [
   {
     main: images.BookPageImage01,
-    text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
+    text: "Discover inspiration for every chapter of life, from everyday moments to timeless family stories",
   },
   {
     main: images.BookPageImage02,
-    text: "Capture your family's adventures and journeys in timeless pages.",
+    text: "Preserve your travels and experiences with audios and photos that tell the story behind each place.",
   },
   {
     main: images.BookPageImage03,
-    text: "Preserve love stories and cherished moments forever.",
+    text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
   },
   {
     main: images.BookPageImage04,
-    text: "Treasured childhood memories, beautifully bound.",
+    text: "Capture the vows, laughter and voices that began your forever.",
   },
   {
     main: images.BookPageImage05,
-    text: "Family legacy books for generations to come.",
+    text: "Perfect for birthdays, retirements, reunions, or honoring generations past. Each book becomes a living archive of voices and photos.",
   },
   {
     main: images.BookPageImage06,
-    text: "A collection of stories, laughter, and love.",
+    text: "Discover inspiration for every chapter of life, from everyday moments to timeless family stories.",
   },
   // Repeat to make 12 if needed, or use unique images/texts as available
   {
     main: images.BookPageImage07,
-    text: "Inspire new traditions with every page.",
+    text: "Preserve your travels and experiences with audios and photos that tell the story behind each place.",
   },
   {
     main: images.BookPageImage08,
-    text: "Every photo tells a story worth sharing.",
+    text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
   },
   {
     main: images.BookPageImage09,
-    text: "Relive the magic of family milestones.",
+    text: "Perfect for birthdays, retirements, reunions, or honoring generations past. Each book becomes a living archive of voices and photos.",
   },
   {
     main: images.BookPageImage10,
-    text: "A gallery of memories, crafted with care.",
+    text: "Preserve your travels and experiences with audios and photos that tell the story behind each place.",
   },
   {
     main: images.BookPageImage11,
-    text: "Legacy in every line and photograph.",
+    text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
   },
   {
     main: images.BookPageImage12,
-    text: "Stories that connect generations together.",
+    text: "Discover inspiration for every chapter of life, from everyday moments to timeless family stories.",
   },
 ];
 
-export const howItWorksStep1 = {
-  image: images.HowItWorksMainImage, // Replace with the correct image for step 1
-  imageAlt: "Hand holding old family photo",
-  bigHeading: "WE WILL GUIDE YOU EVERY STEP OF THE PROCESS",
+export const howItWorksSteps = [
+  {
+    image: images.HowItWorksMainImage,
+    imageAlt: "Hand holding old family photo",
+    stepHeading:
+      "1. Add your favorite photos, stories, and short voice or video recordings",
+    stepDescription:
+      "Start by gathering the moments you want to preserve: candid snapshots, formal portraits, handwritten notes, short voice clips, and short videos. On our platform you can upload directly from your phone, tablet, or computer — or import from cloud services.",
+    sectionHeading: "What to include",
+    sectionList: [
+      "Photos: both color and black-and-white work beautifully. Aim for high-resolution files (JPEG, PNG) when possible.",
+      "Stories: type them in, copy-paste from old letters, or upload scanned documents (PDF or DOCX). Short captions and dates add useful context.",
+      "Audio & Video: record a grandparent telling a favorite memory, or upload short clips of celebrations. We accept common formats like MP3, WAV, MP4, and MOV. Keep individual recordings to a few minutes for best playback and scanning experience.",
+    ],
+  },
+  {
+    image: images.HowItWorksMainImage02,
+    imageAlt: "Scrapbook with collage and layouts",
+    stepHeading:
+      "2. Choose from beautifully pre-made page layouts and simply drag & drop your content",
+    stepDescription:
+      "Once your material is uploaded, choose from a curated collection of page templates designed for storytelling—single-photo spreads, interview-style layouts, photo collages, and pages with space for audio QR codes. Drag and drop your photos, paste text, and place audio/video markers where you want the QR codes to appear.",
+    sectionHeading: "How it works",
+    sectionList: [
+      "Select a theme (heritage, modern, minimalist) to set fonts, colors, and textures across the whole book.",
+      "Pick page templates for each chapter or story — swap and reorder pages with a click.",
+      "Place an audio or video clip onto a page; our system automatically creates a small, elegant QR icon next to the story that links to the recording when scanned.",
+    ],
+  },
+  {
+    image: images.HowItWorksMainImage03,
+    imageAlt: "Person assembling a photo book at a table",
+    stepHeading:
+      "3. Order a professionally bound book (plus a digital version) to share and treasure for generations",
+    stepDescription:
+      "When your design is final, choose print options and order one or more copies. We partner with print-on-demand services to offer archival-quality paper, sturdy binding, and several trim sizes. Every printed book includes the QR codes you placed — scan them with any smartphone to hear the original recordings.",
+    sectionHeading: "Print & digital options",
+    sectionList: [
+      "Paper & binding: pick from premium matte or luster paper, hard- or soft-cover, and optional linen or foil-stamped covers.",
+      "Editions: order single keepsakes, multiple family copies, or a deluxe boxed edition for gifting.",
+      "Digital version: every order also includes a private digital flipbook (PDF + mobile-friendly viewer) so relatives who live far away can read and play recordings online.",
+    ],
+  },
+];
+
+export const mainImagesOfBookMockupCarousel = [
+  images.InnerBookMainImage01,
+  images.InnerBookMainImage02,
+  images.InnerBookMainImage03,
+  images.InnerBookMainImage04,
+];
+
+export const gridImagesOfInnerBook = [
+  images.InnerBookGridImage01,
+  images.InnerBookGridImage02,
+  images.InnerBookGridImage03,
+  images.InnerBookGridImage04,
+  images.InnerBookGridImage05,
+  images.InnerBookGridImage06,
+];
+
+export const journeyOptions = [
+  {
+    id: 1,
+    title: "Option 1 – One-Time Book",
+    features: [
+      "Perfect for milestones, weddings, or gifts.",
+      "Upload all your memories at once and order your finished book.",
+      "Includes digital access and permanent QR codes that link to your audio and video stories.",
+    ],
+    buttonText: "Build My Book",
+  },
+  {
+    id: 2,
+    title: "Option 2 – Storytelling Prompt Subscription",
+    description: "A way to build your heirloom as life unfolds.",
+    features: [
+      "Receive daily, weekly, or monthly memory prompts by text or email.",
+      "Simply reply with a photo,story,voice note,or video, and it is automatically added to your book.",
+      "Watch your heirloom come together as life unfolds, one meaningful moment at a time.",
+    ],
+    descriptionTwo:
+      "No logging in required, just reply to the message and your memories are saved.",
+    buttonText: "Start Subscription",
+  },
+];
+
+export const templateItems = [
+  {
+    id: 1,
+    title: "Family Legacy Books",
+    price: "$30.00",
+    images: [images.FeaturedTemplateImage01],
+  },
+  {
+    id: 2,
+    title: "Journey & Adventures",
+    price: "$30.00",
+    images: [images.FeaturedTemplateImage02],
+  },
+  {
+    id: 3,
+    title: "Love Stories",
+    price: "$30.00",
+    images: [images.FeaturedTemplateImage03],
+  },
+  {
+    id: 4,
+    title: "Childhood Treasures",
+    price: "$30.00",
+    images: [images.FeaturedTemplateImage04],
+  },
+];
+
+export const memoriesSafeSection = {
+  topSection: {
+    heading: "YOUR MEMORIES\nARE SAFE HERE",
+    description1:
+      "Every photo, story, and voice recording you add is safely stored in your private, encrypted account. When you create your heirloom, you'll set up a secure login so your progress, designs, and uploads are automatically saved and easy to revisit anytime.",
+    description2:
+      "You can build and access your heirloom from your computer, phone, or tablet—wherever inspiration strikes. All files are protected through secure cloud storage and encrypted file hosting, and each QR code you create is permanent, ensuring your memories remain safe and accessible for generations to come.",
+    cloudLogo: images.CreateYourBookMemoriesCloudLogo,
+    encryptionLogo: images.CreateYourBookEncryptionLogo,
+    shieldLogo: images.CreateYourBookMemoriesLogo,
+    backgroundImage: images.CreateYourBookMemoriesBackgroundImage,
+  },
+  bottomSection: {
+    heading: "CAPTURE THE MOMENTS\nTHAT WORDS ALONE\nCAN'T KEEP",
+    buttonText: "Start Your Heirloom Journey",
+    mainImage: images.CreateYourBookMemoriesMainImage,
+  },
+};
+
+export const readyToBeginSection = {
+  heading: "READY TO BEGIN?",
   description:
-    "We'll guide you through every step of the process, making it easy to understand exactly how it all works —\nfrom your first story upload to holding your finished heirloom in your hands.",
-  stepHeading:
-    "1. Add your favorite photos, stories, and short voice or video recordings",
-  stepDescription:
-    "Start by gathering the moments you want to preserve: candid snapshots, formal portraits, handwritten notes, short voice clips, and short videos. On our platform you can upload directly from your phone, tablet, or computer — or import from cloud services.",
-  whatToInclude: [
-    "Photos: both color and black-and-white work beautifully. Aim for high-resolution files (JPEG, PNG) when possible.",
-    "Stories: type them in, copy-paste from old letters, or upload scanned documents (PDF or DOCX). Short captions and dates add useful context.",
-    "Audio & Video: record a grandparent telling a favorite memory, or upload short clips of celebrations. We accept common formats like MP3, WAV, MP4, and MOV. Keep individual recordings to a few minutes for best playback and scanning experience.",
+    "Whether you're creating one heirloom or a lifetime of them, The Spoken Heirloom keeps your memories safe, private, and beautifully preserved.",
+  buttonText: "Start My Journey",
+  image: images.CreateYouBookReadyToBeginImage,
+};
+
+// Toggle options data
+export const bookSizeTabs = [
+  { id: "6x6", label: "6 x 6" },
+  { id: "8x8", label: "8 x 8" },
+  { id: "10x10", label: "10 X 10" },
+];
+
+export const copyTypeTabs = [
+  { id: "soft", label: "Soft Copy" },
+  { id: "hard", label: "Hard Copy" },
+  { id: "both", label: "Both" },
+];
+
+export const paperTypeTabs = [
+  { id: "standard", label: "Standard" },
+  { id: "premium", label: "Premium" },
+  { id: "mowhawk", label: "Mowhawk" },
+];
+
+export const coverFinishTabs = [
+  { id: "matte", label: "Matte" },
+  { id: "glossy", label: "Glossy" },
+];
+
+export const pagesCountTabs = [
+  { id: "40", label: "40" },
+  { id: "60", label: "60" },
+  { id: "80", label: "80" },
+];
+
+export const pagesStructure = [
+  {
+    title: "Cover Page",
+    description: "Bride and Groom's name, year, and an introductory quote.",
+  },
+  {
+    title: "Introduction Spread",
+    description:
+      '"Our Story Begins" with a short family note or blessings quote.',
+  },
+  {
+    title: "Generations Section",
+    description: "Family tree, old black and white photos, ancestral notes.",
+  },
+  { title: "Milestones Section", description: "Wedding." },
+  {
+    title: "Everyday Moments",
+    description: "Candid shots, vacations, laughter, and routines.",
+  },
+  {
+    title: "Reflections Section",
+    description: "Written memories and messages from each.",
+  },
+  {
+    title: "Closing",
+    description:
+      '"The Wedding Ceremony" with a final group photo or handwritten message.',
+  },
+];
+
+export const addOnsFeatures = [
+  {
+    title: "Photo Pockets:",
+    description:
+      "Hidden envelope at the back for printed polaroid's or keepsakes.",
+  },
+  {
+    title: "QR Code Pages:",
+    description: "Scan to view short family videos or digital albums.",
+  },
+  {
+    title: "Custom Quote Pages:",
+    description: "Choose inspiring quotes to print between chapters.",
+  },
+  {
+    title: "Gift Box:",
+    description:
+      "Handcrafted wooden box with engraving, tissue wrap, and ribbon tie.",
+  },
+  {
+    title: "Personalization:",
+    description:
+      "1. Embossed name on cover.\n2. Option for handwritten-style captions throughout.",
+  },
+];
+
+export const aboutFounderContent = {
+  heading: "ABOUT THE FOUNDER",
+  paragraphs: [
+    "Hi, I'm Jessica, the heart behind The Spoken Heirloom. This idea began with the desire to make memories last in a way that felt real, through voices, laughter, and the stories that make a family who they are.",
+    "As a wife and mom of two, I see every day how quickly life moves. My phone is overflowing with little videos of my children, the way they giggle with their dad, sing to themselves while playing, or chase each other through the house. But those memories get lost in an endless scroll of photos and clips I rarely go back to. I wanted something I could actually hold, something real, something my children could one day flip through and hear the love that fills our home.",
+    "That feeling became even stronger as my grandparents grew older. I've started to treasure the sound of their laughter and the stories they tell about their childhoods or the people they've loved and lost. There's a kind of beauty in hearing someone's voice that no written words can capture, and I wanted a way to keep that safe, not just for me but for generations to come.",
+    "My inspiration also comes from time spent traveling through Thailand, the Philippines, and Malaysia on mission trips. I often think back to the warmth of those communities, how we would gather around their dinner tables, sharing laughter and food made with such love. I wish I could flip through a photo book and, with one simple tap, hear those sounds again, the joy, the kindness, the music of connection.",
+    "That is what The Spoken Heirloom is really about. It is a way to bridge the gap between the moments we capture and the memories we feel. Every page, every recording, and every story becomes a thread in a family's legacy, one that can be held, heard, and passed down with love.",
+  ],
+  signature: {
+    message: "From my Family to Yours",
+    name: "Jessica",
+  },
+};
+
+// Step Four - Book Cover Editor Constants
+export const stepFourContent = {
+  header: {
+    backText: "Classic Book 6 X 6",
+    actions: [
+      { id: "rearrange", label: "Re-arrange", icon: "rearrange" },
+      { id: "settings", label: "Settings", icon: "settings" },
+      { id: "preview", label: "Preview", icon: "preview" },
+    ],
+  },
+  stepIndicator: {
+    stepNumber: "01",
+    title: "Step#",
+  },
+  photoUpload: {
+    title: "Add Photo",
+    subtitle: "Add Multiple Photos",
+  },
+  coverOptions: {
+    title: "Cover Option",
+    buttons: [
+      { id: "crop", label: "Crop", icon: "crop" },
+      { id: "changeCover", label: "Change Cover", icon: "image" },
+    ],
+  },
+  addTitle: {
+    label: "Add Title",
+    placeholder: "Title here",
+  },
+  subtitle: {
+    label: "Subtitle",
+    placeholder: "Subtitle here",
+  },
+  coverColour: {
+    label: "Cover Colour",
+    colors: [
+      { id: "sage", color: "#A4B494", name: "Sage" },
+      { id: "darkGreen", color: "#3D5A45", name: "Dark Green" },
+      { id: "beige", color: "#E8D9C8", name: "Beige" },
+      { id: "gray", color: "#8B8B8B", name: "Gray" },
+    ],
+  },
+  chooseTemplates: {
+    label: "Choose Templates",
+    buttonText: "Choose a Cover Templates",
+  },
+  actions: {
+    cancel: "Cancel",
+    save: "Save",
+  },
+};
+
+export const aboutMissionVisionContent = {
+  smallHeading: "Our Mission and Vision",
+  mainHeading: `PRESERVE THE SOUND OF LOVE, \n LAUGHTER, AND LEGACY.`,
+  sections: [
+    {
+      id: "mission",
+      title: "Our Mission",
+      description:
+        "Our mission is to help families hold onto what truly matters — the laughter, the stories, and the voices that make life beautiful. Through a blend of timeless design and simple technology, The Spoken Heirloom turns photo memories into keepsakes that can be held, heard, and passed down. So they are preserved in a timeless heirloom of family legacy.",
+      image: "AboutOurMissionImage",
+      imagePosition: "left" as const,
+    },
+    {
+      id: "vision",
+      title: "Our Vision",
+      description:
+        "Our vision is for every family to have a way to keep their stories alive — not just in photos, but in the voices and sounds that make them unforgettable. We see a world filled with beautifully crafted heirloom books, holding the laughter of loved ones, and feeling connection to those who came before them. That lasting connection is the legacy we hope to preserve.",
+      image: "AboutOurVisionImage",
+      imagePosition: "right" as const,
+    },
+    {
+      id: "whatWeDo",
+      title: "What We Do",
+      description:
+        "The Spoken Heirloom transforms cherished memories into beautifully designed keepsake books that combine photos, written stories, voice recordings, and even video snippets. Each book generates a unique QR code that connects the reader directly to the sounds and sights of their moments — the laughter, the voices, and the stories behind every page.\n\nThrough custom options: families can upload their photos, memories, recordings, and videos to create a box of digital heirlooms that can be both kept and shared. Each heirloom book can be printed and shared, offering loved ones a vessel of the story. Shared and holding their memories in perpetuity to come.",
+      image: "AboutWhatWeDoImage",
+      imagePosition: "left" as const,
+    },
   ],
 };

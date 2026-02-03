@@ -14,7 +14,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   placeholder,
 }) => {
   return (
-    <div className="flex items-center w-full max-w-xl mx-auto my-8 border border-gray-200 rounded-md bg-white overflow-hidden">
+    <div className="flex items-center w-full max-w-xl mx-auto px-0.5 my-8 border border-gray-200 overflow-hidden">
       <input
         type="text"
         value={value}

@@ -1,7 +1,7 @@
 import CommonHeroSection from "@/components/shared/CommonHeroSection";
 import { images } from "@/utils/constant";
 import { ContactSection } from "@/components/shared/ContactSection";
-import { ContactDetails } from "./subcomponent";
+import { ContactDetails } from "./subcomponents";
 
 export default function ContactPage() {
   return (

@@ -1,6 +1,11 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 interface ButtonProps {
   text: string;
   onClick?: () => void;
+  navigateTo?: string;
   type?: "button" | "submit" | "reset";
   textColor?: string;
   borderColor?: string;
@@ -15,6 +20,7 @@ interface ButtonProps {
 export default function Button({
   text,
   onClick,
+  navigateTo,
   type = "button",
   textColor = "text-white",
   borderColor = "border-white",
@@ -25,10 +31,20 @@ export default function Button({
   disabled = false,
   fullWidth = false,
 }: ButtonProps) {
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (navigateTo) {
+      router.push(navigateTo);
+    } else if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <button
       type={type}
-      onClick={onClick}
+      onClick={handleClick}
       disabled={disabled}
       className={`cursor-pointer inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3 ${backgroundColor} ${textColor} ${borderColor} ${hoverBgColor} ${hoverTextColor} font-semibold text-base transition-all duration-300 border ${
         fullWidth ? "w-full" : ""

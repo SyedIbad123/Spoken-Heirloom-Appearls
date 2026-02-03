@@ -43,11 +43,12 @@
   --color-ring: #b8860b;
 
   /* Font families */
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
   --font-serif: "Playfair Display", Georgia, Cambria, serif;
   --font-sans: var(--font-geist-sans), system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
+  --font-seaweed: var(--font-seaweed), cursive;
 
-  /* Font sizes */
   --text-display-xl: 4.5rem;
   --text-display-xl--line-height: 1.1;
   --text-display-xl--letter-spacing: -0.02em;
@@ -169,7 +170,7 @@
   h4,
   h5,
   h6 {
-    @apply font-serif text-foreground;
+    @apply text-foreground;
   }
 }
 
@@ -220,7 +221,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+    @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-accent;
   }
 
   .bg-texture {

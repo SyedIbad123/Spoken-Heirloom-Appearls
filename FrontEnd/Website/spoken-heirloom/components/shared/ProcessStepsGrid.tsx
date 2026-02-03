@@ -6,18 +6,29 @@ import Image from "next/image";
 interface ProcessStepsGridProps {
   className?: string;
   bigHeading?: string;
+  description?: string;
+  descriptionColor?: string;
+  descriptionStyle?: string;
 }
 
 const ProcessStepsGrid: React.FC<ProcessStepsGridProps> = ({
   className = "",
   bigHeading,
+  description,
+  descriptionStyle,
+  descriptionColor,
 }) => {
   return (
     <div className="w-full">
-      {bigHeading && (
+      {(bigHeading || description) && (
         <SectionHeader
-          bigHeading={bigHeading}
-          className="text-center text-3xl md:text-4xl font-serif mb-12 text-primary-foreground tracking-wide"
+          bigHeading={bigHeading || ""}
+          description={description || ""}
+          descriptionStyle={descriptionStyle || ""}
+          descriptionColor={descriptionColor || ""}
+          className="text-center text-3xl md:text-4xl mb-12 text-primary-foreground tracking-wide"
+          fontStyleBigHeading="font-cormorant"
+          fontStyleDescription="font-sans!"
         />
       )}
       <div className="flex justify-center mb-16">
@@ -40,10 +51,10 @@ const ProcessStepsGrid: React.FC<ProcessStepsGridProps> = ({
             )}
 
             <div className="text-center max-w-xs">
-              <h3 className="font-serif text-heading-lg text-primary-foreground mb-3 italic">
+              <h3 className="font-cormorant font-semibold text-heading-lg text-primary-foreground mb-3">
                 {step.step} {step.title}
               </h3>
-              <p className="text-primary-grayText text-body-sm leading-relaxed">
+              <p className="text-primary-grayText font-sans text-body-sm leading-relaxed">
                 {step.description}
               </p>
             </div>

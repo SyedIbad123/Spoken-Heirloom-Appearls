@@ -17,16 +17,20 @@ export default function Marquee({
   leafPosition = "right",
 }: MarqueeProps) {
   return (
-    <div className={`relative ${backgroundColor} py-10 overflow-hidden`}>
+    <div
+      className={`font-cormorant relative ${backgroundColor} py-10 overflow-hidden`}
+    >
       <div className="flex animate-marquee whitespace-nowrap">
         {[...Array(6)].map((_, i) => (
           <div key={i} className={`flex ${textColor} items-center`}>
             {items.map((item, index) => (
               <span key={index}>
-                <span className="text-lg md:text-xl font-serif italic mx-4">
+                <span className="text-lg md:text-2xl font-semibold mx-1">
                   {item}
                 </span>
-                {index < items.length - 1 && <span className="mx-4">—</span>}
+                {index < items.length - 1 && (
+                  <span className="mx-1 font-extrabold">—</span>
+                )}
               </span>
             ))}
           </div>

@@ -25,16 +25,16 @@ export default function Stats({
   textColor = "text-primary-foreground",
 }: StatsProps) {
   return (
-    <section className={`py-16 mb-14 md:py-8 ${backgroundColor}`}>
-      <div className="section-container">
+    <section className={`py-16 mb-16 md:py-2  ${backgroundColor}`}>
+      <div className="font-cormorant section-container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="flex flex-row items-center text-center gap-4"
+              className="flex flex-row items-center text-center gap-4 group cursor-pointer"
             >
               {/* Flower icon */}
-              <div className="w-16 h-16 md:w-22 md:h-22 mb-4 relative">
+              <div className="w-16 h-16 md:w-22 md:h-22 mb-4 relative transition-transform duration-700 ease-in-out group-hover:rotate-90">
                 <Image
                   src={images.CommonFlower}
                   alt=""
@@ -45,13 +45,13 @@ export default function Stats({
 
               <div className="font-serif flex flex-col text-left w-full">
                 <p
-                  className={`text-4xl md:text-4xl ${textColor} mb-2 font-bold `}
+                  className={`text-4xl md:text-4xl ${textColor} mb-2 font-bold transition-transform duration-700 ease-in-out group-hover:scale-110`}
                 >
                   {stat.value}
                 </p>
 
                 <p
-                  className={`${textColor} text-body-xs md:text-body-sm uppercase tracking-wider`}
+                  className={`${textColor} text-body-xs md:text-body-xs uppercase tracking-wider`}
                 >
                   {stat.label}
                 </p>

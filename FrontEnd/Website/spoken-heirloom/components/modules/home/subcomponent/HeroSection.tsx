@@ -10,7 +10,6 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
 
-  // Sample carousel images - replace with actual images if available
   const carouselImages = [
     images.HeroSectionImage01,
     images.HeroSectionImage02,
@@ -60,9 +59,9 @@ export default function HeroSection() {
         </div>
 
         {/* Main Content Container */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
+        <div className="font-cormorant relative z-10 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
           {/* Main Heading */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-8 leading-tight max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-8 leading-tight max-w-5xl mx-auto">
             THE EVOLUTION OF THE
             <br />
             PHOTO ALBUM
@@ -81,7 +80,7 @@ export default function HeroSection() {
         <div className="absolute bottom-0 left-0 right-0 z-20">
           {/* Carousel Container */}
           <div className="relative w-full">
-            <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-4 py-28">
+            <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-28">
               <div className="flex items-center justify-between">
                 <CarouselNavigation
                   currentIndex={currentSlide}
