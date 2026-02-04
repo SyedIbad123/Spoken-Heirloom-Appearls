@@ -4,7 +4,7 @@ import { images, aboutMissionVisionContent } from "@/utils/constant";
 
 export default function MissionVisionSection() {
   return (
-    <section className="bg-primary-light py-16 md:py-24 mb-28">
+    <section className="bg-primary-light py-16 md:py-18">
       <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24">
         {/* Main Heading */}
         <div className="text-center mb-16 md:mb-20">

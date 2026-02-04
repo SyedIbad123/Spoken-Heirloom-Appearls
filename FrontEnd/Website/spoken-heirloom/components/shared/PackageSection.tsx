@@ -63,7 +63,7 @@ export default function PackagesSection({
 
   return (
     <>
-      <section className="flex flex-col gap-20 bg-primary mt-12">
+      <section className="flex flex-col gap-0 bg-primary mt-12">
         <div className="section-container">
           <SectionHeader
             smallHeading={smallHeading}
@@ -124,7 +124,7 @@ export default function PackagesSection({
         {showStats && <Stats />}
 
         {showMemoryVoiceBanner && !rightImage && !leftImage && (
-          <div className="relative bg-primary-border/30 px-8 md:px-12 mb-16 mt-8 h-100">
+          <div className="relative bg-primary-border/30 px-8 md:px-12 mb-16 mt-6 h-100">
             {/* CommonLeaf - Top Left */}
             <div className="absolute -top-13.5 left-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none mix-blend-multiply">
               <Image

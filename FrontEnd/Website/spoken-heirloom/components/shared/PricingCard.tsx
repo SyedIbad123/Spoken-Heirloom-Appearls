@@ -38,7 +38,7 @@ export default function PricingCard({
         </div>
 
         {/* Content */}
-        <div className="relative z-10 px-8 py-12 md:px-10 md:py-24 flex flex-col items-center text-center min-h-180">
+        <div className="relative z-10 px-8 py-12 md:px-10 md:py-24 flex flex-col items-center text-center min-h-185">
           {/* Plan name */}
           <h3 className=" text-xl md:text-xl text-primary-foreground mb-6 uppercase tracking-wider">
             {name}
@@ -92,7 +92,11 @@ export default function PricingCard({
                 highlighted ? "bg-primary-foreground" : "bg-transparent"
               }
               textColor={highlighted ? "text-white" : "text-primary-foreground"}
-              borderColor="border-primary-foreground"
+              borderColor={
+                !highlighted
+                  ? "border-primary-foreground"
+                  : "border-transparent"
+              }
               className="transition-all duration-900 ease-in-out"
             />
           </div>
