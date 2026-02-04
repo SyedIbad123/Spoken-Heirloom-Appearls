@@ -5,7 +5,7 @@ import BooksDetails from "./subcomponents/BooksDetails";
 export default function BooksPage() {
   return (
     <>
-      <CommonHeroSection backgroundImage={images.BookPageHero} text="CONTACT" />
+      <CommonHeroSection backgroundImage={images.BookPageHero} text="BOOKS" />
       <BooksDetails />
     </>
   );

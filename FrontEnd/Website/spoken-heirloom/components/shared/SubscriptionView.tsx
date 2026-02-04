@@ -8,7 +8,7 @@ import Button from "./Button";
 
 export default function SubscriptionView() {
   return (
-    <div className="relative group overflow-visible h-216">
+    <div className="relative group overflow-visible h-212">
       <div className="relative py-20 md:py-12 px-10 overflow-visible transition-transform duration-900 ease-in-out group-hover:translate-y-6">
         {/* Background image */}
         <div className="absolute inset-0">

@@ -38,7 +38,7 @@ export default function PricingCard({
         </div>
 
         {/* Content */}
-        <div className="relative z-10 px-8 py-12 md:px-10 md:py-24 flex flex-col items-center text-center min-h-170">
+        <div className="relative z-10 px-8 py-12 md:px-10 md:py-24 flex flex-col items-center text-center min-h-180">
           {/* Plan name */}
           <h3 className=" text-xl md:text-xl text-primary-foreground mb-6 uppercase tracking-wider">
             {name}

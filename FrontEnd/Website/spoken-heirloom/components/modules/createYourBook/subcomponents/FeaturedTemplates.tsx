@@ -23,7 +23,7 @@ export default function FeaturedtemplateItems() {
 
   return (
     <section className="py-8 md:py-4 mb-12">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-14">
         <SectionHeader
           bigHeading={"FEATURED templates"}
           description={
@@ -37,7 +37,7 @@ export default function FeaturedtemplateItems() {
           descriptionColor="text-primary-foreground/80"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {templateItems.map((t) => (
             <Card
               key={t.id}

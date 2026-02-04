@@ -18,9 +18,13 @@ export default function PhotoUploadArea({
     <div className="flex-1 flex-col justify-center items-center bg-primary px-12 py-10">
       {/* Step Indicator */}
       <div className="flex flex-col items-center mb-8 w-full">
-        <h2 className="font-cormorant text-3xl text-left self-start text-primary-foreground mb-2 ml-35">
-          {stepIndicator.title}
-          {stepIndicator.stepNumber.padStart(2, "0")}
+        <h2 className="text-3xl text-left self-start text-primary-foreground mb-2 ml-35">
+          <span className="font-cormorant font-semibold">
+            {stepIndicator.title}
+          </span>
+          <span className="font-serif text-2xl">
+            {stepIndicator.stepNumber.padStart(2, "0")}
+          </span>
         </h2>
 
         <div className="h-1 w-full max-w-100 bg-primary-border overflow-hidden">

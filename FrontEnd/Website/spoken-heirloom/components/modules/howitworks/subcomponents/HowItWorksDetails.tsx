@@ -15,7 +15,7 @@ const HowItWorksDetails = () => {
     setStepIdx((prev) => (prev < howItWorksSteps.length - 1 ? prev + 1 : prev));
 
   return (
-    <section className="py-section-md md:py-section-md relative overflow-hidden mt-2">
+    <section className="relative overflow-hidden mt-16">
       <div className="section-container relative mb-28">
         <ProcessStepsGrid
           bigHeading={"FROM VOICE TO  HEIRLOOM IN\nTHREE SIMPLE STEPS"}

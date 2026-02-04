@@ -43,7 +43,7 @@ export default function CoverOptionsPanel({
   return (
     <div className="w-110 bg-white flex flex-col h-full ">
       {/* Drag Handle */}
-      <div className="flex justify-center py-3 border-b border-border/50">
+      <div className="flex px-2 py-2">
         <GripVertical
           size={20}
           className="text-primary-foreground/30 rotate-90"
