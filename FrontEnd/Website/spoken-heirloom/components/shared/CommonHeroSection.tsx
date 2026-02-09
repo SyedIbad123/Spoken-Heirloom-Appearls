@@ -15,7 +15,7 @@ const CommonHeroSection: React.FC<CommonHeroSectionProps> = ({
   return (
     <>
       <section
-        className="relative w-full flex justify-center items-center overflow-hidden"
+        className="relative w-full flex justify-center items-center overflow-hidden mb-10"
         style={{ minHeight: "300px" }}
       >
         <div className="absolute inset-0 inset-x-10 h-full overflow-hidden mx-auto">

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import SectionHeader from "@/components/shared/SectionHeader";
 import PricingCard from "@/components/shared/PricingCard";
-import ToggleButton from "@/components/shared/ToggleButton";
 import SubscriptionView from "@/components/shared/SubscriptionView";
 import Stats from "@/components/shared/Stats";
 import { images, packages, subscriptions } from "@/utils/constant";
@@ -12,6 +11,7 @@ import MemoryVoiceBanner from "@/components/shared/MemoryVoiceBanner";
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Button from "./Button";
+import CustomizeAlbumSection from "./CustomizeAlbumSection";
 
 // Define tabs for the toggle
 const pricingTabs = [
@@ -33,6 +33,8 @@ interface PackagesSectionProps {
   descriptionColor?: string;
   descriptionStyle?: string;
   showMemoryVoiceBanner?: boolean;
+  isProElevated?: boolean;
+  showAlbumSection?: boolean;
 }
 
 export default function PackagesSection({
@@ -49,6 +51,8 @@ export default function PackagesSection({
   rightImage,
   heading,
   sizeOfHeading,
+  isProElevated = false,
+  showAlbumSection = false,
 }: PackagesSectionProps) {
   const [activeTab, setActiveTab] = useState<string>("packages");
 
@@ -63,7 +67,7 @@ export default function PackagesSection({
 
   return (
     <>
-      <section className="flex flex-col gap-0 bg-primary mt-12">
+      <section className="flex flex-col gap-0 bg-primary">
         <div className="section-container">
           <SectionHeader
             smallHeading={smallHeading}
@@ -78,13 +82,6 @@ export default function PackagesSection({
             fontStyleDescription="font-sans"
           />
 
-          <ToggleButton
-            tabs={pricingTabs}
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            className="font-sans"
-          />
-
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
@@ -97,17 +94,22 @@ export default function PackagesSection({
             >
               {/* Packages View */}
               <div className="w-full shrink-0" style={{ minWidth: "100%" }}>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
-                  {packages.map((plan, index) => (
+                <div
+                  className={`grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto ${isProElevated ? "md:items-start pt-8" : ""}`}
+                >
+                  {packages.map((plan) => (
                     <PricingCard
                       key={plan.name}
                       name={plan.name}
+                      subtitle={plan.subtitle}
                       price={plan.price}
-                      period={(plan as any).period}
                       features={plan.features}
                       highlighted={plan.highlighted}
                       cta={plan.cta}
-                      backgroundImage={packages[index].backgroundImage}
+                      backgroundImage={plan.backgroundImage}
+                      frontImage={plan.frontImage}
+                      addOns={plan.addOns}
+                      isProElevated={isProElevated}
                     />
                   ))}
                 </div>
@@ -120,6 +122,12 @@ export default function PackagesSection({
             </div>
           </div>
         </div>
+
+        {showAlbumSection && (
+          <CustomizeAlbumSection
+            backgroundImage={images.CustomizedAlbumBgImage}
+          />
+        )}
 
         {showStats && <Stats />}
 

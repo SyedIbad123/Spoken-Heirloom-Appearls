@@ -45,7 +45,7 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({ faqs }) => {
             </span>
           </button>
           {openIndex === idx && (
-            <div className="font-sans px-2 pb-6 text-xs text-primary-foreground/80 animate-fade-in">
+            <div className="font-sans px-2 pb-6 text-xs text-primary-foreground/80 animate-fade-in whitespace-pre-line">
               {faq.answer}
             </div>
           )}

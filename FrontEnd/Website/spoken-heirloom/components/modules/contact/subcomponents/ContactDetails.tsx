@@ -47,7 +47,7 @@ const PinIcon = ({ className = "w-10 h-10" }: { className?: string }) => (
 
 export default function ContactDetails() {
   return (
-    <section className="section-container px-6 py-16 text-primary-foreground">
+    <section className="section-container px-6 py-4 text-primary-foreground">
       <div className="text-center max-w-3xl mx-auto">
         <h1 className="font-cormorant text-4xl  font-semibold text-primary-foreground mb-16">
           BECAUSE SOME STORIES DESERVE TO BE HEARD — NOT JUST REMEMBERED.

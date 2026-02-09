@@ -56,14 +56,14 @@ export default function InspirationGallery() {
           ))}
         </div>
 
-        {/* View all button */}
+        {/* View all button
         <div className="flex flex-row justify-center items-center text-center mt-6 gap-2 ">
           <CircleAlert className="h-4 w-4 text-primary-foreground" />
           <p className="text-sm text-primary-foreground">
             Each book type includes a flexible template designed to help you get
             started.{" "}
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );

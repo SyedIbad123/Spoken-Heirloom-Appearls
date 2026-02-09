@@ -24,7 +24,7 @@ export default function ContactDetails() {
   };
 
   return (
-    <section className="section-container px-6 py-20 text-primary-foreground">
+    <section className="section-container px-6 py-2 text-primary-foreground">
       <SectionHeader
         bigHeading="HAVE A QUESTION? WE’RE HERE TO HELP"
         description={`Explore our most frequently asked questions below and if you can’t find \n what you’re looking for, we’d love to hear from you.`}

@@ -20,6 +20,8 @@ const PricingPage = () => {
         rightImage={null}
         heading={`BECAUSE SOME STORIES DESERVE \nTO BE HEARD — NOT JUST \n REMEMBERED`}
         sizeOfHeading="2"
+        showAlbumSection={true}
+        isProElevated={true}
       />
     </>
   );

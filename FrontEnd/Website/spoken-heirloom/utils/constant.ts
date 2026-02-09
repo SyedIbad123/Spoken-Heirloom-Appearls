@@ -27,6 +27,10 @@ import LogoBrand from "@/assets/Logo_Brand.svg";
 import ProPlanImage from "@/assets/Prop_Plan_Image.svg";
 import BasicPlanImage from "@/assets/Basic_And_Premium_Plan_Image.svg";
 import PremiumPlanImage from "@/assets/Basic_And_Premium_Plan_Image.svg";
+import BasicPlanImage_01 from "@/assets/Basic_Plan_Image_01.svg";
+import ProPlanImage_02 from "@/assets/Pro_Plan_Imag_02.svg";
+import BasicPlanImage_03 from "@/assets/Basic_Plan_Image_03.svg";
+import CustomizedAlbumBgImage from "@/assets/Customized_Album_Bg_Image.svg";
 import Subscription_Plan_Image from "@/assets/Subscription_Plan_Image.svg";
 import FamilyCareSubscriptionImage from "@/assets/Family_Care_Subscription.svg";
 import FamilyHouseSubscriptionImage from "@/assets/Family_House_Subscription.svg";
@@ -107,6 +111,7 @@ import CommonLeaf from "@/assets/Common_Leaf.svg";
 import CommonFlower from "@/assets/Common_Flower.svg";
 import CommonQuote from "@/assets/Common_Quote.svg";
 import CommonArrowdown from "@/assets/Arrow_down.svg";
+import CommonStar from "@/assets/star.svg";
 
 export const navLinks = [
   { label: "Home", href: "/" },
@@ -148,6 +153,10 @@ export const images = {
   ProPlanImage,
   BasicPlanImage,
   PremiumPlanImage,
+  BasicPlanImage_01,
+  ProPlanImage_02,
+  BasicPlanImage_03,
+  CustomizedAlbumBgImage,
   Subscription_Plan_Image,
   FamilyCareSubscriptionImage,
   FamilyHouseSubscriptionImage,
@@ -228,6 +237,7 @@ export const images = {
   CommonFlower,
   CommonQuote,
   CommonArrowdown,
+  CommonStar,
 };
 
 export const processSteps = [
@@ -368,45 +378,60 @@ export const usefulLinks = [
 
 export const packages = [
   {
-    name: "BASIC",
-    price: "$100",
+    name: "EVERYDAY ALBUM",
+    subtitle: "Best for everyday moments",
+    price: "$199",
     features: [
-      "Up to 20 custom-designed pages (text + images)",
-      "1-2 audio recordings integrated via QR codes",
-      "Printed hardcover memory book (8x8 size)",
-      "Digital flipbook version included",
+      "15 spreads (30 pages)",
+      "11x8 Photo Wrap Hardcover",
+      "260 GSM archival-quality photo paper",
+      "Printed cover title included",
+      "QR memory for every photo",
+      "Free shipping",
     ],
     highlighted: false,
     cta: "Get Started",
     backgroundImage: images.BasicPlanImage,
+    frontImage: images.BasicPlanImage_01,
+    addOns: ["Upgrade to 10x10", "Add pages"],
   },
   {
-    name: "PRO",
-    price: "$250",
+    name: "HEIRLOOM ALBUM",
+    subtitle: "Our most popular family album",
+    price: "$249",
     features: [
-      "Up to 50 custom-designed pages",
-      "5-7 audio recordings seamlessly integrated",
-      "Premium linen or leather-bound book (10x10 or 12x12)",
-      "Digital interactive edition (web + app access)",
-      "Personalized design consultation",
+      "15 spreads (30 pages)",
+      "11x8 Premium Linen or Vegan Leather cover",
+      "260 GSM archival-quality photo paper",
+      "QR memory for every photo",
+      "Free shipping",
     ],
     highlighted: true,
     cta: "Get Started",
     backgroundImage: images.ProPlanImage,
+    frontImage: images.ProPlanImage_02,
+    addOns: [
+      "Upgrade to 10x10",
+      "Add pages",
+      "Add optional embossed foil title",
+    ],
   },
   {
-    name: "PREMIUM",
-    price: "$350",
+    name: "LAGACY ALBUM",
+    subtitle: "For families with a lot to remember",
+    price: "$309",
     features: [
-      "Up to 100+ custom-designed pages",
-      "Unlimited audio/story integrations",
-      "Archival-quality handcrafted book with slipcase",
-      "Digital interactive edition + lifetime hosting",
-      "White-glove storytelling support (editing, design, organization)",
+      "20 spreads (40 pages)",
+      "10x10 Premium Linen or Vegan Leather cover",
+      "260 GSM archival-quality photo paper",
+      "Multiple memories per QR",
+      "Free shipping",
     ],
     highlighted: false,
     cta: "Get Started",
     backgroundImage: images.PremiumPlanImage,
+    frontImage: images.BasicPlanImage_03,
+    addOns: ["Add pages", "Add optional embossed foil title"],
   },
 ];
 
@@ -469,7 +494,7 @@ export const faqData = [
   {
     question: "How does it work?",
     answer:
-      "You simply upload your photos, stories, and recordings to our platform, choose your design, and we turn them into a beautiful, interactive memory book.",
+      "You can create your heirloom as a one-time book or through a monthly storytelling subscription. \n -Choose a template and upload your stories, photos, and voice recordings. \n -Each recording automatically generates a unique QR code that links to your audio or video clip. \n -Watch your heirloom grow page by page, then print your finished book whenever you're ready.",
   },
   {
     question:
@@ -959,5 +984,51 @@ export const bookCategories = [
     icon: images.TravelSubscriptionImage,
     title:
       "Travel: Share photos and stories as you explore, then print your adventures at the end of the year.",
+  },
+];
+
+export const customizeAlbumItems = [
+  {
+    id: 1,
+    title: "Size Options",
+    description:
+      "Choose between 11x8 or 10x10 during creation  (10x10 included with Legacy Album)",
+    highlightedText: ["11x8 or 10x10"],
+    type: "info" as const,
+  },
+  {
+    id: 2,
+    title: "Add More Pages",
+    price: "$9.99",
+    priceLabel: "per spread",
+    type: "single-price" as const,
+  },
+  {
+    id: 3,
+    title: "Embossed Foil Titles",
+    subtitle: "(For linen & vegan leather covers)",
+    type: "multi-price" as const,
+    priceRows: [
+      { label: "Front Cover", price: "$29.99" },
+      { label: "Spine", price: "$24.99" },
+      { label: "Cover + Spine", price: "$49.99" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Membership Subscription",
+    price: "$9.99",
+    priceLabel: "/month",
+    type: "subscription" as const,
+    linkText: "Learn More",
+    linkHref: "/pricing",
+  },
+  {
+    id: 5,
+    title: "Multi-Memory QR",
+    price: "$49.00",
+    description:
+      "Fit more memories into one album by storing multiple videos or voice notes behind a single QR code.",
+    type: "single-price" as const,
   },
 ];
