@@ -31,7 +31,7 @@ export default function CustomizeAlbumSection({
   backgroundImage,
 }: CustomizeAlbumSectionProps) {
   return (
-    <section className="relative py-16 md:py-8">
+    <section className="relative ">
       <div className="section-container">
         {/* Header */}
         <SectionHeader
