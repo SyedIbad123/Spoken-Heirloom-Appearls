@@ -8,7 +8,9 @@ import CarouselNavigation from "@/components/shared/CarouselNavigation";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState<number | null>(null);
   const [autoPlay, setAutoPlay] = useState(true);
+  const [animationKey, setAnimationKey] = useState(0);
 
   // Sample carousel images - replace with actual images if available
   const carouselImages = [
@@ -20,12 +22,28 @@ export default function HeroSection() {
   useEffect(() => {
     if (!autoPlay) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 5000);
+      setCurrentSlide((prev) => {
+        setPrevSlide(prev);
+        setAnimationKey((k) => k + 1);
+        return (prev + 1) % carouselImages.length;
+      });
+    }, 3000); // Changed to 3 seconds to match Figma specs
     return () => clearInterval(timer);
   }, [autoPlay, carouselImages.length]);
 
+  // Resume autoplay after manual interaction
+  useEffect(() => {
+    if (!autoPlay) {
+      const resumeTimer = setTimeout(() => {
+        setAutoPlay(true);
+      }, 10000); // Resume autoplay after 10 seconds of inactivity
+      return () => clearTimeout(resumeTimer);
+    }
+  }, [autoPlay]);
+
   const handlePrevSlide = () => {
+    setPrevSlide(currentSlide);
+    setAnimationKey((k) => k + 1);
     setCurrentSlide(
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
     );
@@ -33,6 +51,8 @@ export default function HeroSection() {
   };
 
   const handleNextSlide = () => {
+    setPrevSlide(currentSlide);
+    setAnimationKey((k) => k + 1);
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
     setAutoPlay(false);
   };
@@ -41,22 +61,43 @@ export default function HeroSection() {
     <>
       <section className="mx-auto relative h-screen md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
         {/* Background Image with Dark Overlay */}
-        <div className="absolute inset-0">
-          {carouselImages.map((image, index) => (
-            <Image
-              key={index}
-              src={image}
-              alt={`Hero Background ${index + 1}`}
-              fill
-              priority={index === 0}
-              className={`object-cover w-full h-full transition-opacity duration-700 ${
-                currentSlide === index ? "opacity-100" : "opacity-0"
-              }`}
-              quality={100}
-            />
-          ))}
+        <div className="absolute inset-0 overflow-hidden">
+          {carouselImages.map((image, index) => {
+            const isActive = index === currentSlide;
+            const isPrevious = index === prevSlide;
+
+            // Determine z-index: current slide on top, previous behind, others hidden
+            let zIndex = 1;
+            if (isPrevious) zIndex = 5;
+            if (isActive) zIndex = 10;
+
+            return (
+              <div
+                key={
+                  isActive ? `slide-${index}-${animationKey}` : `slide-${index}`
+                }
+                className={`absolute inset-0 ${
+                  isActive
+                    ? "animate-curtain-slide-in"
+                    : isPrevious
+                      ? "translate-x-0"
+                      : "translate-x-full"
+                }`}
+                style={{ zIndex }}
+              >
+                <Image
+                  src={image}
+                  alt={`Hero Background ${index + 1}`}
+                  fill
+                  priority={index === 0}
+                  className="object-cover w-full h-full"
+                  quality={100}
+                />
+              </div>
+            );
+          })}
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/40 z-20" />
         </div>
 
         {/* Main Content Container */}

@@ -20,6 +20,7 @@ export default function HomePage() {
       <PackagesSection
         leftImage={images.MemoryLeftImage}
         rightImage={images.MemoryRightImage}
+        showToggleButton={false}
       />
       <TestimonialsSection />
       <ContactSection />

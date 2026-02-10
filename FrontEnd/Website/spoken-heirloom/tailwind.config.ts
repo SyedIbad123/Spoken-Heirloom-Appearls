@@ -118,6 +118,7 @@ const config: Config = {
         "scale-in": "scaleIn 0.4s ease-out",
         marquee: "marquee 30s linear infinite",
         "spin-slow": "spin 20s linear infinite",
+        "curtain-slide-in": "curtainSlideIn 0.8s ease-out forwards",
       },
       keyframes: {
         fadeIn: {
@@ -135,6 +136,10 @@ const config: Config = {
         marquee: {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-50%)" },
+        },
+        curtainSlideIn: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
     },

@@ -46,7 +46,7 @@ export default function ToggleButton({
 
   return (
     <div
-      className={`mb-16 md:mb-20 ${heading ? "" : "flex justify-center"} ${className}`}
+      className={`mb-16 md:mb-16 ${heading ? "" : "flex justify-center"} ${className}`}
     >
       {/* Optional Heading */}
       {heading && (

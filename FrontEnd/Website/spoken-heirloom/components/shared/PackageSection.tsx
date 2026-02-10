@@ -12,6 +12,7 @@ import type { StaticImageData } from "next/image";
 import Image from "next/image";
 import Button from "./Button";
 import CustomizeAlbumSection from "./CustomizeAlbumSection";
+import ToggleButton from "./ToggleButton";
 
 // Define tabs for the toggle
 const pricingTabs = [
@@ -35,6 +36,7 @@ interface PackagesSectionProps {
   showMemoryVoiceBanner?: boolean;
   isProElevated?: boolean;
   showAlbumSection?: boolean;
+  showToggleButton?: boolean;
 }
 
 export default function PackagesSection({
@@ -53,6 +55,7 @@ export default function PackagesSection({
   sizeOfHeading,
   isProElevated = false,
   showAlbumSection = false,
+  showToggleButton = true,
 }: PackagesSectionProps) {
   const [activeTab, setActiveTab] = useState<string>("packages");
 
@@ -81,6 +84,15 @@ export default function PackagesSection({
             fontStyleBigHeading="font-cormorant"
             fontStyleDescription="font-sans"
           />
+
+          {showToggleButton && (
+            <ToggleButton
+              tabs={pricingTabs}
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+              className="font-sans"
+            />
+          )}
 
           <div className="overflow-hidden">
             <div

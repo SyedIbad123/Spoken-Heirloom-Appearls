@@ -8,6 +8,7 @@ import CarouselNavigation from "@/components/shared/CarouselNavigation";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [nextSlide, setNextSlide] = useState<number | null>(null);
   const [autoPlay, setAutoPlay] = useState(true);
 
   const carouselImages = [
@@ -16,23 +17,48 @@ export default function HeroSection() {
     images.HeroSectionImage03,
   ];
 
+  const goToSlide = (newIndex: number) => {
+    if (nextSlide !== null || newIndex === currentSlide) return;
+
+    // Set next slide to animate in
+    setNextSlide(newIndex);
+
+    // After animation completes, make it the current slide
+    setTimeout(() => {
+      setCurrentSlide(newIndex);
+      setNextSlide(null);
+    }, 800);
+  };
+
   useEffect(() => {
     if (!autoPlay) return;
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 5000);
+      const next = (currentSlide + 1) % carouselImages.length;
+      goToSlide(next);
+    }, 3000);
     return () => clearInterval(timer);
-  }, [autoPlay, carouselImages.length]);
+  }, [autoPlay, currentSlide, carouselImages.length]);
+
+  // Resume autoplay after manual interaction
+  useEffect(() => {
+    if (!autoPlay) {
+      const resumeTimer = setTimeout(() => {
+        setAutoPlay(true);
+      }, 10000);
+      return () => clearTimeout(resumeTimer);
+    }
+  }, [autoPlay]);
 
   const handlePrevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
-    );
+    const newIndex =
+      (currentSlide - 1 + carouselImages.length) % carouselImages.length;
+    goToSlide(newIndex);
     setAutoPlay(false);
   };
 
   const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    const newIndex = (currentSlide + 1) % carouselImages.length;
+    goToSlide(newIndex);
     setAutoPlay(false);
   };
 
@@ -40,22 +66,38 @@ export default function HeroSection() {
     <>
       <section className="mx-auto relative h-screen md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
         {/* Background Image with Dark Overlay */}
-        <div className="absolute inset-0">
-          {carouselImages.map((image, index) => (
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Current slide - s1: stays in place, z-index: 1 */}
+          <div className="absolute inset-0" style={{ zIndex: 1 }}>
             <Image
-              key={index}
-              src={image}
-              alt={`Hero Background ${index + 1}`}
+              src={carouselImages[currentSlide]}
+              alt={`Hero Background ${currentSlide + 1}`}
               fill
-              priority={index === 0}
-              className={`object-cover w-full h-full transition-opacity duration-700 ${
-                currentSlide === index ? "opacity-100" : "opacity-0"
-              }`}
+              priority
+              className="object-cover w-full h-full"
               quality={100}
             />
-          ))}
+          </div>
+
+          {/* Next slide - s2: slides in from right, z-index: 2 */}
+          {nextSlide !== null && (
+            <div
+              key={nextSlide}
+              className="absolute inset-0 animate-[curtain_0.8s_ease-out_forwards]"
+              style={{ zIndex: 2, transform: "translateX(100%)" }}
+            >
+              <Image
+                src={carouselImages[nextSlide]}
+                alt={`Hero Background ${nextSlide + 1}`}
+                fill
+                className="object-cover w-full h-full"
+                quality={100}
+              />
+            </div>
+          )}
+
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/40 z-20" />
         </div>
 
         {/* Main Content Container */}

@@ -35,7 +35,7 @@ export default function MissionVisionSection() {
                       ? "top-0"
                       : index === aboutMissionVisionContent.sections.length - 1
                         ? "bottom-0"
-                        : "top-1/2 -translate-y-1/2"
+                        : "-top-2/14 -translate-y-1/20"
                   }`}
                 />
 

@@ -51,32 +51,32 @@ export default function PricingCard({
       )}
 
       {/* Card container */}
-      <div className={`font-cormorant relative h-180 `}>
+      <div className={` relative h-187`}>
         {/* Background image */}
         <div className="absolute inset-0">
           <Image src={backgroundImage} alt="" fill className="object-cover" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 px-8 py-12 md:px-10 md:py-14 flex flex-col items-center text-center h-full">
+        <div className="relative z-10 px-8 py-8 md:px-10 md:py-14 flex flex-col items-center text-center h-full">
           {/* Plan name */}
-          <h3 className="text-xl md:text-2xl text-primary-foreground font-semibold uppercase tracking-wider">
+          <h3 className="font-cormorant text-xl md:text-2xl text-primary-foreground font-semibold uppercase tracking-wider">
             {name}
           </h3>
 
           {/* Subtitle - fixed height for alignment */}
-          <div className="h-10 flex items-center justify-center">
+          <div className="h-8 flex items-center justify-center">
             {subtitle && (
-              <p className="font-sans text-body-sm text-primary-foreground/80">
+              <p className="font-sans text-body-sm text-black/70 font-medium">
                 {subtitle}
               </p>
             )}
           </div>
 
           {/* Price */}
-          <div className="mb-8">
+          <div className="mb-8 font-cormorant">
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-4xl md:text-5xl font-serif font-bold text-primary-foreground">
+              <span className="text-4xl md:text-4xl font-cormorant font-bold text-black">
                 {price}
               </span>
               {period && (
@@ -88,13 +88,12 @@ export default function PricingCard({
           </div>
 
           {/* Front Book Image - fixed height container for symmetry */}
-          <div className="w-full flex justify-center h-32 md:h-44 mb-0">
+          <div className="w-full flex justify-center h-32 md:h-52 mb-0">
             {frontImage && (
-              <div className="relative w-48 md:w-64 h-full">
+              <div className="relative w-48 md:w-72 h-full">
                 <Image
                   src={frontImage}
                   alt={name}
-                  fill
                   className="object-contain object-bottom"
                 />
               </div>
@@ -105,11 +104,11 @@ export default function PricingCard({
           <div className="w-full border-b border-black/20 mb-8" />
 
           {/* Features list */}
-          <ul className="space-y-3 mb-auto w-full max-w-xs text-left">
+          <ul className="space-y-3 mb-auto w-full max-w-xs text-left font-sans">
             {features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-start gap-2 text-primary-foreground font-medium text-body-sm font-sans"
+                className="flex items-start gap-2 text-black font-medium text-body-sm font-sans"
               >
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary-foreground shrink-0" />
                 <span>{feature}</span>
