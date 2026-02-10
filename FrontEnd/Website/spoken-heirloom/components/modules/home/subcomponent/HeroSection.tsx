@@ -97,11 +97,11 @@ export default function HeroSection() {
           )}
 
           {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/40 z-20" />
+          <div className="absolute inset-0 bg-black/40 z-10" />
         </div>
 
         {/* Main Content Container */}
-        <div className="font-cormorant relative z-10 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
+        <div className="font-cormorant relative z-30 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-2 leading-tight max-w-5xl mx-auto">
             THE EVOLUTION OF THE
@@ -120,13 +120,15 @@ export default function HeroSection() {
             className="mb-12 md:mb-16"
             backgroundColor="bg-transparent"
             textColor="text-primary"
+            borderColor="border-primary"
             hoverBgColor="hover:bg-primary"
             hoverTextColor="hover:text-primary-foreground"
+            hoverBorderColor="hover:border-primary"
           />
         </div>
 
         {/* Carousel Section at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
+        <div className="absolute bottom-0 left-0 right-0 z-30">
           {/* Carousel Container */}
           <div className="relative w-full">
             <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-18">

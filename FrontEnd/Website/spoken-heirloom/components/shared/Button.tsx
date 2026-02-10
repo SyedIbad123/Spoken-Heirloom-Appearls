@@ -12,6 +12,7 @@ interface ButtonProps {
   backgroundColor?: string;
   hoverBgColor?: string;
   hoverTextColor?: string;
+  hoverBorderColor?: string;
   className?: string;
   disabled?: boolean;
   fullWidth?: boolean;
@@ -27,6 +28,7 @@ export default function Button({
   backgroundColor = "bg-transparent",
   hoverBgColor = "hover:bg-white",
   hoverTextColor = "hover:text-black",
+  hoverBorderColor = "hover:border-white",
   className = "",
   disabled = false,
   fullWidth = false,
@@ -46,7 +48,7 @@ export default function Button({
       type={type}
       onClick={handleClick}
       disabled={disabled}
-      className={`cursor-pointer inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3 ${backgroundColor} ${textColor} ${borderColor} ${hoverBgColor} ${hoverTextColor} font-semibold text-base transition-all duration-300 border ${
+      className={`cursor-pointer inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3 ${backgroundColor} ${textColor} ${borderColor} ${hoverBgColor} ${hoverTextColor} ${hoverBorderColor} font-semibold text-base transition-all duration-300 border ${
         fullWidth ? "w-full" : ""
       } ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`}
     >
