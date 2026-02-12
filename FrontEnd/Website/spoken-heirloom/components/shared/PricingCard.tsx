@@ -37,7 +37,7 @@ export default function PricingCard({
         highlighted && isProElevated ? "md:-translate-y-8" : ""
       }`}
     >
-      {/* Star icon for highlighted card */}
+      {/* Star icon for highlighted card
       {highlighted && (
         <div className="absolute top-0 -right-10 z-30 w-20 h-20">
           <Image
@@ -48,7 +48,7 @@ export default function PricingCard({
             className="object-contain"
           />
         </div>
-      )}
+      )} */}
 
       {/* Card container */}
       <div className={` relative h-187`}>

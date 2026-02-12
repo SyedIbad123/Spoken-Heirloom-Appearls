@@ -18,7 +18,7 @@ export default function InspirationGallery() {
       <div className="section-container">
         <SectionHeader
           smallHeading="Books"
-          bigHeading={`CHOOSE THE TYPE OF THE BOOK YOU\nWANT TO CREATE`}
+          bigHeading={`CHOOSE THE TYPE OF BOOK YOU\nWANT TO CREATE`}
           description="Select a book type, then choose whether to build now or be guided by prompts as life unfolds."
           showWhirl={false}
           descriptionColor="text-primary-foreground"

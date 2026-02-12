@@ -30,15 +30,15 @@ const BooksDetails: React.FC = () => {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`text-body-sm transition-all duration-300 pb-2 relative ${
+            className={`text-body-lg transition-all duration-300 pb-2 relative cursor-pointer ${
               activeCategory === category
-                ? "font-bold text-primary-foreground"
-                : "font-normal text-primary-foreground"
+                ? "font-extrabold text-primary-foreground"
+                : "font-medium text-primary-foreground"
             }`}
           >
             {category}
             {activeCategory === category && (
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-14 h-0.75 bg-primary-foreground"></span>
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.75 bg-primary-foreground"></span>
             )}
           </button>
         ))}

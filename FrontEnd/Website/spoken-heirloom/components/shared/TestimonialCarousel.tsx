@@ -29,7 +29,7 @@ export default function TestimonialCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextTestimonial();
-    }, 3500);
+    }, 4500);
 
     return () => clearInterval(interval);
   }, []);
@@ -76,7 +76,7 @@ export default function TestimonialCarousel() {
               {/* Sliding Content Container */}
               <div className="overflow-hidden">
                 <div
-                  className="flex transition-transform duration-500 ease-in-out"
+                  className="flex transition-transform duration-700 ease-in-out"
                   style={{ transform: `translateX(-${activeIndex * 100}%)` }}
                 >
                   {testimonialList.map((testimonial, index) => (

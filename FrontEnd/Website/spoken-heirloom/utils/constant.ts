@@ -341,21 +341,21 @@ export const testimonials = [
     id: 1,
     quote:
       "The Spoken Heirloom turned our memories into something tangible and timeless. It feels like holding our family's history in our hands — and hearing it come alive.",
-    author: "JOHN DOE",
+    author: "Sarah Reynolds",
     role: "Client",
   },
   {
     id: 2,
     quote:
-      "I created a book for my grandmother's 90th birthday with recordings of all her favorite stories. The tears of joy when she scanned the QR codes and heard our voices will stay with me forever.",
-    author: "SARAH MITCHELL",
+      "The procss was so easy, and the result was stunning. Our family now has a bautifully designed book that not only tells our story but lets future generations actually hear it.",
+    author: "Lilly Chiristansen",
     role: "Client",
   },
   {
     id: 3,
     quote:
-      "As someone who lost my father last year, having his voice preserved in our family book has been the most precious gift. This is more than a book—it's a bridge to those we love.",
-    author: "MICHAEL CHEN",
+      "I did'nt realize how powerful it would be to hear my grandmother's voice again until w scanned tha pages. The Spoken Heirloom turned our memories into something deeply personal, and we'll cherish it for generations.",
+    author: "Rachel Foster",
     role: "Client",
   },
 ];
