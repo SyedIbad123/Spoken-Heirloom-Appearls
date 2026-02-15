@@ -79,8 +79,8 @@ export default function Navbar() {
               <Button
                 text="Login Now"
                 textColor="text-primary-foreground"
-                borderColor="border-olive"
-                hoverBgColor="hover:bg-olive"
+                borderColor="border-primary-foreground"
+                hoverBgColor="hover:bg-primary-foreground"
                 hoverTextColor="hover:text-white"
                 className="hidden md:inline-flex items-center gap-2 md:px-5! md:py-2! font-medium font-cormorant"
               />
@@ -137,7 +137,7 @@ export default function Navbar() {
                 })}
                 <Link
                   href="#"
-                  className="mt-4 mx-4 inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-body-sm font-medium rounded-full hover:bg-accent-light transition-colors duration-200"
+                  className="mt-4 mx-4 inline-flex items-center justify-center gap-2 px-5 py-2.5 text-accent-foreground text-body-sm font-medium rounded-full hover:bg-primary-foreground transition-colors duration-200"
                 >
                   Login Now
                 </Link>

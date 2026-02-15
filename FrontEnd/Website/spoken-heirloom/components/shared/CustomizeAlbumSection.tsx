@@ -31,7 +31,7 @@ export default function CustomizeAlbumSection({
   backgroundImage,
 }: CustomizeAlbumSectionProps) {
   return (
-    <section className="relative ">
+    <section className="relative mb-6">
       <div className="section-container">
         {/* Header */}
         <SectionHeader

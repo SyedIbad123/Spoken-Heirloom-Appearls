@@ -64,11 +64,11 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="mx-auto relative h-screen md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
+      <section className="mx-auto relative max-w-[100vw] h-screen md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
         {/* Background Image with Dark Overlay */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute max-w-[100vw] inset-0 overflow-hidden">
           {/* Current slide - s1: stays in place, z-index: 1 */}
-          <div className="absolute inset-0" style={{ zIndex: 1 }}>
+          <div className="absolute max-w-[100vw] inset-0" style={{ zIndex: 1 }}>
             <Image
               src={carouselImages[currentSlide]}
               alt={`Hero Background ${currentSlide + 1}`}

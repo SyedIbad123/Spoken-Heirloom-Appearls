@@ -33,16 +33,22 @@ const HowItWorksDetails = () => {
 
       <div className="relative -mt-12 mb-12">
         {/* Navigation positioned outside sliding content */}
-        <div className="absolute -bottom-6 left-52 transform z-20 mb-10">
-          <CarouselNavigation
-            currentIndex={stepIdx}
-            totalItems={howItWorksSteps.length}
-            onPrev={handlePrev}
-            onNext={handleNext}
-            variant="dark"
-            widthOfArrow="w-16"
-            sizeOfNumber="text-md"
-          />
+        <div className="absolute inset-x-0 bottom-3 z-20">
+          <div className="section-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto">
+              <div className="flex justify-center">
+                <CarouselNavigation
+                  currentIndex={stepIdx}
+                  totalItems={howItWorksSteps.length}
+                  onPrev={handlePrev}
+                  onNext={handleNext}
+                  variant="dark"
+                  widthOfArrow="w-16"
+                  sizeOfNumber="text-md"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Sliding content container */}

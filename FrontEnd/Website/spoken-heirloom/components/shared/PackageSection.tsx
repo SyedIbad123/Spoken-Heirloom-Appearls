@@ -172,8 +172,8 @@ export default function PackagesSection({
 
               {/* Author Info */}
               <div className="font-cormorant text-center">
-                <p className=" text-lg md:text-xl lg:text-4xl text-primary-foreground font-normal uppercase mb-1 tracking-wide whitespace-pre-line">
-                  {`Because some storiews deserve \n to be heard - Not just \n remembered`}
+                <p className=" text-lg md:text-xl lg:text-4xl font-medium text-primary-foreground uppercase mb-1 tracking-wide whitespace-pre-line">
+                  {`Because some stories deserve \n to be heard — Not just \n remembered`}
                 </p>
                 <div className="mt-8">
                   <Button

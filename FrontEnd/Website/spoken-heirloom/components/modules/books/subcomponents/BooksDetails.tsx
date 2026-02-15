@@ -1,18 +1,51 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { galleryCategories, bookImages } from "@/utils/constant";
 import Button from "@/components/shared/Button";
 import SectionHeader from "@/components/shared/SectionHeader";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const BooksDetails: React.FC = () => {
   const router = useRouter();
-  const [activeCategory, setActiveCategory] = useState(galleryCategories[0]);
+  const searchParams = useSearchParams();
+
+  const normalizeCategory = (value: string) =>
+    value
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+
+  const resolvedCategoryFromQuery = useMemo(() => {
+    const selectedCategory = searchParams.get("category");
+
+    if (!selectedCategory) {
+      return galleryCategories[0];
+    }
+
+    const matchedCategory = galleryCategories.find(
+      (category) =>
+        normalizeCategory(category) === normalizeCategory(selectedCategory),
+    );
+
+    return matchedCategory ?? galleryCategories[0];
+  }, [searchParams]);
+
+  const [activeCategory, setActiveCategory] = useState(
+    resolvedCategoryFromQuery,
+  );
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
-  const displayedImages = bookImages;
+  useEffect(() => {
+    setActiveCategory(resolvedCategoryFromQuery);
+  }, [resolvedCategoryFromQuery]);
+
+  const displayedImages =
+    activeCategory === "All Inspiration"
+      ? bookImages
+      : bookImages.filter((img) => img.category === activeCategory);
 
   const navigate = () => {
     router.push("/InnerBook");

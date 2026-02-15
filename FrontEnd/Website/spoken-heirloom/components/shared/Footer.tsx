@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="text-primary-foreground pt-0">
       {/* Instagram CTA Section */}
-      <div className="pt-0 pb-18">
+      <div className="pt-0 pb-6">
         <div className="section-container text-center">
           <SectionHeader
             smallHeading="Instagram"
@@ -23,9 +23,9 @@ export default function Footer() {
       </div>
 
       {/* Main Footer */}
-      <div className="bg-primary-foreground pt-12 pb-12 relative z-10">
+      <div className="bg-primary-foreground pt-10 pb-12 relative z-10">
         <div
-          className="w-full flex justify-center relative z-30 -mt-19 md:-mt-20 lg:-mt-20 xl:-mt-40 2xl:-mt-27"
+          className="w-full flex justify-center relative z-30 -mt-19 md:-mt-20 lg:-mt-20 xl:-mt-21"
           style={{ pointerEvents: "auto" }}
         >
           <div className="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-0 overflow-hidden">

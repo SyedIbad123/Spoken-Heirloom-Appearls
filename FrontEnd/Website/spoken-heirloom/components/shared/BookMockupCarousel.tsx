@@ -42,7 +42,7 @@ const BookMockupCarousel: React.FC<BookMockupCarouselProps> = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setCurrent((prev) => (prev + 1) % mainImagesOfBookMockupCarousel.length);
-    }, 2000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, [current]);
 

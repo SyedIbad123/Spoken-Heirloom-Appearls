@@ -567,51 +567,63 @@ export const faqData = [
 export const bookImages = [
   {
     main: images.BookPageImage01,
+    category: "Family Legacy Books",
     text: "Discover inspiration for every chapter of life, from everyday moments to timeless family stories",
   },
   {
     main: images.BookPageImage02,
+    category: "Journey & Adventures",
     text: "Preserve your travels and experiences with audios and photos that tell the story behind each place.",
   },
   {
     main: images.BookPageImage03,
+    category: "Childhood Treasures",
     text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
   },
   {
     main: images.BookPageImage04,
+    category: "Love Stories",
     text: "Capture the vows, laughter and voices that began your forever.",
   },
   {
     main: images.BookPageImage05,
+    category: "Family Legacy Books",
     text: "Perfect for birthdays, retirements, reunions, or honoring generations past. Each book becomes a living archive of voices and photos.",
   },
   {
     main: images.BookPageImage06,
+    category: "Family Legacy Books",
     text: "Discover inspiration for every chapter of life, from everyday moments to timeless family stories.",
   },
   // Repeat to make 12 if needed, or use unique images/texts as available
   {
     main: images.BookPageImage07,
+    category: "Journey & Adventures",
     text: "Preserve your travels and experiences with audios and photos that tell the story behind each place.",
   },
   {
     main: images.BookPageImage08,
+    category: "Childhood Treasures",
     text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
   },
   {
     main: images.BookPageImage09,
+    category: "Family Legacy Books",
     text: "Perfect for birthdays, retirements, reunions, or honoring generations past. Each book becomes a living archive of voices and photos.",
   },
   {
     main: images.BookPageImage10,
+    category: "Journey & Adventures",
     text: "Preserve your travels and experiences with audios and photos that tell the story behind each place.",
   },
   {
     main: images.BookPageImage11,
+    category: "Childhood Treasures",
     text: "Record milestones, giggles, and bedtime stories to be passed down for generations.",
   },
   {
     main: images.BookPageImage12,
+    category: "Love Stories",
     text: "Discover inspiration for every chapter of life, from everyday moments to timeless family stories.",
   },
 ];

@@ -9,8 +9,8 @@ import { useRouter } from "next/navigation";
 export default function InspirationGallery() {
   const router = useRouter();
 
-  const navigate = () => {
-    router.push("/books");
+  const navigate = (category: string) => {
+    router.push(`/books?category=${encodeURIComponent(category)}`);
   };
 
   return (
@@ -33,7 +33,7 @@ export default function InspirationGallery() {
             <div
               key={card.title}
               className="group cursor-pointer bg-white flex flex-col h-full transition-transform hover:-translate-y-1"
-              onClick={navigate}
+              onClick={() => navigate(card.title)}
             >
               <div className="relative mb-2 aspect-3/4 h-44 overflow-hidden">
                 <Image

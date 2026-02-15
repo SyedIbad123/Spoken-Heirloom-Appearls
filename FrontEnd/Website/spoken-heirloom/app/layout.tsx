@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${cormorant.variable} ${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${seaweed.variable}  antialiased bg-primary overflow-x-hidden`}
+        className={`${cormorant.variable} ${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${seaweed.variable}  antialiased bg-primary overflow-x-hidden max-w-[100vw]`}
       >
         <Navbar />
         <main>{children}</main>

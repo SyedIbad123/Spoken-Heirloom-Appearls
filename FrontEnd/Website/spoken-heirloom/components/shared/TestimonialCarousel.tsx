@@ -64,7 +64,7 @@ export default function TestimonialCarousel() {
               </div>
 
               {/* CommonLeaf - Bottom Right */}
-              <div className="absolute -bottom-9.5 right-0 w-32 h-32 md:w-40 md:h-40 pointer-events-none mix-blend-multiply rotate-180">
+              <div className="absolute -bottom-9.75 right-0 w-32 h-32 md:w-40 md:h-40 pointer-events-none mix-blend-multiply rotate-180">
                 <Image
                   src={defaultImages.CommonLeaf}
                   alt=""

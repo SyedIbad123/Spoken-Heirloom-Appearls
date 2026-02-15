@@ -33,7 +33,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative flex flex-col pt-8 ${
+      className={`relative flex flex-col mb-6 pt-8 ${
         highlighted && isProElevated ? "md:-translate-y-8" : ""
       }`}
     >
@@ -126,6 +126,7 @@ export default function PricingCard({
               borderColor="border-transparent"
               hoverBgColor="hover:bg-primary-foreground/90"
               hoverTextColor="hover:text-white"
+              hoverBorderColor="none"
               fullWidth
               navigateTo="/create-your-book"
               className="py-1!"
