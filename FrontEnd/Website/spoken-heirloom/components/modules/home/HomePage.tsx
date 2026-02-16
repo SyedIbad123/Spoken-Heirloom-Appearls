@@ -12,7 +12,7 @@ import { images } from "@/utils/constant";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <ProcessSection />
       <InspirationGallery />
@@ -24,6 +24,6 @@ export default function HomePage() {
       />
       <TestimonialsSection />
       <ContactSection />
-    </>
+    </div>
   );
 }
