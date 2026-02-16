@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-md">
       <nav className="bg-primary-light backdrop-blur-sm border-b border-primary/20">
-        <div className="px-8 mx-2">
+        <div className="px-4 mx-2 lg:px-8 lg:mx-2">
           <div className="flex items-center h-16 md:h-20 relative">
             {/* All nav links - left side */}
             <div className="hidden lg:flex items-center gap-8 md:gap-4 font-sans font-extralight">
@@ -24,9 +24,8 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`text-primary-foreground/90 text-body-xs xl:text-xs 2xl:text-body-md transition-colors duration-200 ${
-                      isActive ? "font-bold" : "font-medium"
-                    }`}
+                    className={`text-primary-foreground/90 text-body-xs xl:text-xs 2xl:text-body-md transition-colors duration-200 ${isActive ? "font-bold" : "font-medium"
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -39,7 +38,7 @@ export default function Navbar() {
               href="/"
               className="absolute left-1/2 -translate-x-1/2 translate-y-1/6 flex flex-col items-center bg-primary-light py-4 px-8 rounded-2xl"
             >
-              <div className="relative w-36 h-36 md:w-32 md:h-32 -my-4">
+              <div className="relative w-20 h-26 md:w-32 md:h-32 -my-4">
                 <Image
                   src={images.NavbarLogo}
                   width={700}
@@ -82,7 +81,7 @@ export default function Navbar() {
                 borderColor="border-primary-foreground"
                 hoverBgColor="hover:bg-primary-foreground"
                 hoverTextColor="hover:text-white"
-                className="hidden md:inline-flex items-center text-body-xs xl:text-xs 2xl:text-body-lg gap-2 md:px-5! md:py-2! font-medium font-cormorant"
+                className="hidden! md:inline-flex! items-center text-body-xs xl:text-xs 2xl:text-body-lg gap-2 md:px-5! md:py-2! font-medium font-cormorant"
               />
 
               {/* Mobile menu button */}
@@ -118,7 +117,7 @@ export default function Navbar() {
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="lg:hidden py-4 border-t border-primary/20">
+            <div className="lg:hidden! py-12 border-t border-primary/20">
               <div className="flex flex-col gap-2">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
@@ -127,20 +126,22 @@ export default function Navbar() {
                       key={link.label}
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-primary-foreground/80 hover:text-accent-light py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors duration-200 ${
-                        isActive ? "font-bold" : "font-medium"
-                      }`}
+                      className={`text-primary-foreground/80 py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors duration-200 ${isActive ? "font-bold" : "font-medium"
+                        }`}
                     >
                       {link.label}
                     </Link>
+
                   );
                 })}
-                <Link
-                  href="#"
-                  className="mt-4 mx-4 inline-flex items-center justify-center gap-2 px-5 py-2.5 text-accent-foreground text-body-sm font-medium rounded-full hover:bg-primary-foreground transition-colors duration-200"
-                >
-                  Login Now
-                </Link>
+                <Button
+                  text="Login Now"
+                  textColor="text-primary-foreground"
+                  borderColor="border-primary-foreground"
+                  hoverBgColor="hover:bg-primary-foreground"
+                  hoverTextColor="hover:text-white"
+                  className=" md:inline-flex! items-center text-body-sm xl:text-xs 2xl:text-body-lg gap-2 md:px-5! md:py-2! font-medium font-cormorant"
+                />
               </div>
             </div>
           )}
