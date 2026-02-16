@@ -980,7 +980,7 @@ export const bookCategories = [
   {
     icon: images.WeddingSubscriptionImage,
     title:
-      "Wedding: Both partners receive prompts to capture their story from each side.",
+      "Love Stories: Both partners receive prompts to capture their story from each side.",
   },
   {
     icon: images.FamilyHouseSubscriptionImage,
@@ -995,7 +995,7 @@ export const bookCategories = [
   {
     icon: images.TravelSubscriptionImage,
     title:
-      "Travel: Share photos and stories as you explore, then print your adventures at the end of the year.",
+      "Journeys & Adventures: Share photos and stories as you explore, then print your adventures at the end of the year.",
   },
 ];
 
