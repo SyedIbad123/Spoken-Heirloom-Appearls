@@ -103,21 +103,21 @@ export default function HeroSection() {
         {/* Main Content Container */}
         <div className="font-cormorant relative z-30 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
           {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-2 leading-tight max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-6 md:mb-2 leading-tight max-w-6xl mx-auto">
             THE EVOLUTION OF THE
             <br />
             PHOTO ALBUM
           </h1>
 
           {/* Subheading */}
-          <p className="text-white font-semibold text-base md:text-lg lg:text-xl text-center mb-10 md:mb-5 tracking-wide max-w-2xl mx-auto">
+          <p className="text-white font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl text-center mb-10 md:mb-5 tracking-wide max-w-2xl mx-auto">
             Stories you can hear. Memories you can hold.
           </p>
 
           {/* CTA Button */}
           <Button
             text="Build My Heirloom Today"
-            className="mb-12 md:mb-16"
+            className="mb-12 md:mb-16 text-sm md:text-2xl"
             backgroundColor="bg-transparent"
             textColor="text-primary"
             borderColor="border-primary"
@@ -138,6 +138,8 @@ export default function HeroSection() {
                   totalItems={carouselImages.length}
                   onPrev={handlePrevSlide}
                   onNext={handleNextSlide}
+                  widthOfArrow="w-28 md:w-16 2xl:w-28"
+                  sizeOfNumber="text-lg 2xl:text-2xl"
                   variant="light"
                 />
               </div>

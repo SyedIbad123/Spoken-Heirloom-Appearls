@@ -55,8 +55,8 @@ export default function FeaturedtemplateItems() {
             onPrev={handlePrev}
             onNext={handleNext}
             variant="dark"
-            widthOfArrow="w-20"
-            sizeOfNumber="text-md"
+            widthOfArrow="w-20 2xl:w-32"
+            sizeOfNumber="text-md 2xl:text-3xl"
           />
         </div>
       </div>

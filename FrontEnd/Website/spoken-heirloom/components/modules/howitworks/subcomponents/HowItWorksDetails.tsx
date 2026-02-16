@@ -75,16 +75,16 @@ const HowItWorksDetails = () => {
                   showNavigation={false}
                 >
                   <div>
-                    <h3 className="font-cormorant font-bold text-2xl md:text-2xl text-primary-foreground mb-4 mt-2">
+                    <h3 className="font-cormorant font-bold text-2xl md:text-2xl 2xl:text-4xl text-primary-foreground mb-4 mt-2">
                       {stepItem.stepHeading}
                     </h3>
-                    <p className="font-sans text-primary-foreground/90 text-base md:text-md mb-4">
+                    <p className="font-sans text-primary-foreground/90 text-base md:text-md 2xl:text-lg mb-4">
                       {stepItem.stepDescription}
                     </p>
-                    <h4 className="font-cormorant font-bold text-xl text-primary-foreground mb-2 mt-6">
+                    <h4 className="font-cormorant font-bold text-xl 2xl:text-2xl text-primary-foreground mb-2 mt-6">
                       {stepItem.sectionHeading}
                     </h4>
-                    <ul className="font-sans font-normal list-disc pl-6 text-primary-foreground/90 space-y-2 text-sm">
+                    <ul className="font-sans font-normal list-disc pl-6 text-primary-foreground/90 space-y-2 text-sm 2xl:text-lg">
                       {stepItem.sectionList.map((item: string, idx: number) => (
                         <li key={idx}>{item}</li>
                       ))}

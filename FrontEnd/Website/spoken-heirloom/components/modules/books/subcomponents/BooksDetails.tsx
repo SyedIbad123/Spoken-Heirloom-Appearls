@@ -63,7 +63,7 @@ const BooksDetails: React.FC = () => {
           <button
             key={category}
             onClick={() => setActiveCategory(category)}
-            className={`text-body-lg transition-all duration-300 pb-2 relative cursor-pointer ${
+            className={`text-body-lg xl:text-2xl transition-all duration-300 pb-2 relative cursor-pointer ${
               activeCategory === category
                 ? "font-extrabold text-primary-foreground"
                 : "font-medium text-primary-foreground"
@@ -104,7 +104,7 @@ const BooksDetails: React.FC = () => {
                 }`}
               style={{ minWidth: 100, maxWidth: 260 }}
             >
-              <div className="text-xs transition-all duration-300">
+              <div className="text-xs xl:text-body-lg transition-all duration-300">
                 {img.text}
               </div>
             </div>
@@ -114,7 +114,7 @@ const BooksDetails: React.FC = () => {
       <div className="flex justify-center mt-12">
         <Button
           text="Load More"
-          className="mb-10 md:mb-4 font-cormorant! font-bold!"
+          className="mb-10 md:mb-4 font-cormorant! font-bold! xl:text-xl"
           textColor="text-olive"
           borderColor="border-olive"
           hoverBgColor="hover:bg-olive"

@@ -52,10 +52,10 @@ export default function MissionVisionSection() {
                         : "lg:order-2"
                     }`}
                   >
-                    <h3 className="font-cormorant font-bold text-2xl md:text-3xl lg:text-4xl text-primary-foreground mb-6">
+                    <h3 className="font-cormorant font-bold text-2xl md:text-3xl lg:text-6xl text-primary-foreground mb-6">
                       {section.title}
                     </h3>
-                    <p className="font-sans text-body-sm text-primary-foreground leading-relaxed whitespace-pre-line">
+                    <p className="font-sans text-body-sm xl:text-lg text-primary-foreground leading-relaxed whitespace-pre-line">
                       {section.description}
                     </p>
                   </div>

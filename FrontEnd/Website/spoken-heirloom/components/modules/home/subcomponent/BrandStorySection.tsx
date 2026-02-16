@@ -71,7 +71,7 @@ export default function BrandStorySection() {
                   TO LAST FOREVER
                 </h3>
 
-                <div className="space-y-5 font-sans text-primary-foreground/80 text-body-md md:text-body-sm leading-normal tracking-tight max-w-lg mx-auto">
+                <div className="space-y-5 font-sans text-primary-foreground/80 text-body-md md:text-body-sm 2xl:text-lg leading-normal tracking-tight max-w-lg 2xl:max-w-2xl mx-auto">
                   <p>
                     At The Spoken Heirloom, we believe every family has a
                     treasure chest of stories moments passed around the dinner

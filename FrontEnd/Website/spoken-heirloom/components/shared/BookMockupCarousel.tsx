@@ -74,11 +74,11 @@ const BookMockupCarousel: React.FC<BookMockupCarouselProps> = ({
             className={`flex flex-col ${rightContainerClassName}  min-w-100`}
           >
             <h2
-              className={`${subtitleSizeClass} font-cormorant font-bold text-primary-foreground mb-2 tracking-wide`}
+              className={`${subtitleSizeClass} 2xl:text-xl font-cormorant font-bold text-primary-foreground mb-2 tracking-wide`}
             >
               {subtitle && subtitle}
             </h2>
-            <h1 className="text-4xl md:text-3xl font-cormorant font-bold text-primary-foreground leading-snug mb-2">
+            <h1 className="text-4xl md:text-3xl 2xl:text-5xl font-cormorant font-bold text-primary-foreground leading-snug mb-2">
               {title &&
                 title?.split("\n").map((line, idx) => (
                   <React.Fragment key={idx}>

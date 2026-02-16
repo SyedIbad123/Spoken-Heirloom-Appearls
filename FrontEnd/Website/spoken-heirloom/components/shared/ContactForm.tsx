@@ -58,12 +58,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
         />
       </div>
 
-      <form onSubmit={handleSubmit} className="font-sans space-y-8">
+      <form onSubmit={handleSubmit} className="font-sans space-y-8 2xl:space-y-6">
         {/* Name field */}
         <div>
           <label
             htmlFor="name"
-            className="block text-sm text-primary-foreground mb-2"
+            className="block text-sm 2xl:text-xl text-primary-foreground mb-2"
           >
             Name
           </label>
@@ -82,7 +82,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <div>
             <label
               htmlFor="email"
-              className="block text-sm text-primary-foreground mb-2"
+              className="block text-sm 2xl:text-xl  text-primary-foreground mb-2"
             >
               Email
             </label>
@@ -98,7 +98,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm text-primary-foreground mb-2"
+              className="block text-sm 2xl:text-xl  text-primary-foreground mb-2"
             >
               Phone
             </label>
@@ -117,7 +117,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         <div>
           <label
             htmlFor="message"
-            className="block text-sm text-primary-foreground mb-2"
+            className="block text-sm 2xl:text-xl  text-primary-foreground mb-2"
           >
             Message
           </label>

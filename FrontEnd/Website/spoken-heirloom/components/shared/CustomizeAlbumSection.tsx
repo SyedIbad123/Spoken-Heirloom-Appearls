@@ -94,7 +94,7 @@ export default function CustomizeAlbumSection({
                         {item.price}
                       </span>
                       {item.priceLabel && (
-                        <span className="font-sans text-body-xs ">
+                        <span className="font-sans text-body-xs 2xl:text-body-md">
                           {item.priceLabel}
                         </span>
                       )}
@@ -108,7 +108,7 @@ export default function CustomizeAlbumSection({
 
                 {/* Info type - description with highlighted text */}
                 {item.type === "info" && item.description && (
-                  <p className="font-sans text-body-sm leading-relaxed">
+                  <p className="font-sans text-body-sm 2xl:text-body-md leading-relaxed">
                     {item.highlightedText
                       ? renderHighlightedText(
                           item.description,
@@ -120,7 +120,7 @@ export default function CustomizeAlbumSection({
 
                 {/* Single price with description (Multi-Memory QR) */}
                 {item.type === "single-price" && item.description && (
-                  <p className="font-sans text-body-xs  leading-relaxed mt-2">
+                  <p className="font-sans text-body-xs 2xl:text-sm leading-relaxed mt-2">
                     {item.description}
                   </p>
                 )}
@@ -160,7 +160,7 @@ export default function CustomizeAlbumSection({
                         {item.price}
                       </span>
                       {item.priceLabel && (
-                        <span className="font-sans text-body-sm">
+                        <span className="font-sans text-body-sm 2xl:text-lg">
                           {item.priceLabel}
                         </span>
                       )}
@@ -168,13 +168,13 @@ export default function CustomizeAlbumSection({
                     {item.linkText && (
                       <a
                         href={item.linkHref || "#"}
-                        className="font-sans text-body-sm text-primary-foreground hover:text-olive transition-colors inline-flex items-center gap-2"
+                        className="font-sans text-body-sm 2xl:text-lg text-primary-foreground hover:text-olive transition-colors inline-flex items-center gap-2"
                       >
                         {item.linkText}
                         <Image
                           src={images.RightArrowOlive}
                           width={40}
-                          className="mt-1"
+                          className="mt-1 2xl:w-14"
                           alt="Right Arrow"
                         />
                       </a>

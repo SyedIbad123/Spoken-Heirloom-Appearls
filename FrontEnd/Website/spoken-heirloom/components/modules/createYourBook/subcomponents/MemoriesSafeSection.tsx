@@ -55,7 +55,7 @@ export default function MemoriesSafeSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-cormorant font-bold text-md text-primary-foreground uppercase tracking-wide mb-8">
+            <h2 className="font-cormorant font-bold text-md 2xl:text-3xl text-primary-foreground uppercase tracking-wide mb-8">
               {topSection.heading.split("\n").map((line, i) => (
                 <span key={i}>
                   {line}
@@ -65,11 +65,11 @@ export default function MemoriesSafeSection() {
             </h2>
 
             {/* Description Paragraphs */}
-            <p className="text-xs text-primary-foreground font-sans leading-relaxed mb-5 max-w-xl">
+            <p className="text-xs 2xl:text-lg text-primary-foreground font-sans leading-relaxed mb-5 max-w-xl">
               {topSection.description1}
             </p>
 
-            <p className="text-xs text-primary-foreground font-sans leading-relaxed max-w-xl">
+            <p className="text-xs 2xl:text-lg text-primary-foreground font-sans leading-relaxed max-w-xl">
               {topSection.description2}
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function MemoriesSafeSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Left Content */}
             <div className="max-w-lg pt-16 lg:pt-24 pb-20 lg:pb-0 relative z-10">
-              <h2 className="font-cormorant text-2xl font-bold text-primary-foreground uppercase tracking-wide leading-tight mb-10">
+              <h2 className="font-cormorant text-2xl 2xl:text-4xl font-bold text-primary-foreground uppercase tracking-wide leading-tight mb-10">
                 {bottomSection.heading.split("\n").map((line, i) => (
                   <span key={i}>
                     {line}
@@ -99,7 +99,7 @@ export default function MemoriesSafeSection() {
                 backgroundColor="bg-transparent"
                 hoverBgColor="hover:bg-primary-foreground"
                 hoverTextColor="hover:text-white"
-                className="font-cormorant font-bold! text-md tracking-wide"
+                className="font-cormorant font-bold! text-md 2xl:text-xl tracking-wide"
                 navigateTo="/create-your-book/stepthree"
               />
             </div>

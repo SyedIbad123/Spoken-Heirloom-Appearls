@@ -59,7 +59,7 @@ export default function SectionHeader({
       {/* Small heading (optional) */}
       {smallHeading && (
         <p
-          className={`${smallHeadingColor} ${fontStyleSmallHeading} font-bold text-body-sm tracking-wider mb-3`}
+          className={`${smallHeadingColor} ${fontStyleSmallHeading} font-bold text-body-sm 2xl:text-xl tracking-wider mb-3`}
         >
           {smallHeading}
         </p>
@@ -67,7 +67,7 @@ export default function SectionHeader({
 
       {/* Big heading */}
       <h2
-        className={`${fontStyleBigHeading} font-bold text-display-sm md:text-display-sm ${bigHeadingColor} ${headingTransformation == "uppercase" ? "uppercase" : ""} mb-4 whitespace-pre-line`}
+        className={`${fontStyleBigHeading} font-bold text-display-sm md:text-display-sm 2xl:text-5xl ${bigHeadingColor} ${headingTransformation == "uppercase" ? "uppercase" : ""} mb-4 whitespace-pre-line`}
       >
         {bigHeading}
       </h2>

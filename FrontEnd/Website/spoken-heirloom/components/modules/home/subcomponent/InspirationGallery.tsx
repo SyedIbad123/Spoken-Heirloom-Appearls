@@ -23,9 +23,9 @@ export default function InspirationGallery() {
           showWhirl={false}
           descriptionColor="text-primary-foreground"
           descriptionStyle="bold"
-          fontStyleSmallHeading="font-cormorant"
+          fontStyleSmallHeading="font-cormorant "
           fontStyleBigHeading="font-cormorant"
-          fontStyleDescription="font-cormorant"
+          fontStyleDescription="font-cormorant 2xl:text-xl"
         />
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
@@ -45,10 +45,10 @@ export default function InspirationGallery() {
                 />
               </div>
               <div className="p-5 pb-8">
-                <h3 className="text-xl md:text-xl font-cormorant font-extrabold text-primary-foreground mb-2">
+                <h3 className="text-xl md:text-xl 2xl:text-2xl font-cormorant font-extrabold text-primary-foreground mb-2">
                   {card.title}
                 </h3>
-                <p className="text-sm font-light font-sans text-primary-foreground pr-10">
+                <p className="text-sm 2xl:text-body-md font-light font-sans text-primary-grayText pr-10">
                   {card.description}
                 </p>
               </div>

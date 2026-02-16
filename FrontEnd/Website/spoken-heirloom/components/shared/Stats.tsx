@@ -34,7 +34,7 @@ export default function Stats({
               className="flex flex-row items-center text-center gap-4 group cursor-pointer"
             >
               {/* Flower icon */}
-              <div className="w-16 h-16 md:w-22 md:h-22 mb-4 relative transition-transform duration-700 ease-in-out group-hover:rotate-90">
+              <div className="w-16 h-16 md:w-22 md:h-22 2xl:w-32 2xl:h-32 mb-4 relative transition-transform duration-700 ease-in-out group-hover:rotate-90">
                 <Image
                   src={images.CommonFlower}
                   alt=""
@@ -45,13 +45,13 @@ export default function Stats({
 
               <div className="font-serif flex flex-col text-left w-full">
                 <p
-                  className={`text-4xl md:text-4xl ${textColor} mb-2 font-bold transition-transform duration-700 ease-in-out group-hover:scale-110`}
+                  className={`text-4xl md:text-4xl 2xl:text-5xl ${textColor} mb-2 font-bold transition-transform duration-700 ease-in-out group-hover:scale-110`}
                 >
                   {stat.value}
                 </p>
 
                 <p
-                  className={`${textColor} text-body-xs md:text-body-xs uppercase tracking-wider`}
+                  className={`${textColor} text-body-xs md:text-body-xs 2xl:text-body-sm uppercase tracking-wider`}
                 >
                   {stat.label}
                 </p>

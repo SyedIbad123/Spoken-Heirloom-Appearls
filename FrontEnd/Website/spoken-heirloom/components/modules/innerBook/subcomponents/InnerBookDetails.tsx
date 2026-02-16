@@ -4,7 +4,7 @@ import BookMockupCarousel from "@/components/shared/BookMockupCarousel";
 
 const InnerBookDetails: React.FC = () => {
   return (
-    <section className="bg-[#FAF8F5] py-20 px-2 md:px-0">
+    <section className="bg-primary py-20 px-2 md:px-0">
       <BookMockupCarousel
         title={"Mary & FD Forester's Living\nLegacy Book"}
         subtitle="CHECK OUT"
@@ -12,7 +12,7 @@ const InnerBookDetails: React.FC = () => {
       />
 
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-center text-primary-foreground text-xl md:text-2xl font-serif font-semibold mb-8 tracking-wider">
+        <h2 className="text-center text-primary-foreground text-xl md:text-2xl xl:text-4xl font-serif font-semibold mb-8 tracking-wider">
           MEMORIES WORTH PRESERVING
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch min-h-55">

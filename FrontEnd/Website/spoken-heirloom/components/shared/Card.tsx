@@ -50,14 +50,14 @@ export default function Card({
       </div>
 
       <div className="mt-2">
-        <h3 className="font-cormorant text-lg text-primary-foreground mb-1">
+        <h3 className="font-cormorant text-lg 2xl:text-3xl text-primary-foreground mb-1">
           {title}
         </h3>
         {description && (
-          <p className="text-sm text-foreground-muted mb-2">{description}</p>
+          <p className="text-sm 2xl:text-lg text-foreground-muted mb-2">{description}</p>
         )}
         {price !== undefined && (
-          <div className="text-xl font-cormorant font-semibold text-primary-foreground">
+          <div className="text-xl 2xl:text-3xl font-cormorant font-semibold text-primary-foreground">
             {price}
           </div>
         )}

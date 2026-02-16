@@ -35,7 +35,7 @@ export default function ProcessSection() {
             bigHeadingColor="text-primary-foreground"
             descriptionColor="text-primary-foreground/85"
             className="max-w-5xl mx-auto"
-            fontStyleBigHeading="font-cormorant"
+            fontStyleBigHeading="font-cormorant "
             descriptionStyle="normal"
             fontStyleDescription="font-sans"
           />

@@ -51,10 +51,10 @@ const ProcessStepsGrid: React.FC<ProcessStepsGridProps> = ({
             )}
 
             <div className="text-center max-w-xs">
-              <h3 className="font-cormorant font-semibold text-heading-lg text-primary-foreground mb-3">
+              <h3 className="font-cormorant font-semibold text-heading-lg 2xl:text-3xl text-primary-foreground mb-3">
                 {step.step} {step.title}
               </h3>
-              <p className="text-primary-grayText font-sans text-body-sm leading-relaxed">
+              <p className="text-primary-grayText font-sans text-body-sm 2xl:text-body-md leading-relaxed">
                 {step.description}
               </p>
             </div>

@@ -104,7 +104,7 @@ export default function SubscriptionView() {
               borderColor="border-primary-foreground"
               hoverBgColor="hover:bg-primary-foreground/90"
               hoverTextColor="hover:text-white"
-              className="px-12 py-4 font-cormorant"
+              className="px-12 py-4 font-cormorant 2xl:text-xl"
             />
           </div>
         </div>

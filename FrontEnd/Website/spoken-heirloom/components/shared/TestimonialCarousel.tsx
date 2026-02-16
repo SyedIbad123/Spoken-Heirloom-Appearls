@@ -97,7 +97,7 @@ export default function TestimonialCarousel() {
                       </div>
 
                       {/* Quote */}
-                      <blockquote className="font-cormorant text-base md:text-lg lg:text-xl font-bold text-primary-foreground leading-relaxed mb-8 text-center">
+                      <blockquote className="font-cormorant text-base md:text-lg lg:text-xl  font-bold text-primary-foreground leading-relaxed mb-8 text-center">
                         &ldquo;{testimonial.quote}&rdquo;
                       </blockquote>
 

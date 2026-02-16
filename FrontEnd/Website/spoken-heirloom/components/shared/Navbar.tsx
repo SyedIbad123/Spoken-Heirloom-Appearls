@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-md">
       <nav className="bg-primary-light backdrop-blur-sm border-b border-primary/20">
-        <div className=" px-8 mx-2">
+        <div className="px-8 mx-2">
           <div className="flex items-center h-16 md:h-20 relative">
             {/* All nav links - left side */}
             <div className="hidden lg:flex items-center gap-8 md:gap-4 font-sans font-extralight">
@@ -24,7 +24,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`text-primary-foreground/90 text-body-xs transition-colors duration-200 ${
+                    className={`text-primary-foreground/90 text-body-xs xl:text-xs 2xl:text-body-md transition-colors duration-200 ${
                       isActive ? "font-bold" : "font-medium"
                     }`}
                   >
@@ -60,7 +60,7 @@ export default function Navbar() {
                 />
               </button>
               <div className="hidden md:flex items-center gap-2">
-                <span className="text-primary-foreground/80 text-body-sm font-medium">
+                <span className="text-primary-foreground/80 text-body-sm 2xl:text-body-lg font-medium">
                   EN
                 </span>
                 <div className="w-7 h-7 rounded-full overflow-hidden border border-primary-foreground/20">
@@ -82,7 +82,7 @@ export default function Navbar() {
                 borderColor="border-primary-foreground"
                 hoverBgColor="hover:bg-primary-foreground"
                 hoverTextColor="hover:text-white"
-                className="hidden md:inline-flex items-center gap-2 md:px-5! md:py-2! font-medium font-cormorant"
+                className="hidden md:inline-flex items-center text-body-xs xl:text-xs 2xl:text-body-lg gap-2 md:px-5! md:py-2! font-medium font-cormorant"
               />
 
               {/* Mobile menu button */}

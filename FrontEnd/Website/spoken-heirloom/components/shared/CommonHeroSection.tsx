@@ -28,11 +28,11 @@ const CommonHeroSection: React.FC<CommonHeroSectionProps> = ({
           />
         </div>
         <div className="relative z-10 flex flex-col items-center justify-center w-full py-16">
-          <h1 className="font-cormorant text-white text-4xl md:text-5xl font-semibold text-center drop-shadow-lg">
+          <h1 className="font-cormorant text-white text-4xl md:text-5xl 2xl:text-6xl font-semibold text-center drop-shadow-lg">
             {text}
           </h1>
           {description && (
-            <p className="text-white text-xs md:text-md font-sans font-normal text-center drop-shadow-lg whitespace-pre-line w-1/2 mt-4 leading-loose">
+            <p className="text-white text-xs md:text-md 2xl:text-body-md font-sans font-normal text-center drop-shadow-lg whitespace-pre-line w-1/2 mt-4 leading-loose">
               {description}
             </p>
           )}

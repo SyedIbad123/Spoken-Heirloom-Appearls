@@ -25,7 +25,7 @@ export default function Marquee({
           <div key={i} className={`flex ${textColor} items-center`}>
             {items.map((item, index) => (
               <span key={index}>
-                <span className="text-lg md:text-2xl font-semibold mx-1">
+                <span className="text-lg md:text-2xl 2xl:text-3xl font-semibold mx-1">
                   {item}
                 </span>
                 {index < items.length - 1 && (

@@ -10,17 +10,17 @@ export default function ReadyToBegin() {
           {/* Left Content */}
           <div className=" bg-primary-border/30 p-8 md:p-16 flex items-center justify-center lg:justify-start h-full">
             <div className="max-w-md">
-              <h2 className="font-cormorant text-display-sm md:text-display-md font-normal text-primary-foreground uppercase mb-6">
+              <h2 className="font-cormorant text-display-sm md:text-display-md  font-normal text-primary-foreground uppercase mb-6">
                 {readyToBeginSection.heading}
               </h2>
 
-              <p className="text-body-md font-sans text-primary-foreground/90 mb-8 leading-relaxed">
+              <p className="text-body-md 2xl:text-lg font-sans text-primary-foreground/90 mb-8 leading-relaxed">
                 {readyToBeginSection.description}
               </p>
 
               <Button
                 text={readyToBeginSection.buttonText}
-                className="border-primary-foreground/50 text-md font-cormorant text-primary-text bg-transparent hover:bg-primary-text/10 transition"
+                className="border-primary-foreground/50 text-md 2xl:text-xl font-cormorant text-primary-text bg-transparent hover:bg-primary-text/10 transition"
                 type="button"
                 textColor="text-primary-foreground"
                 borderColor="border-primary-text"

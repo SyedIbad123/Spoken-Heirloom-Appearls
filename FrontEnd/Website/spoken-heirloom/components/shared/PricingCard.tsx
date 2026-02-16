@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+  import Image, { StaticImageData } from "next/image";
 import { images } from "@/utils/constant";
 import Button from "./Button";
 
@@ -67,7 +67,7 @@ export default function PricingCard({
           {/* Subtitle - fixed height for alignment */}
           <div className="h-8 flex items-center justify-center">
             {subtitle && (
-              <p className="font-sans text-body-sm text-black/70 font-medium">
+              <p className="font-sans text-body-sm 2xl:text-md text-black/70 font-medium">
                 {subtitle}
               </p>
             )}
@@ -151,7 +151,7 @@ export default function PricingCard({
                   className="object-contain opacity-60"
                 />
               </div>
-              <span className="font-sans text-body-xs text-primary-foreground">
+              <span className="font-sans text-body-xs 2xl:text-body-md text-primary-foreground">
                 {addOn}
               </span>
             </div>

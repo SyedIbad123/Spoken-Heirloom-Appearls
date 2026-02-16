@@ -49,13 +49,13 @@ export default function ContactDetails() {
   return (
     <section className="section-container px-6 py-4 text-primary-foreground">
       <div className="text-center max-w-3xl mx-auto">
-        <h1 className="font-cormorant text-4xl  font-semibold text-primary-foreground mb-16">
+        <h1 className="font-cormorant text-4xl 2xl:text-5xl font-semibold text-primary-foreground mb-16">
           BECAUSE SOME STORIES DESERVE TO BE HEARD — NOT JUST REMEMBERED.
         </h1>
-        <h2 className="font-cormorant text-4xl md:text-3xl font-semibold text-primary-foreground mb-6">
+        <h2 className="font-cormorant text-4xl md:text-3xl xl:text-5xl font-semibold text-primary-foreground mb-6">
           We’re an Online Studio
         </h2>
-        <p className="font-sans text-primary-foreground/80 text-xs">
+        <p className="font-sans text-primary-foreground/80 text-xs 2xl:text-body-md">
           The Spoken Heirloom is proudly based in North Carolina, but we work
           with families everywhere. We don’t have a public storefront — all
           projects, consultations, and support are handled online.
@@ -68,10 +68,10 @@ export default function ContactDetails() {
             <MailIcon />
           </div>
           <div>
-            <h3 className="font-cormorant font-semibold text-xl text-gray-600/50">
+            <h3 className="font-cormorant font-semibold text-xl xl:text-3xl text-gray-600/50">
               support@thespokenheirloom.com
             </h3>
-            <p className="font-sans text-xs text-primary-foreground/70 mt-2 italic">
+            <p className="font-sans text-xs xl:text-body-sm text-primary-foreground/70 mt-2 italic">
               We typically reply within one business day, Monday–Friday.
             </p>
           </div>

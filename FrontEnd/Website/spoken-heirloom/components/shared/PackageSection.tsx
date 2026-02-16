@@ -178,6 +178,7 @@ export default function PackagesSection({
                 <div className="mt-8">
                   <Button
                     text={"Create Your Book"}
+                    className="text-lg 2xl:text-xl"
                     textColor="text-olive"
                     borderColor="border-olive"
                     hoverBgColor="hover:bg-olive"

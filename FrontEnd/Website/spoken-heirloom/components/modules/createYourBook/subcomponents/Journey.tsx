@@ -33,7 +33,7 @@ export const Journey = () => {
 
         {/* Right Content */}
         <div className="flex flex-col justify-center px-8 lg:px-12 py-12 lg:py-20 ">
-          <h2 className="font-cormorant font-semibold text-display-sm md:text-display-sm text-primary-foreground uppercase mb-6 whitespace-pre-line">
+          <h2 className="font-cormorant font-semibold text-display-sm md:text-display-sm 2xl:text-5xl text-primary-foreground uppercase mb-6 whitespace-pre-line">
             {"TWO SIMPLE WAYS TO BEGIN\nYOUR HEIRLOOM JOURNEY"}
           </h2>
 
@@ -49,11 +49,11 @@ export const Journey = () => {
                   className="w-full shrink-0"
                   style={{ minWidth: "100%" }}
                 >
-                  <h3 className="font-cormorant font-semibold text-xl md:text-2xl text-primary-foreground mb-6">
+                  <h3 className="font-cormorant font-semibold text-xl md:text-2xl 2xl:text-4xl text-primary-foreground mb-6">
                     {option.title}
                   </h3>
 
-                  <h6 className="font-sans font-extralight text-sm md:text-md text-primary-foreground mb-6">
+                  <h6 className="font-sans font-extralight text-sm md:text-md 2xl:text-xl text-primary-foreground mb-6">
                     {option.description && option?.description}
                   </h6>
 
@@ -64,18 +64,18 @@ export const Journey = () => {
                         className="flex items-start gap-2 text-primary-foreground"
                       >
                         <span className="mt-0">•</span>
-                        <span className="text-sm font-normal">{feature}</span>
+                        <span className="text-sm 2xl:text-lg font-normal">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
-                  <h6 className="font-extralight text-sm md:text-md text-primary-foreground mb-6">
+                  <h6 className="font-extralight text-sm md:text-md 2xl:text-lg text-primary-foreground mb-6">
                     {option.descriptionTwo && option?.descriptionTwo}
                   </h6>
 
                   <Button
                     text={option.buttonText}
-                    className="border-primary-foreground/50 text-sm font-serif text-primary-text bg-transparent hover:bg-primary-text/10 transition"
+                    className="border-primary-foreground/50 text-sm 2xl:text-lg font-serif text-primary-text bg-transparent hover:bg-primary-text/10 transition"
                     type="button"
                     textColor="text-primary-foreground"
                     borderColor="border-primary-text"
@@ -95,6 +95,8 @@ export const Journey = () => {
               totalItems={journeyOptions.length}
               onPrev={prevJourney}
               onNext={nextJourney}
+              sizeOfNumber="text-lg 2xl:text-3xl"
+              widthOfArrow="w-20 2xl:w-28"
               variant="dark"
             />
           </div>

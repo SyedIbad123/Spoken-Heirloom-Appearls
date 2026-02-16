@@ -31,7 +31,7 @@ export default function CreateYourBookPage() {
           <div className="mt-6 flex flex-col sm:flex-row gap-4">
             <Button
               text="Start a One-Time Book"
-              className="border-primary-foreground/50 text-md font-cormorant font-bold text-primary-text bg-transparent hover:bg-primary-text/10 transition"
+              className="border-primary-foreground/50 text-md 2xl:text-lg font-cormorant font-bold text-primary-text bg-transparent hover:bg-primary-text/10 transition"
               type="button"
               textColor="text-primary-foreground"
               borderColor="border-primary-text"

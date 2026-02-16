@@ -105,7 +105,7 @@ export default function ToggleButton({
               <button
                 key={tab.id}
                 onClick={() => onTabChange(tab.id)}
-                className={`relative z-10 px-8 py-3 rounded-full text-body-md font-medium transition-colors duration-300 cursor-pointer ${
+                className={`relative z-10 px-8 py-3 rounded-full text-body-md 2xl:text-lg font-medium transition-colors duration-300 cursor-pointer ${
                   activeTab === tab.id
                     ? "text-primary-foreground"
                     : "text-white"
