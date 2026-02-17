@@ -107,7 +107,7 @@ export default function PackagesSection({
               {/* Packages View */}
               <div className="w-full shrink-0" style={{ minWidth: "100%" }}>
                 <div
-                  className={`grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto ${isProElevated ? "md:items-start pt-8" : ""}`}
+                  className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto ${isProElevated ? "md:items-start pt-4 md:pt-8" : ""}`}
                 >
                   {packages.map((plan) => (
                     <PricingCard
@@ -144,9 +144,9 @@ export default function PackagesSection({
         {showStats && <Stats />}
 
         {showMemoryVoiceBanner && !rightImage && !leftImage && (
-          <div className="relative bg-primary-border/30 px-8 md:px-12 mb-16 mt-6 h-100">
+          <div className="relative bg-primary-border/30 px-5 sm:px-6 md:px-12 mb-12 md:mb-16 mt-6 min-h-20 md:min-h-92 md:h-100 py-10 md:py-0">
             {/* CommonLeaf - Top Left */}
-            <div className="absolute -top-13.5 left-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none mix-blend-multiply">
+            <div className="absolute -top-6 md:-top-13.5 left-0 w-24 h-24 md:w-56 md:h-56 pointer-events-none mix-blend-multiply">
               <Image
                 src={images.CommonLeaf}
                 alt=""
@@ -156,7 +156,7 @@ export default function PackagesSection({
             </div>
 
             {/* CommonLeaf - Bottom Right */}
-            <div className="absolute -bottom-13.5 right-0 w-32 h-32 md:w-56 md:h-56 pointer-events-none mix-blend-multiply rotate-180">
+            <div className="absolute -bottom-6 md:-bottom-13.5 right-0 w-24 h-24 md:w-56 md:h-56 pointer-events-none mix-blend-multiply rotate-180">
               <Image
                 src={images.CommonLeaf}
                 alt=""
@@ -172,13 +172,13 @@ export default function PackagesSection({
 
               {/* Author Info */}
               <div className="font-cormorant text-center">
-                <p className=" text-lg md:text-xl lg:text-4xl font-medium text-primary-foreground uppercase mb-1 tracking-wide whitespace-pre-line">
+                <p className=" text-base sm:text-lg md:text-xl lg:text-4xl font-medium text-primary-foreground uppercase mb-1 tracking-wide whitespace-pre-line">
                   {`Because some stories deserve \n to be heard — Not just \n remembered`}
                 </p>
-                <div className="mt-8">
+                <div className="mt-6 md:mt-8">
                   <Button
                     text={"Create Your Book"}
-                    className="text-lg 2xl:text-xl"
+                    className="text-base md:text-lg 2xl:text-xl"
                     textColor="text-olive"
                     borderColor="border-olive"
                     hoverBgColor="hover:bg-olive"

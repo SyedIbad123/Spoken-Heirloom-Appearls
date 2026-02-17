@@ -25,7 +25,7 @@ export default function Footer() {
       {/* Main Footer */}
       <div className="bg-primary-foreground pt-10 pb-12 relative z-10">
         <div
-          className="w-full flex justify-center relative z-30 -mt-19 md:-mt-20 lg:-mt-20 xl:-mt-21"
+          className="w-full flex justify-center relative z-30 -mt-10 sm:-mt-14 md:-mt-20 lg:-mt-20 xl:-mt-21 px-4 sm:px-0"
           style={{ pointerEvents: "auto" }}
         >
           <div className="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-0 overflow-hidden">
@@ -70,10 +70,10 @@ export default function Footer() {
         </div>
 
         <div className="section-container max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-2 border-t border-primary-foreground/10 pt-14 mt-0 mr-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-2 border-t border-primary-foreground/10 pt-10 md:pt-14 mt-0 mr-0">
             {/* Brand Column */}
             <div className="lg:col-span-1 flex flex-col items-start">
-              <div className="flex flex-row mb-6 gap-4">
+              <div className="flex flex-col sm:flex-row mb-6 gap-4 items-start">
                 <Image
                   src={images.FooterLogo}
                   alt="Footer Logo"
@@ -81,13 +81,13 @@ export default function Footer() {
                   height={120}
                   className="mb-4"
                 />
-                <p className="text-primary font-cormorant text-xl font-semibold mb-2">
+                <p className="text-primary font-cormorant text-lg sm:text-xl font-semibold mb-2 max-w-sm">
                   Your Legacy, Told in Words, Images, and Sound.
                 </p>
               </div>
 
-              <div className="flex flex-row items-center justify-center gap-3 mb-6">
-                <p className="text-primary font-cormorant text-xl font-semibold mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-2 sm:mb-6">
+                <p className="text-primary font-cormorant text-xl font-semibold mb-0 sm:mb-4">
                   Follow Us
                 </p>
                 <div className="flex flex-row gap-2">
@@ -132,8 +132,8 @@ export default function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div className="relative pl-10">
-              <span className="absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
+            <div className="relative pl-0 md:pl-10">
+              <span className="hidden lg:block absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
               <h4 className="text-primary font-cormorant text-2xl mb-4 ">
                 Quick Links
               </h4>
@@ -152,8 +152,8 @@ export default function Footer() {
             </div>
 
             {/* Useful Links */}
-            <div className="relative pl-10">
-              <span className="absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
+            <div className="relative pl-0 md:pl-10">
+              <span className="hidden lg:block absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
               <h4 className="text-primary text-2xl font-cormorant mb-4">
                 Useful Links
               </h4>
@@ -172,8 +172,8 @@ export default function Footer() {
             </div>
 
             {/* Contact Info */}
-            <div className="relative pl-10">
-              <span className="absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
+            <div className="relative pl-0 md:pl-10">
+              <span className="hidden lg:block absolute left-0 top-10 h-34 w-px bg-primary/30"></span>
 
               <h4 className="text-primary text-md font-cormorant text-2xl mb-4">
                 Contact Info
@@ -195,7 +195,7 @@ export default function Footer() {
                   </svg>
                   <span>support@thespokenheirloom.com</span>
                 </li>
-                <li className="font-sans flex items-center gap-3 text-md">
+                <li className="font-sans flex items-start gap-3 text-md">
                   <svg
                     className="w-6 h-6 text-primary"
                     fill="none"
@@ -232,13 +232,13 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="relative py-2 bg-primary-foreground">
         <span className="block absolute inset-x-2 top-0 h-px bg-primary/30"></span>
-        <div className="font-sans section-container flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-primary">
+        <div className="font-sans section-container flex flex-col md:flex-row items-center md:items-center justify-between gap-3 md:gap-4 text-xs text-primary text-center md:text-left">
           <p>
             © 2026 The Spoken Heirloom LLC. Patent Pending.
             <br />
             THE SPOKEN HEIRLOOM™ is a trademark of The Spoken Heirloom LLC.
           </p>
-          <div className="text-right text-xs">
+          <div className="text-center md:text-right text-xs">
             Protected by Patent-Pending Technology
           </div>
         </div>

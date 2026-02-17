@@ -9,7 +9,7 @@ export default function TestimonialsSection({
   bigHeading = "WHAT OUR CUSTOMERS SAY ABOUT US",
 }: TestimonialsSectionProps) {
   return (
-    <section className="mt-22 mb-36 bg-primary">
+    <section className="mt-10 md:mt-22 mb-2 md:mb-2 lg:mb-36 bg-primary">
       <div className="section-container">
         <SectionHeader
           smallHeading="Testimonials"

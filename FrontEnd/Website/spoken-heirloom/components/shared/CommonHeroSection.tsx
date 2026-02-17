@@ -18,7 +18,7 @@ const CommonHeroSection: React.FC<CommonHeroSectionProps> = ({
         className="relative w-full flex justify-center items-center overflow-hidden mb-10"
         style={{ minHeight: "300px" }}
       >
-        <div className="absolute inset-0 inset-x-10 h-full overflow-hidden mx-auto">
+        <div className="absolute inset-0 lg:inset-x-10 h-full overflow-hidden mx-0 md:mx-auto">
           <Image
             src={backgroundImage}
             alt="Hero Background"

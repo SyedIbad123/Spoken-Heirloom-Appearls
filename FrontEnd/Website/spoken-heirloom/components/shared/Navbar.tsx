@@ -17,15 +17,16 @@ export default function Navbar() {
         <div className="px-4 mx-2 lg:px-8 lg:mx-2">
           <div className="flex items-center h-16 md:h-20 relative">
             {/* All nav links - left side */}
-            <div className="hidden lg:flex items-center gap-8 md:gap-4 font-sans font-extralight">
+            <div className="hidden xl:flex items-center gap-8 md:gap-4 font-sans font-extralight">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`text-primary-foreground/90 text-body-xs xl:text-xs 2xl:text-body-md transition-colors duration-200 ${isActive ? "font-bold" : "font-medium"
-                      }`}
+                    className={`text-primary-foreground/90 text-body-xs xl:text-xs 2xl:text-body-md transition-colors duration-200 ${
+                      isActive ? "font-bold" : "font-medium"
+                    }`}
                   >
                     {link.label}
                   </Link>
@@ -87,7 +88,7 @@ export default function Navbar() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden p-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                className="xl:hidden p-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 <svg
                   className="w-6 h-6"
@@ -117,7 +118,7 @@ export default function Navbar() {
 
           {/* Mobile menu */}
           {isMenuOpen && (
-            <div className="lg:hidden! py-12 border-t border-primary/20">
+            <div className="xl:hidden! py-12 border-t border-primary/20">
               <div className="flex flex-col gap-2">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
@@ -126,12 +127,12 @@ export default function Navbar() {
                       key={link.label}
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className={`text-primary-foreground/80 py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors duration-200 ${isActive ? "font-bold" : "font-medium"
-                        }`}
+                      className={`text-primary-foreground/80 py-2 px-4 rounded-lg hover:bg-primary/30 transition-colors duration-200 ${
+                        isActive ? "font-bold" : "font-medium"
+                      }`}
                     >
                       {link.label}
                     </Link>
-
                   );
                 })}
                 <Button
@@ -140,7 +141,7 @@ export default function Navbar() {
                   borderColor="border-primary-foreground"
                   hoverBgColor="hover:bg-primary-foreground"
                   hoverTextColor="hover:text-white"
-                  className=" md:inline-flex! items-center text-body-sm xl:text-xs 2xl:text-body-lg gap-2 md:px-5! md:py-2! font-medium font-cormorant"
+                  className="md:hidden xl:inline-flex! items-center text-body-sm xl:text-xs 2xl:text-body-lg gap-2 md:px-5! md:py-2! font-medium font-cormorant"
                 />
               </div>
             </div>

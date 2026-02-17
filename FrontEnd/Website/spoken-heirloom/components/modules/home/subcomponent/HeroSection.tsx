@@ -64,7 +64,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="mx-auto relative max-w-[100vw] h-auto md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
+      <section className="mx-auto relative max-w-[100vw] min-h-[75vh] md:min-h-0 md:h-auto md:aspect-video lg:h-screen overflow-hidden bg-black">
         {/* Background Image with Dark Overlay */}
         <div className="absolute max-w-[100vw] inset-0 overflow-hidden">
           {/* Current slide - s1: stays in place, z-index: 1 */}
@@ -101,23 +101,23 @@ export default function HeroSection() {
         </div>
 
         {/* Main Content Container */}
-        <div className="font-cormorant relative mt-16 md:mt-0 z-30 h-full flex flex-col items-center justify-center px-8 md:px-16 lg:px-24">
+        <div className="font-cormorant relative z-30 h-full flex flex-col items-center justify-center px-5 pt-24 pb-14 sm:px-8 md:px-16 md:pt-0 md:pb-0 lg:px-24">
           {/* Main Heading */}
-          <h1 className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-2 md:mb-2 leading-tight max-w-6xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white text-center mb-3 md:mb-2 leading-tight max-w-6xl mx-auto">
             THE EVOLUTION OF THE
             <br />
             PHOTO ALBUM
           </h1>
 
           {/* Subheading */}
-          <p className="text-white font-semibold text-xs md:text-lg lg:text-xl 2xl:text-2xl text-center mb-10 md:mb-5 tracking-wide max-w-2xl mx-auto">
+          <p className="text-white font-semibold text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-center mb-8 md:mb-5 tracking-wide max-w-2xl mx-auto">
             Stories you can hear. Memories you can hold.
           </p>
 
           {/* CTA Button */}
           <Button
             text="Build My Heirloom Today"
-            className="mb-12 md:mb-16 text-xs md:text-2xl"
+            className="mb-0 md:mb-16 text-sm md:text-2xl"
             backgroundColor="bg-transparent"
             textColor="text-primary"
             borderColor="border-primary"
@@ -125,21 +125,39 @@ export default function HeroSection() {
             hoverTextColor="hover:text-primary-foreground"
             hoverBorderColor="hover:border-primary"
           />
+
+          <div className="relative md:absolute md:bottom-0 left-0 right-0 z-30 pb-5 md:pb-0">
+            <div className="block md:hidden relative w-full">
+              <div className="max-w-full mx-auto px-5 sm:px-8 md:px-16 lg:px-20 py-8 md:py-18">
+                <div className="flex items-center justify-between">
+                  <CarouselNavigation
+                    currentIndex={currentSlide}
+                    totalItems={carouselImages.length}
+                    onPrev={handlePrevSlide}
+                    onNext={handleNextSlide}
+                    widthOfArrow="w-12 md:w-16 2xl:w-28"
+                    sizeOfNumber="text-sm md:text-xs lg:text-lg 2xl:text-2xl"
+                    variant="light"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Carousel Section at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 z-30">
+        <div className="relative md:absolute md:bottom-0 left-0 right-0 z-30 pb-5 md:pb-0">
           {/* Carousel Container */}
-          <div className="relative w-full">
-            <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-20 py-18">
+          <div className="hidden md:block relative w-full">
+            <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-3 lg:px-20 py-8 md:py-18">
               <div className="flex items-center justify-between">
                 <CarouselNavigation
                   currentIndex={currentSlide}
                   totalItems={carouselImages.length}
                   onPrev={handlePrevSlide}
                   onNext={handleNextSlide}
-                  widthOfArrow="w-28 md:w-16 2xl:w-28"
-                  sizeOfNumber="text-lg 2xl:text-2xl"
+                  widthOfArrow="w-12 md:w-14 lg:w-28"
+                  sizeOfNumber="text-sm md:text-xl lg:text-2xl"
                   variant="light"
                 />
               </div>
@@ -149,7 +167,7 @@ export default function HeroSection() {
       </section>
 
       <div
-        className="relative mb-72 -mt-26 h-0 after:content-[''] after:block after:mx-auto after:w-64 after:h-80 md:after:w-96 md:after:h-120 after:bg-no-repeat after:bg-center after:bg-cover after:border-10 after:border-white after:shadow-lg after:z-20 after:relative"
+        className="relative mb-44 md:mb-72 -mt-10 md:-mt-26  h-0 after:content-[''] after:block after:mx-auto after:w-64 after:h-80 md:after:w-96 md:after:h-120 after:bg-no-repeat after:bg-center after:bg-cover after:border-10 after:border-white after:shadow-lg after:z-20 after:relative"
         style={
           {
             "--bg-image": `url(${images.ProcessSectionImage.src})`,

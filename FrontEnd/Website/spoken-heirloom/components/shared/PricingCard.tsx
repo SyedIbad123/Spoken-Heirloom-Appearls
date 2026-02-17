@@ -1,4 +1,4 @@
-  import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { images } from "@/utils/constant";
 import Button from "./Button";
 
@@ -33,7 +33,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`relative flex flex-col mb-6 pt-8 ${
+      className={`relative flex flex-col mb-6 pt-5 md:pt-8 ${
         highlighted && isProElevated ? "md:-translate-y-8" : ""
       }`}
     >
@@ -51,21 +51,21 @@ export default function PricingCard({
       )} */}
 
       {/* Card container */}
-      <div className={` relative h-187`}>
+      <div className={` relative h-155 md:h-175 lg:h-187`}>
         {/* Background image */}
         <div className="absolute inset-0">
           <Image src={backgroundImage} alt="" fill className="object-cover" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 px-8 py-8 md:px-10 md:py-14 flex flex-col items-center text-center h-full">
+        <div className="relative z-10 px-5 py-6 sm:px-6 sm:py-8 md:px-10 md:py-14 flex flex-col items-center text-center h-full">
           {/* Plan name */}
-          <h3 className="font-cormorant text-xl md:text-2xl text-primary-foreground font-semibold uppercase tracking-wider">
+          <h3 className="font-cormorant text-lg sm:text-xl md:text-2xl text-primary-foreground font-semibold uppercase tracking-wider">
             {name}
           </h3>
 
           {/* Subtitle - fixed height for alignment */}
-          <div className="h-8 flex items-center justify-center">
+          <div className="h-7 sm:h-8 flex items-center justify-center">
             {subtitle && (
               <p className="font-sans text-body-sm 2xl:text-md text-black/70 font-medium">
                 {subtitle}
@@ -74,9 +74,9 @@ export default function PricingCard({
           </div>
 
           {/* Price */}
-          <div className="mb-8 font-cormorant">
+          <div className="mb-6 sm:mb-8 font-cormorant">
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-4xl md:text-4xl font-cormorant font-bold text-black">
+              <span className="text-3xl sm:text-4xl md:text-4xl font-cormorant font-bold text-black">
                 {price}
               </span>
               {period && (
@@ -88,9 +88,9 @@ export default function PricingCard({
           </div>
 
           {/* Front Book Image - fixed height container for symmetry */}
-          <div className="w-full flex justify-center h-32 md:h-52 mb-0">
+          <div className="w-full flex justify-center h-44 sm:h-32 md:h-52 mb-0">
             {frontImage && (
-              <div className="relative w-48 md:w-72 h-full">
+              <div className="relative w-56 sm:w-48 md:w-72 h-full">
                 <Image
                   src={frontImage}
                   alt={name}
@@ -101,10 +101,10 @@ export default function PricingCard({
           </div>
 
           {/* Divider line - full width, always at same position */}
-          <div className="w-full border-b border-black/20 mb-8" />
+          <div className="w-full border-b border-black/20 mb-4 sm:mb-8" />
 
           {/* Features list */}
-          <ul className="space-y-3 mb-auto w-full max-w-xs text-left font-sans">
+          <ul className="space-y-4 sm:space-y-3 mb-auto w-full max-w-xs text-left font-sans">
             {features.map((feature, index) => (
               <li
                 key={index}
@@ -117,7 +117,7 @@ export default function PricingCard({
           </ul>
 
           {/* CTA button */}
-          <div className="w-full max-w-xs mt-10">
+          <div className="w-full max-w-xs mt-2 sm:mt-10">
             <Button
               text={cta}
               onClick={onCtaClick}
@@ -151,7 +151,7 @@ export default function PricingCard({
                   className="object-contain opacity-60"
                 />
               </div>
-              <span className="font-sans text-body-xs 2xl:text-body-md text-primary-foreground">
+              <span className="font-sans text-body-sm sm:text-body-xs 2xl:text-body-md text-primary-foreground">
                 {addOn}
               </span>
             </div>

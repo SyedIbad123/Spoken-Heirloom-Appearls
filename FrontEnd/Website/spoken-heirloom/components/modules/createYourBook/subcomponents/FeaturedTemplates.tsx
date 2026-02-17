@@ -23,7 +23,7 @@ export default function FeaturedtemplateItems() {
 
   return (
     <section className="py-8 md:py-4 mb-12">
-      <div className="container mx-auto px-14">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-14">
         <SectionHeader
           bigHeading={"FEATURED templates"}
           description={
@@ -48,15 +48,15 @@ export default function FeaturedtemplateItems() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8 md:mt-12">
           <CarouselNavigation
             currentIndex={currentIndex}
             totalItems={templateItems.length}
             onPrev={handlePrev}
             onNext={handleNext}
             variant="dark"
-            widthOfArrow="w-20 2xl:w-32"
-            sizeOfNumber="text-md 2xl:text-3xl"
+            widthOfArrow="w-16 sm:w-20 2xl:w-32"
+            sizeOfNumber="text-sm sm:text-md 2xl:text-3xl"
           />
         </div>
       </div>

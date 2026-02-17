@@ -44,7 +44,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section className="mt-20 ">
+    <section className="mt-4 md:mt-2 lg:mt-20 mb-10 md:mb-10 lg:mb-0">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-7xl mx-auto">
           {/* Contact form */}

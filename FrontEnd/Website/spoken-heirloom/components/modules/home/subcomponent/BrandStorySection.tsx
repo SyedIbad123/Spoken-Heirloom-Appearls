@@ -36,8 +36,8 @@ export default function BrandStorySection() {
                   />
 
                   {/* Circular logo overlay at center */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-30 md:h-30 rounded-full bg-primary flex items-center justify-center">
-                    <div className="relative w-20 h-20 md:w-20 md:h-20">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-30 md:h-30 rounded-full bg-primary flex items-center justify-center">
+                    <div className="relative w-14 h-14 md:w-20 md:h-20">
                       <Image
                         src={images.LogoBrand}
                         alt="Logo"

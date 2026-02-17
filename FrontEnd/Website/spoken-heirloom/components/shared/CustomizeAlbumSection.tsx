@@ -47,7 +47,7 @@ export default function CustomizeAlbumSection({
         />
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 md:auto-rows-auto gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:grid-rows-2 md:auto-rows-auto gap-6 max-w-7xl mx-auto">
           {(customizeAlbumItems as CustomizeAlbumItem[]).map((item) => (
             <div
               key={item.id}

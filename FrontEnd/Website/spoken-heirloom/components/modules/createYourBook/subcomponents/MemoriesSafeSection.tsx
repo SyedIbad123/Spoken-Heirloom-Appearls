@@ -8,9 +8,9 @@ export default function MemoriesSafeSection() {
   const { topSection, bottomSection } = memoriesSafeSection;
 
   return (
-    <section className="w-full mb-20">
+    <section className="w-full mb-14 md:mb-20">
       {/* Top Section - Your Memories Are Safe Here */}
-      <div className="relative py-20 md:py-28 overflow-visible">
+      <div className="relative py-14 sm:py-16 md:py-28 overflow-visible">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -22,7 +22,7 @@ export default function MemoriesSafeSection() {
         </div>
 
         {/* Cloud Icon - Top Right Corner */}
-        <div className="absolute top-4 right-4 md:top-8 md:right-8 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 ">
+        <div className="absolute top-4 right-4 md:top-8 md:right-8 w-10 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-56 lg:h-56 ">
           <Image
             src={topSection.cloudLogo}
             alt="Cloud Storage"
@@ -32,7 +32,7 @@ export default function MemoriesSafeSection() {
         </div>
 
         {/* Encryption Icon - Bottom Left Corner */}
-        <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 w-28 h-40 md:w-40 md:h-56 lg:w-48 lg:h-64 z-20">
+        <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 w-10 h-20 sm:w-20 sm:h-28 md:w-24 md:h-24 lg:w-48 lg:h-64 z-20">
           <Image
             src={topSection.encryptionLogo}
             alt="Encryption Security"
@@ -45,7 +45,7 @@ export default function MemoriesSafeSection() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
             {/* Shield Logo */}
-            <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 mb-8">
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 lg:w-44 lg:h-44 mb-6 md:mb-8">
               <Image
                 src={topSection.shieldLogo}
                 alt="Spoken Heirloom Shield"
@@ -55,7 +55,7 @@ export default function MemoriesSafeSection() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-cormorant font-bold text-md 2xl:text-3xl text-primary-foreground uppercase tracking-wide mb-8">
+            <h2 className="font-cormorant font-bold text-sm sm:text-md 2xl:text-3xl text-primary-foreground uppercase tracking-wide mb-6 md:mb-8">
               {topSection.heading.split("\n").map((line, i) => (
                 <span key={i}>
                   {line}
@@ -65,11 +65,11 @@ export default function MemoriesSafeSection() {
             </h2>
 
             {/* Description Paragraphs */}
-            <p className="text-xs 2xl:text-lg text-primary-foreground font-sans leading-relaxed mb-5 max-w-xl">
+            <p className="text-xs sm:text-sm 2xl:text-lg text-primary-foreground font-sans leading-relaxed mb-4 md:mb-5 max-w-xl px-2 sm:px-0">
               {topSection.description1}
             </p>
 
-            <p className="text-xs 2xl:text-lg text-primary-foreground font-sans leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm 2xl:text-lg text-primary-foreground font-sans leading-relaxed max-w-xl px-2 sm:px-0">
               {topSection.description2}
             </p>
           </div>
@@ -77,12 +77,12 @@ export default function MemoriesSafeSection() {
       </div>
 
       {/* Bottom Section - Capture The Moments */}
-      <div className="relative -mt-32 md:-mt-162 py-20 md:pt-160 bg-primary-border/20 overflow-visible">
-        <div className="section-container mx-auto px-24 relative">
+      <div className="relative -mt-12 sm:-mt-16 md:-mt-162 py-12 sm:py-14 md:py-20 md:pt-160 bg-primary-border/20 overflow-visible">
+        <div className="section-container mx-auto px-4 sm:px-6 md:px-12 lg:px-24 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Left Content */}
-            <div className="max-w-lg pt-16 lg:pt-24 pb-20 lg:pb-0 relative z-10">
-              <h2 className="font-cormorant text-2xl 2xl:text-4xl font-bold text-primary-foreground uppercase tracking-wide leading-tight mb-10">
+            <div className="max-w-lg md:max-w-full lg:max-w-lg pt-6 sm:pt-8 lg:pt-24 pb-6 sm:pb-10 md:pb-0 lg:pb-0 relative z-10 text-center lg:text-left">
+              <h2 className="font-cormorant text-xl sm:text-2xl 2xl:text-4xl font-bold text-primary-foreground uppercase tracking-wide leading-tight mb-6 sm:mb-10">
                 {bottomSection.heading.split("\n").map((line, i) => (
                   <span key={i}>
                     {line}
@@ -105,7 +105,7 @@ export default function MemoriesSafeSection() {
             </div>
 
             {/* Right Content - Main Image with Overflow */}
-            <div className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-[60%] xl:w-[55%] h-96 md:h-125 lg:h-auto">
+            <div className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-[60%] xl:w-[55%] h-44 sm:h-96 lg:h-125 xl:h-auto">
               <div className="relative w-full h-full lg:h-[150%] lg:top-[0%] xl:top-[2%]">
                 <Image
                   src={bottomSection.mainImage}

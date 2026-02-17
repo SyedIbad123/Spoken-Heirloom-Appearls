@@ -28,14 +28,14 @@ export default function InspirationGallery() {
           fontStyleDescription="font-cormorant 2xl:text-xl"
         />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-10">
           {inspirationGalleryCards.map((card, idx) => (
             <div
               key={card.title}
               className="group cursor-pointer bg-white flex flex-col h-full transition-transform hover:-translate-y-1"
               onClick={() => navigate(card.title)}
             >
-              <div className="relative mb-2 aspect-3/4 h-44 overflow-hidden">
+              <div className="relative mb-2 aspect-2/3 md:aspect-3/4 h-52 md:h-44 overflow-hidden">
                 <Image
                   src={card.image}
                   alt={card.alt}
