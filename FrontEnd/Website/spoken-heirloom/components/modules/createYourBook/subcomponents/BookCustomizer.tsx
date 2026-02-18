@@ -24,14 +24,14 @@ export default function BookCustomizer() {
   const [pagesCount, setPagesCount] = useState("40");
 
   return (
-    <section className="bg-primary ">
+    <section className="bg-primary overflow-hidden">
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-6">
           {/* Left Column - Images & Pages Structure */}
           <div className="mt-8 h-full">
             <div className="h-full flex flex-col">
               {/* Three Book Images */}
-              <div className="p-8">
+              <div className="p-4 sm:p-6 lg:p-8">
                 <Image
                   src={images.CreateYourBookStepThreeFirstImage}
                   alt="Book Preview 1"
@@ -39,7 +39,7 @@ export default function BookCustomizer() {
                 />
               </div>
 
-              <div className="p-8">
+              <div className="p-4 sm:p-6 lg:p-8">
                 <Image
                   src={images.CreateYourBookStepThreeSecondImage}
                   alt="Book Preview 2"
@@ -47,7 +47,7 @@ export default function BookCustomizer() {
                 />
               </div>
 
-              <div className="p-8">
+              <div className="p-4 sm:p-6 lg:p-8">
                 <Image
                   src={images.CreateYourBookStepThreeThirdImage}
                   alt="Book Preview 3"
@@ -56,12 +56,12 @@ export default function BookCustomizer() {
               </div>
 
               {/* Pages Structure Section */}
-              <div className="p-8 h-full">
-                <div className="bg-primary-border/40 p-8 pr-32 h-full">
-                  <h3 className="font-cormorant font-semibold pl-6 text-xl md:text-2xl text-primary-foreground mb-8">
+              <div className="p-4 sm:p-6 lg:p-8 h-full">
+                <div className="bg-primary-border/40 p-4 pr-4 sm:p-6 sm:pr-12 md:p-8 md:pr-20 lg:p-8 lg:pr-32 h-full">
+                  <h3 className="font-cormorant font-semibold pl-2 sm:pl-4 lg:pl-6 text-xl md:text-2xl text-primary-foreground mb-8">
                     Pages Structure:
                   </h3>
-                  <ul className="font-sans space-y-4 pl-10">
+                  <ul className="font-sans space-y-4 pl-4 sm:pl-6 lg:pl-10">
                     {pagesStructure.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-primary-foreground -mt-1">•</span>
@@ -78,7 +78,7 @@ export default function BookCustomizer() {
           </div>
 
           {/* Right Column - Customization Options */}
-          <div className="bg-white pl-14 pr-24 pt-28 pb-6 h-full">
+          <div className="bg-white px-4 pt-8 pb-6 sm:px-6 sm:pt-12 md:px-10 md:pt-16 lg:pl-14 lg:pr-24 lg:pt-28 h-full">
             {/* Rating */}
             <div className="flex items-center gap-2 mb-4">
               <span className="font-cormorant text-lg text-primary-foreground font-semibold">
@@ -100,7 +100,7 @@ export default function BookCustomizer() {
             />
 
             {/* Description */}
-            <div className="mb-12 pr-12 ">
+            <div className="mb-8 pr-0 md:mb-10 md:pr-4 lg:mb-12 lg:pr-12">
               <h4 className="font-cormorant font-bold text-3xl text-primary-foreground mb-2">
                 Description
               </h4>
@@ -146,7 +146,7 @@ export default function BookCustomizer() {
               onTabChange={setCopyType}
               heading="Soft Copy/Hard Copy"
               isRadioButton={true}
-              className="mb-18!"
+              className="mb-8! md:mb-12! lg:mb-18!"
               fullWidth={true}
             />
 
@@ -156,7 +156,7 @@ export default function BookCustomizer() {
               activeTab={paperType}
               onTabChange={setPaperType}
               heading="Paper Type"
-              className="mb-18!"
+              className="mb-8! md:mb-12! lg:mb-18!"
               fullWidth={true}
             />
 
@@ -166,7 +166,7 @@ export default function BookCustomizer() {
               activeTab={coverFinish}
               onTabChange={setCoverFinish}
               heading="Cover Finish"
-              className="mb-18!"
+              className="mb-8! md:mb-12! lg:mb-18!"
               fullWidth={true}
             />
 
@@ -177,7 +177,7 @@ export default function BookCustomizer() {
               onTabChange={setPagesCount}
               heading="Pages Count"
               isRadioButton={true}
-              className="mb-18!"
+              className="mb-8! md:mb-12! lg:mb-18!"
               fullWidth={true}
             />
 
@@ -192,7 +192,7 @@ export default function BookCustomizer() {
             <br />
 
             {/* Add-ons & Premium Features */}
-            <div className="mb-8 pr-24">
+            <div className="mb-8 pr-0 lg:pr-24">
               <h4 className="font-cormorant font-semibold text-2xl text-primary-foreground mb-4">
                 Add-ons & Premium Features:
               </h4>

@@ -99,7 +99,7 @@ export default function PackagesSection({
             <div className="lg:hidden">
               {activeTab === "packages" ? (
                 <div
-                  className={`grid grid-cols-2 gap-6 max-w-7xl mx-auto ${isProElevated ? "pt-4" : ""}`}
+                  className={`grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-7xl mx-auto ${isProElevated ? "pt-4" : ""}`}
                 >
                   {packages.map((plan) => (
                     <PricingCard
