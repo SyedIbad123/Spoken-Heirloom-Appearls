@@ -10,7 +10,7 @@ export default function ProcessSection() {
     <section className="section-container py-section-md md:py-section-lg relative overflow-hidden mt-6 md:mt-10">
       <div className="section-container bg-white px-5 py-20 sm:px-8 sm:py-10 md:px-12 md:py-14 md:max-lg:px-10 md:max-lg:py-20 lg:p-20 relative border-b-5 border-primary-border">
         <div className="text-center mb-10 sm:mb-14 md:mb-20 md:max-lg:mb-16 relative">
-          <div className="absolute w-24 h-24 sm:w-36 sm:h-36 md:w-52 md:h-52 md:max-lg:w-40 md:max-lg:h-40 -left-5 sm:-left-10 md:-left-36 md:max-lg:-left-10 -top-20 sm:-top-10 md:-top-24 md:max-lg:-top-20 pointer-events-none mix-blend-multiply">
+          <div className="absolute w-24 h-24 sm:w-36 sm:h-36 md:w-52 md:h-52 md:max-lg:w-40 md:max-lg:h-40 -left-5 sm:-left-10 lg:-left-20 -top-20 sm:-top-10 md:-top-20 pointer-events-none mix-blend-multiply">
             <Image
               src={images.CommonLeaf}
               className=""

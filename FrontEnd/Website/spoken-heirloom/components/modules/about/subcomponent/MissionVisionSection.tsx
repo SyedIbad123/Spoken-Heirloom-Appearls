@@ -68,7 +68,7 @@ export default function MissionVisionSection() {
                         : "lg:order-1"
                     }`}
                   >
-                    <div className="relative aspect-4/3 sm:aspect-square overflow-hidden">
+                    <div className="relative aspect-square sm:aspect-square md:aspect-9/9 lg:aspect-square overflow-hidden">
                       <Image
                         src={
                           images[section.image as keyof typeof images] as any
@@ -76,7 +76,7 @@ export default function MissionVisionSection() {
                         alt={section.title}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 40vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 60vw, (max-width: 1024px) 80vw, 40vw"
                       />
                     </div>
                   </div>

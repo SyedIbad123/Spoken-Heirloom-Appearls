@@ -27,7 +27,7 @@ export default function BrandStorySection() {
             <div className="relative order-2 lg:order-1">
               <div className="relative">
                 {/* Main image */}
-                <div className="relative aspect-7/8 overflow-hidden">
+                <div className="relative aspect-7/8 md:aspect-5/5 lg:aspect-7/8 overflow-hidden">
                   <Image
                     src={images.BrandStoryMainImage}
                     alt="Heirloom Book"

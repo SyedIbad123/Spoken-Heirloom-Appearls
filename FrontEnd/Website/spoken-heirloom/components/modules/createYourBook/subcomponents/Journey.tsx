@@ -32,7 +32,7 @@ export const Journey = () => {
         </div>
 
         {/* Right Content */}
-        <div className="flex flex-col justify-center px-8 lg:px-12 py-12 lg:py-20 ">
+        <div className="flex flex-col justify-center px-8 xl:px-12 py-12 xl:py-20 ">
           <h2 className="font-cormorant font-semibold text-display-sm md:text-display-sm 2xl:text-5xl text-primary-foreground uppercase mb-6 whitespace-pre-line">
             {"TWO SIMPLE WAYS TO BEGIN\nYOUR HEIRLOOM JOURNEY"}
           </h2>
@@ -46,7 +46,7 @@ export const Journey = () => {
               {journeyOptions.map((option, index) => (
                 <div
                   key={option.id}
-                  className="w-full shrink-0"
+                  className="w-full shrink-0 "
                   style={{ minWidth: "100%" }}
                 >
                   <h3 className="font-cormorant font-semibold text-xl md:text-2xl 2xl:text-4xl text-primary-foreground mb-6">
@@ -89,7 +89,7 @@ export const Journey = () => {
             </div>
           </div>
 
-          <div className="flex mt-20">
+          <div className="flex mt-4 xl:mt-10">
             <CarouselNavigation
               currentIndex={journeyIndex}
               totalItems={journeyOptions.length}

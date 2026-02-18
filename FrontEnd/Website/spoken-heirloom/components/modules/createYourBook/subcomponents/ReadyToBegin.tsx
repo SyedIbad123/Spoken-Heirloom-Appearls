@@ -14,7 +14,7 @@ export default function ReadyToBegin() {
                 {readyToBeginSection.heading}
               </h2>
 
-              <p className="text-sm sm:text-body-md 2xl:text-lg font-sans text-primary-foreground/90 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-sm sm:text-body-md 2xl:text-lg text-center xl:text-left font-sans text-primary-foreground/90 mb-6 md:mb-8 leading-relaxed">
                 {readyToBeginSection.description}
               </p>
 

@@ -25,7 +25,7 @@ export default function Footer() {
       {/* Main Footer */}
       <div className="bg-primary-foreground pt-10 pb-12 relative z-10">
         <div
-          className="w-full flex justify-center relative z-30 -mt-10 sm:-mt-14 md:-mt-20 lg:-mt-20 xl:-mt-21 px-4 sm:px-0"
+          className="w-full flex justify-center relative z-30 -mt-10 sm:-mt-14 md:-mt-20 lg:-mt-20 xl:-mt-21 px-0 "
           style={{ pointerEvents: "auto" }}
         >
           <div className="w-full max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-0 overflow-hidden">

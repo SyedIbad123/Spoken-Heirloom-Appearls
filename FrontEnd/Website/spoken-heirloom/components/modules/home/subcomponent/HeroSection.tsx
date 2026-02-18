@@ -156,7 +156,7 @@ export default function HeroSection() {
                   totalItems={carouselImages.length}
                   onPrev={handlePrevSlide}
                   onNext={handleNextSlide}
-                  widthOfArrow="w-12 md:w-14 lg:w-28"
+                  widthOfArrow="w-12 md:w-14 lg:w-18 xl:w-28"
                   sizeOfNumber="text-sm md:text-xl lg:text-2xl"
                   variant="light"
                 />

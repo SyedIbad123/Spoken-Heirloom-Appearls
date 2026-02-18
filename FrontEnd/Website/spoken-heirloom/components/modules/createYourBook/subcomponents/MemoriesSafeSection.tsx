@@ -77,7 +77,7 @@ export default function MemoriesSafeSection() {
       </div>
 
       {/* Bottom Section - Capture The Moments */}
-      <div className="relative -mt-12 sm:-mt-16 md:-mt-162 py-12 sm:py-14 md:py-20 md:pt-160 bg-primary-border/20 overflow-visible">
+      <div className="relative -mt-12 sm:-mt-16 md:-mt-162 py-12 sm:py-14 md:py-2 lg:py-20 md:pt-160 lg:pt-160 bg-primary-border/20 overflow-visible">
         <div className="section-container mx-auto px-4 sm:px-6 md:px-12 lg:px-24 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             {/* Left Content */}
@@ -105,8 +105,8 @@ export default function MemoriesSafeSection() {
             </div>
 
             {/* Right Content - Main Image with Overflow */}
-            <div className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-[60%] xl:w-[55%] h-44 sm:h-96 lg:h-125 xl:h-auto">
-              <div className="relative w-full h-full lg:h-[150%] lg:top-[0%] xl:top-[2%]">
+            <div className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 lg:w-[50%] xl:w-[55%] h-44 sm:h-96 lg:h-125 xl:h-auto">
+              <div className="relative w-full h-full lg:h-[150%] lg:-top-[26%] xl:top-[2%]">
                 <Image
                   src={bottomSection.mainImage}
                   alt="Vintage Photos and Memories"

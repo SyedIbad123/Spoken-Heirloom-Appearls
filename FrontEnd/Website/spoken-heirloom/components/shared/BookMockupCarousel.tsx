@@ -62,7 +62,7 @@ const BookMockupCarousel: React.FC<BookMockupCarouselProps> = ({
                 priority
                 className="w-70 h-70 sm:w-90 sm:h-90 md:w-125 md:h-125"
               />
-              <div className="absolute -bottom-8 md:-bottom-10 left-1/2 -translate-x-1/2 mb-4 lg:mb-0">
+              <div className="absolute -bottom-10 md:-bottom-10 left-1/2 -translate-x-1/2 mb-4 lg:mb-0">
                 <DotNavigation
                   total={mainImagesOfBookMockupCarousel.length}
                   current={current}

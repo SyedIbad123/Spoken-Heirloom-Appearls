@@ -25,7 +25,7 @@ export default function MemoryVoiceBanner({
     <section className="relative py-10 sm:py-12 md:py-12 mt-10 md:mt-4 lg:mt-20 overflow-visible bg-primary-border/30">
       <div className="font-cormorant relative">
         {hasImages && (
-          <div className="hidden lg:block absolute -top-24.5 lg:left-65 xl:-top-31.5 xl:left-80 2xl:-top-35 2xl:left-96 lg:w-52 lg:h-52 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply">
+          <div className="hidden lg:block absolute -top-24.5 lg:left-65 xl:-top-31.5 xl:left-80 2xl:-top-35 2xl:left-120 lg:w-52 lg:h-52 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply">
             <Image
               src={images.CommonLeaf}
               alt=""
@@ -42,7 +42,7 @@ export default function MemoryVoiceBanner({
                 <Image
                   src={leftImage}
                   alt=""
-                  className="w-full h-auto object-contain z-10 lg:absolute lg:-top-96 lg:-left-10"
+                  className="w-full h-auto object-contain z-10 lg:absolute lg:-top-96 lg:-left-14"
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function MemoryVoiceBanner({
                   className="w-full h-auto object-contain z-10 relative"
                 />
                 {/* CommonLeaf on right image - left bottom corner */}
-                <div className="hidden lg:block absolute lg:-bottom-29.5 lg:-left-44 xl:-bottom-31.5 xl:-left-48 2xl:-bottom-35.5 2xl:-left-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply rotate-180 z-0">
+                <div className="hidden lg:block absolute lg:-bottom-31.5 lg:-left-44 xl:-bottom-31.5 xl:-left-48 2xl:-bottom-35.5 2xl:-left-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 pointer-events-none mix-blend-multiply rotate-180 z-0">
                   <Image
                     src={images.CommonLeaf}
                     alt=""

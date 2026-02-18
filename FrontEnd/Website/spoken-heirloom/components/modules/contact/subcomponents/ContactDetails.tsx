@@ -62,8 +62,8 @@ export default function ContactDetails() {
         </p>
       </div>
 
-      <div className="mt-10 md:mt-12 grid grid-cols-1 lg:grid-cols-3 items-start md:items-center gap-8 md:gap-10 lg:gap-2 mx-auto max-w-6xl">
-        <div className="md:col-span-1 flex items-start gap-4 sm:gap-6 px-0 md:px-8 lg:px-12">
+      <div className="mt-10 md:mt-12 grid grid-cols-1 xl:grid-cols-2 items-start md:items-center gap-8 md:gap-10 lg:gap-10 xl:gap-2 mx-auto max-w-7xl">
+        <div className="md:col-span-1 flex items-start gap-4 sm:gap-6 px-0 md:px-8 lg:px-12 border-r">
           <div className="text-primary-foreground">
             <MailIcon className="w-8 h-8 sm:w-10 sm:h-10" />
           </div>
@@ -77,9 +77,9 @@ export default function ContactDetails() {
           </div>
         </div>
 
-        <div className="hidden lg:block h-40 border-l border-primary-foreground/70 mx-auto" />
+        {/* <div className="hidden xl:block h-40 border-l border-primary-foreground/70 mx-auto" /> */}
 
-        <div className="md:col-span-1 flex items-start gap-4 sm:gap-6 justify-start lg:justify-end px-0 md:px-8 lg:px-12">
+        <div className="md:col-span-1 flex items-start gap-4 sm:gap-6 justify-start xl:justify-end px-0 md:px-8 lg:px-12">
           <div className="text-primary-foreground">
             <PinIcon className="w-8 h-8 sm:w-10 sm:h-10" />
           </div>

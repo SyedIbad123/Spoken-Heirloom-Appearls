@@ -41,7 +41,7 @@ export default function TestimonialCarousel() {
       <div className="relative max-w-full">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch">
           {/* Left Image */}
-          <div className="relative w-full lg:w-4/5 z-0 aspect-4/3 sm:aspect-16/10 lg:aspect-auto overflow-hidden">
+          <div className="relative w-full lg:w-4/5 z-0 aspect-4/3 sm:aspect-16/10 overflow-hidden">
             <Image
               src={mainImage}
               alt="Testimonial"
@@ -51,11 +51,11 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Right Content - Overlapping */}
-          <div className="relative w-full lg:w-4/5 lg:-ml-10 z-10 -mt-8 sm:-mt-10 lg:mt-4 mb-4 md:mb-8">
+          <div className="relative w-full lg:w-4/5 lg:-ml-10 z-10 -mt-8 sm:-mt-10 lg:mt-16 mb-4 md:-mb-14">
             {/* White Content Box */}
             <div className="relative bg-white px-4 sm:px-6 md:px-10 lg:px-12 pt-12 sm:pt-14 md:pt-16 pb-8 sm:pb-10 h-full border-b-5 border-primary-border">
               {/* CommonLeaf - Top Left */}
-              <div className="absolute -top-8 left-0 w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 pointer-events-none mix-blend-multiply">
+              <div className="absolute -top-8 md:-top-9.5 lg:-top-10 left-0 w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 pointer-events-none mix-blend-multiply">
                 <Image
                   src={defaultImages.CommonLeaf}
                   alt=""
@@ -65,7 +65,7 @@ export default function TestimonialCarousel() {
               </div>
 
               {/* CommonLeaf - Bottom Right */}
-              <div className="absolute -bottom-6 sm:-bottom-8 right-0 w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 pointer-events-none mix-blend-multiply rotate-180">
+              <div className="absolute -bottom-6 sm:-bottom-8 md:-bottom-9.5 lg:-bottom-10 right-0 w-24 h-24 sm:w-28 sm:h-28 md:w-40 md:h-40 pointer-events-none mix-blend-multiply rotate-180">
                 <Image
                   src={defaultImages.CommonLeaf}
                   alt=""

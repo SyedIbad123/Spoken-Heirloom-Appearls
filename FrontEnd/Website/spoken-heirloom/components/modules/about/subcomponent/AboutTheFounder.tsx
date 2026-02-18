@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function AboutTheFounder() {
   return (
-    <section className="bg-primary-light py-16 md:py-8">
-      <div className="max-w-7xl  mx-auto px-8 md:px-16 lg:px-24 2xl:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 2xl:gap-12">
+    <section className="bg-primary-light py-2 md:py-8">
+      <div className="max-w-7xl mx-auto px-8 md:px-16 lg:px-24 2xl:px-8">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 lg:gap-20 2xl:gap-12">
           {/* Left Column - Text Content */}
           <div className="flex flex-col">
             <h2 className=" font-cormorant text-3xl md:text-4xl lg:text-4xl 2xl:text-5xl font-semibold text-primary-foreground mb-8">

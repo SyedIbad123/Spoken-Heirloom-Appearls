@@ -120,7 +120,7 @@ export default function TwoColumnSection({
   );
 
   return (
-    <section className={`py-section-md md:py-section-sm ${backgroundColor}`}>
+    <section className={`py-section-sm ${backgroundColor}`}>
       <div className={`section-container ${containerClassName}`}>
         <div
           className={`grid grid-cols-1 lg:grid-cols-2 ${gap} items-center max-w-6xl mx-auto`}

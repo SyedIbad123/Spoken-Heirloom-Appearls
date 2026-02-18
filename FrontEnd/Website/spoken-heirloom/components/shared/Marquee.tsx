@@ -18,7 +18,7 @@ export default function Marquee({
 }: MarqueeProps) {
   return (
     <div
-      className={`font-cormorant relative ${backgroundColor} py-10 overflow-hidden`}
+      className={`font-cormorant relative ${backgroundColor} py-8 md:py-9 overflow-hidden`}
     >
       <div className="flex animate-marquee whitespace-nowrap">
         {[...Array(6)].map((_, i) => (

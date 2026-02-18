@@ -95,8 +95,36 @@ export default function PackagesSection({
           )}
 
           <div className="overflow-hidden">
+            {/* Mobile (<md): render only the active panel to avoid height bleed from the taller sibling */}
+            <div className="lg:hidden">
+              {activeTab === "packages" ? (
+                <div
+                  className={`grid grid-cols-2 gap-6 max-w-7xl mx-auto ${isProElevated ? "pt-4" : ""}`}
+                >
+                  {packages.map((plan) => (
+                    <PricingCard
+                      key={plan.name}
+                      name={plan.name}
+                      subtitle={plan.subtitle}
+                      price={plan.price}
+                      features={plan.features}
+                      highlighted={plan.highlighted}
+                      cta={plan.cta}
+                      backgroundImage={plan.backgroundImage}
+                      frontImage={plan.frontImage}
+                      addOns={plan.addOns}
+                      isProElevated={isProElevated}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <SubscriptionView />
+              )}
+            </div>
+
+            {/* Desktop (md+): keep the existing slide animation */}
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="hidden lg:flex transition-transform duration-500 ease-in-out"
               style={{
                 transform:
                   activeTab === "packages"

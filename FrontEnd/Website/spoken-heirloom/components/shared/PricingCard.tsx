@@ -34,7 +34,7 @@ export default function PricingCard({
   return (
     <div
       className={`relative flex flex-col mb-6 pt-5 md:pt-8 ${
-        highlighted && isProElevated ? "md:-translate-y-8" : ""
+        highlighted && isProElevated ? "lg:-translate-y-8" : ""
       }`}
     >
       {/* Star icon for highlighted card
@@ -51,7 +51,7 @@ export default function PricingCard({
       )} */}
 
       {/* Card container */}
-      <div className={` relative h-155 md:h-175 lg:h-187`}>
+      <div className={`relative h-155 md:h-175 lg:h-187`}>
         {/* Background image */}
         <div className="absolute inset-0">
           <Image src={backgroundImage} alt="" fill className="object-cover" />
