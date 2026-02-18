@@ -57,7 +57,7 @@ export default function ToggleButton({
 
       {/* Toggle Container */}
       <div
-        className={`${fullWidth ? "flex w-full" : "inline-flex"} items-center bg-primary-foreground rounded-full p-1.5`}
+        className={`${fullWidth ? "flex w-82 md:w-106 xl:w-120" : "inline-flex"} items-center bg-primary-foreground rounded-full p-1.5`}
       >
         {isRadioButton ? (
           /* Radio Button Style */
@@ -71,15 +71,15 @@ export default function ToggleButton({
                 onClick={() => onTabChange(tab.id)}
               >
                 <span
-                  className={`w-6 h-6 rounded-full border-2 border-white flex items-center justify-center transition-all duration-300 ${
+                  className={`w-4 h-4 rounded-full border-2 border-white flex items-center justify-center transition-all duration-300 ${
                     activeTab === tab.id ? "bg-white" : "bg-transparent"
                   }`}
                 >
                   {activeTab === tab.id && (
-                    <span className="w-3 h-3 rounded-full bg-primary-foreground" />
+                    <span className="w-2 h-2 rounded-full bg-primary-foreground" />
                   )}
                 </span>
-                <span className="text-white text-body-md font-medium">
+                <span className="text-white text-body-xs md:text-body-sm  font-medium">
                   {tab.label}
                 </span>
               </label>

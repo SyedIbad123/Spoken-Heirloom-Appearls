@@ -78,7 +78,7 @@ export default function BookCustomizer() {
           </div>
 
           {/* Right Column - Customization Options */}
-          <div className="bg-white px-4 pt-8 pb-6 sm:px-6 sm:pt-12 md:px-10 md:pt-16 lg:pl-14 lg:pr-24 lg:pt-28 h-full">
+          <div className="bg-white px-4 pt-8 pb-6 sm:px-6 sm:pt-12 md:px-10 md:pt-16 lg:pl-14 lg:pr-18 lg:pt-28 h-full">
             {/* Rating */}
             <div className="flex items-center gap-2 mb-4">
               <span className="font-cormorant text-lg text-primary-foreground font-semibold">
