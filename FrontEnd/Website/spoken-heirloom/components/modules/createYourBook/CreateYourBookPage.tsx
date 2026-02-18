@@ -53,7 +53,7 @@ export default function CreateYourBookPage() {
         </TwoColumnSection>
       </div>
 
-      <div className="relative bg-primar mt-10 md:mt-16">
+      <div className=" section-container relative bg-primary mt-10 md:mt-16">
         <div className="absolute md:hidden lg:absolute -top-15 md:-top-31.5 left-0 w-20 h-20 sm:w-24 sm:h-24 md:w-64 md:h-64 pointer-events-none mix-blend-multiply">
           <Image
             src={images.CommonLeaf}
