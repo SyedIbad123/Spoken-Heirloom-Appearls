@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { images } from "@/utils/web-constants";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import CarouselNavigation from "@/components/shared/marketing/CarouselNavigation";
 
 export default function HeroSection() {

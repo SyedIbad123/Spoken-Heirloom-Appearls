@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { images } from "@/utils/web-constants";
-import Button from "./Button";
+import Button from "../Button";
 
 interface PricingCardProps {
   name: string;

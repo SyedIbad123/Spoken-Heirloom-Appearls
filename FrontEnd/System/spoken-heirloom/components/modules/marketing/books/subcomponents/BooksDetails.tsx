@@ -3,7 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import { galleryCategories, bookImages } from "@/utils/web-constants";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import SectionHeader from "@/components/shared/marketing/SectionHeader";
 import { useRouter, useSearchParams } from "next/navigation";
 

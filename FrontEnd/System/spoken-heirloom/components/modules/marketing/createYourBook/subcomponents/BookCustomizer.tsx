@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SectionHeader from "@/components/shared/marketing/SectionHeader";
 import ToggleButton from "@/components/shared/marketing/ToggleButton";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import {
   addOnsFeatures,
   bookSizeTabs,

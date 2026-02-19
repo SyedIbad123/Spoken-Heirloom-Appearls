@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import { memoriesSafeSection } from "@/utils/web-constants";
 
 export default function MemoriesSafeSection() {

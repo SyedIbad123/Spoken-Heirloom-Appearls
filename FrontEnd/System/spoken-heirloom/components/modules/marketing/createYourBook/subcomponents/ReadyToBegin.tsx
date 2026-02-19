@@ -1,4 +1,4 @@
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import { readyToBeginSection } from "@/utils/web-constants";
 import Image from "next/image";
 

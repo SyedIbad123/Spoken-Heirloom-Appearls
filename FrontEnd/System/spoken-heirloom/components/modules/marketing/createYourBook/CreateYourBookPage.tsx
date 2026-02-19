@@ -1,5 +1,5 @@
 import BookMockupCarousel from "@/components/shared/marketing/BookMockupCarousel";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import ProcessStepsGrid from "@/components/shared/marketing/ProcessStepsGrid";
 import TwoColumnSection from "@/components/shared/marketing/TwoColumnSection";
 import { images } from "@/utils/web-constants";

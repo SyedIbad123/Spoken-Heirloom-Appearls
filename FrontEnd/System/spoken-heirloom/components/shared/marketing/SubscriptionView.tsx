@@ -4,7 +4,7 @@ import {
   howItWorksStepsSubscription,
   bookCategories,
 } from "@/utils/web-constants";
-import Button from "./Button";
+import Button from "../Button";
 
 export default function SubscriptionView() {
   return (

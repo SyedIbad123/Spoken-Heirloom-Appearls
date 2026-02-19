@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { stepFourContent, images } from "@/utils/web-constants";
 import { Crop, ImageIcon, ChevronRight, GripVertical } from "lucide-react";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 
 interface CoverOptionsPanelProps {
   onCrop?: () => void;

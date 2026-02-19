@@ -10,7 +10,7 @@ import MemoryVoiceBanner from "@/components/shared/marketing/MemoryVoiceBanner";
 
 import type { StaticImageData } from "next/image";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../Button";
 import CustomizeAlbumSection from "./CustomizeAlbumSection";
 import ToggleButton from "./ToggleButton";
 

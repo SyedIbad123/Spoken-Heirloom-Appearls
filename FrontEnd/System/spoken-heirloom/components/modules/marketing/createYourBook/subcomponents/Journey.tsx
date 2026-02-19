@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import CarouselNavigation from "@/components/shared/marketing/CarouselNavigation";
 import { images, journeyOptions } from "@/utils/web-constants";
 

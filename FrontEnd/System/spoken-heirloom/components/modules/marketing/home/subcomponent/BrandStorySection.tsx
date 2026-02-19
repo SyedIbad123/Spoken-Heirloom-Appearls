@@ -1,7 +1,7 @@
 import { images, marqueeItems } from "@/utils/web-constants";
 import Image from "next/image";
 import SectionHeader from "@/components/shared/marketing/SectionHeader";
-import Button from "@/components/shared/marketing/Button";
+import Button from "@/components/shared/Button";
 import Marquee from "@/components/shared/marketing/Marquee";
 import MemoryVoiceSection from "./MemoryVoiceSection";
 
